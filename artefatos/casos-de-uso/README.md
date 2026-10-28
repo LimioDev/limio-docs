@@ -1,6 +1,20 @@
 # Casos de uso
 
-- **Diagrama:** [`diagrama-casos-de-uso.png`](diagrama-casos-de-uso.png) (card [ETI-17](https://kaueamaral96.atlassian.net/browse/ETI-17))
+- **Diagrama:** feito no draw.io em 9 páginas, uma por pacote (card [ETI-17](https://kaueamaral96.atlassian.net/browse/ETI-17)). O arquivo editável é [`diagramas/limio-casos-de-uso.drawio`](diagramas/limio-casos-de-uso.drawio). As imagens ficam em [`diagramas/`](diagramas/):
+
+  | Página | Imagem |
+  | --- | --- |
+  | 0. Visão Geral | [`00-visao-geral.png`](diagramas/00-visao-geral.png) |
+  | 1. Identidade e Acesso | [`01-identidade-e-acesso.png`](diagramas/01-identidade-e-acesso.png) |
+  | 2. Perfil e Preferências | [`02-perfil-e-preferencias.png`](diagramas/02-perfil-e-preferencias.png) |
+  | 3. Anúncios de Serviço | [`03-anuncios-de-servico.png`](diagramas/03-anuncios-de-servico.png) |
+  | 4. Mural e Matching | [`04-mural-e-matching.png`](diagramas/04-mural-e-matching.png) |
+  | 5. Assinatura GOLD | [`05-assinatura-gold.png`](diagramas/05-assinatura-gold.png) |
+  | 6. Execução do Serviço | [`06-execucao-do-servico.png`](diagramas/06-execucao-do-servico.png) |
+  | 7. Avaliação e Reputação | [`07-avaliacao-e-reputacao.png`](diagramas/07-avaliacao-e-reputacao.png) |
+  | 8. Moderação e Admin | [`08-moderacao-e-admin.png`](diagramas/08-moderacao-e-admin.png) |
+
+  Legenda das elipses: amarelo é caso de uso iniciado por um ator humano; verde é executado automaticamente pelo Sistema; cinza tracejado é caso de uso de outro pacote, mostrado só para indicar o relacionamento.
 - **Especificação:** [`especificacao-casos-de-uso.pdf`](especificacao-casos-de-uso.pdf), com finalidade, atores, pré-condições, fluxo principal e fluxos alternativos de cada caso de uso (cards [ETI-8](https://kaueamaral96.atlassian.net/browse/ETI-8) e [ETI-24](https://kaueamaral96.atlassian.net/browse/ETI-24))
 - **Planilha de trabalho:** [Google Sheets](https://docs.google.com/spreadsheets/d/1kWNyoly5FkJhXvtluj5rvOOADmTCcx7xr4R0tdRfUdw/edit?usp=sharing), uma aba por caso de uso
 - **Página no Confluence:** [Documentação de Casos de Uso](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/7667713)
