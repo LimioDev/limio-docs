@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Registrar denúncia
+Finalidade/Objetivo:;Abrir denúncia de anúncio, chat, perfil ou serviço (mau comportamento, fraude, serviço não realizado, não pagamento fora da plataforma). A denúncia não move dinheiro, não reabre o serviço e não obriga o LIMIO a mediar o conflito.
+Ator(es):;Usuário autenticado (Prestador ou Solicitante, conforme o caso)
+Pré-Condições:;Alvo (perfil, anúncio, chat ou serviço) acessível ao denunciante.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário acessa a central de denúncias e escolhe o alvo.;
+;2. O sistema apresenta motivos (incluindo mau comportamento, fraude, serviço não realizado e não pagamento do valor combinado fora da plataforma) e evidência opcional.
+3. O usuário informa motivo, anexa evidência se desejar e confirma.;
+;4. O sistema abre a denúncia na fila admin. Não altera a máquina de estados do anúncio para reabrir o serviço e não transfere valor .
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. Prestador denuncia não pagamento após Concluido (ou em AguardandoValidacao).;
+;"2. O sistema registra a denúncia; admin não marca “pago/não pago” nem media o PIX."
+3. Solicitante denuncia serviço não feito.;
+;4. O sistema registra da mesma forma, sem estorno.

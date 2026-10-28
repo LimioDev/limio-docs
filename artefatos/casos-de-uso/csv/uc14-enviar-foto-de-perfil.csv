@@ -1,0 +1,13 @@
+﻿Nome do Caso de Uso;Enviar foto de perfil
+Finalidade/Objetivo:;Atualizar a foto pública usada no mural (nome + foto) e no perfil.
+Ator(es):;Usuário autenticado
+Pré-Condições:;Sessão válida. Arquivo nos tipos e tamanhos aceitos.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário seleciona uma imagem e envia.;
+;2. O sistema valida tipo/tamanho, processa o upload e passa a exibir a foto no mural e no perfil público.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário envia arquivo inválido.;
+;2. O sistema recusa o upload e informa o erro.
+;3. O administrador remove a foto via moderação.

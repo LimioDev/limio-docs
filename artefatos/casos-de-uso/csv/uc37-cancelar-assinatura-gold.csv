@@ -1,0 +1,13 @@
+﻿Nome do Caso de Uso;Cancelar assinatura GOLD
+Finalidade/Objetivo:;Permitir que o prestador GOLD cancele a renovação de sua assinatura. O prestador permanece com o benefício GOLD até o fim do ciclo já pago, a partir daí, retorna ao plano FREE.
+Ator(es):;Prestador
+Pré-Condições:;Assinatura GOLD ativa.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador solicita o cancelamento da renovação do plano GOLD.;
+;2. O sistema cancela a renovação, mantém o status GOLD até o fim do período pago e notifica o prestador.
+;3. Ao final do ciclo, o sistema realiza o downgrade para FREE. Escolhas ocorridas enquanto o prestador ainda era GOLD não contam para o teto de 4, apenas novas escolhas feitas após o downgrade passam a consumir a cota.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O prestador reassina o plano GOLD antes do fim do ciclo vigente.;
+;2. O sistema mantém o status GOLD de forma contínua, sem interrupção.

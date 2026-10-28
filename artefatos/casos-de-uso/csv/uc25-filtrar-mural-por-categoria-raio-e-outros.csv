@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Filtrar mural por categoria, raio e Outros
+Finalidade/Objetivo:;Garantir que o mural liste apenas anúncios compatíveis: especialidade ou categoria Outros ou prestador com Outros, e distância ≤ raio.
+Ator(es):;Sistema (em nome do Prestador)
+Pré-Condições:;Especialidades e raio definidos no perfil prestador.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador abre o mural (UC24).;
+;2. O sistema aplica: (categoria ∈ especialidades ou categoria = Outros ou prestador possui Outros) e distância ≤ raio. Horários declarados são filtro opcional de UX, não bloqueio rígido na fase 1.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. Prestador só com especialidade elétrica não vê anúncio de limpeza, salvo se o anúncio for Outros.
+;2. Anúncio Outros aparece para quem tem a categoria correspondente ou possui Outros.
+3. O prestador aplica filtro de horário na UX.;
+;4. O sistema pode ocultar itens na interface, mas não é bloqueio rígido de match na fase 1.

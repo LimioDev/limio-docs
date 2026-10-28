@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Falha de cobrança e retry
+Finalidade/Objetivo:;Tratar a recusa da renovação da assinatura GOLD pelo gateway de pagamento, notificando o prestador sobre a falha na cobrança e realizando novas tentativas de pagamento de forma controlada. Caso todas as tentativas sejam recusadas, a assinatura é automaticamente alterada para o plano FREE. O sistema também garante que webhooks duplicados não resultem em cobranças duplicadas.
+Ator(es):;Sistema
+Pré-Condições:;Renovação da assinatura GOLD recusada pelo gateway de pagamento.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O gateway informa falha na renovação, via webhook/evento.;
+;2. O sistema registra a falha, notifica o prestador e agenda uma nova tentativa em fila.
+;3. Se a nova tentativa for bem-sucedida, o sistema mantém o status GOLD.
+;4. Após inúmeras tentativas parametrizáveis sem sucesso, o sistema realiza o downgrade do prestador para FREE.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O gateway reenvia o mesmo webhook de cobrança (duplicado).;
+;2. O sistema trata o evento de forma idempotente e não realiza a cobrança em duplicidade.

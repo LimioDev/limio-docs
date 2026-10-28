@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Empregador cancelar após combinação (≥ 24h)
+Finalidade/Objetivo:;Permitir cancelamento do empregador somente em Combinado com pelo menos 24h de antecedência da agenda vigente, estornando cota FREE, salvo dentro da carência pós-reagendamento.
+Ator(es):;Empregador
+Pré-Condições:;Anúncio em Combinado. Faltam ≥ 24h para a data/hora agendada vigente. Não houve reagendamento aceito nas últimas `carencia_pos_reagendamento` (default 24h).
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador solicita o cancelamento e confirma.;
+;2. O sistema verifica (≥ 24h em relação à agenda vigente e status Combinado), marca Cancelado, estorna a cota FREE se aplicável , deixa o chat em somente leitura e notifica o prestador . O lead já visto permanece no histórico do escolhido, mas o serviço encerra.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. Faltam menos de 24h para a agenda vigente.;
+;2. O sistema recusa o cancelamento.
+3. O anúncio está EmAndamento ou AguardandoValidacao.;
+;"4. O sistema recusa este fluxo; o empregador usa denúncia."
+5. O empregador cancela dentro da carência posterior a um reagendamento aceito.;
+;6. O sistema permite o cancelamento, desde que a antecedência de 24h em relação à data vigente seja respeitada, mas registra o motivo `CanceladoTardio`, não estorna a cota do prestador FREE e registra auditoria com a data anterior e a nova

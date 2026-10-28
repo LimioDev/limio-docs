@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Expirar anúncio sem combinação
+Finalidade/Objetivo:;Retirar do mural anúncios em AguardandoCandidatos cuja data/hora agendada já passou e que não possuem nenhuma aplicação.
+Ator(es):;Sistema
+Pré-Condições:;Anúncio em AguardandoCandidatos. Data/hora agendada já passou. Zero aplicações.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O job de expiração é disparado.;
+;2. O sistema verifica: status AguardandoCandidatos, data/hora passada e nenhuma aplicação.
+;3. O sistema marca Expirado, remove do mural, não altera cota e notifica o empregador.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. A data/hora ainda está no futuro: o sistema não expira.
+;"2. Já existe ao menos uma aplicação: o sistema não expira por esta regra; o empregador ainda pode escolher, recusar ou cancelar."
+;3. O anúncio já está Combinado, Concluido ou Cancelado: o sistema não reprocessa para Expirado.

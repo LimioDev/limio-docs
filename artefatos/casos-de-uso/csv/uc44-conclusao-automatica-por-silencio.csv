@@ -1,0 +1,15 @@
+﻿Nome do Caso de Uso;Conclusão automática por silêncio
+Finalidade/Objetivo:;Marcar Concluido quando ninguém move o anúncio após a agenda vigente (ou após check-out sem validação), sem exigir foto nem validação explícita neste fallback. Proposta de reagendamento pendente suspende a conclusão.
+Ator(es):;Sistema
+Pré-Condições:;"(a) Combinado ou EmAndamento, agora > agenda vigente + prazo pós-agenda (default 24h), sem validação, check-out nem cancelamento; ou (b) AguardandoValidacao e prazo de validação esgotado (default 24h após o check-out). Em ambos os casos: não existe proposta de reagendamento pendente. Após reagendamento aceito, a agenda vigente é a nova data."
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O job de silêncio é disparado.;
+;2. O sistema aplica e marca Concluido.
+;3. O sistema pode oferecer avaliação. Se não houve pagamento, o prestador denuncia Conflito financeiro permanece off-platform.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. Anúncio ainda AguardandoCandidatos.
+;2. Anúncio já Concluido ou Cancelado: o sistema não reprocessa.
+;3. Existe proposta de reagendamento pendente: o sistema adia a avaliação e não conclui o anúncio, até o aceite, a recusa ou a expiração da proposta (no máximo `prazo_resposta_reagendamento`).
+;4. A proposta é recusada ou expira: o job volta a considerar o anúncio na execução seguinte, contra a data original.

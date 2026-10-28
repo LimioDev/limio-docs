@@ -1,0 +1,12 @@
+﻿Nome do Caso de Uso;Encerrar demais aplicações após a escolha.
+Finalidade/Objetivo:;Após a combinação do anúncio, encerrar automaticamente as aplicações dos candidatos não escolhidos, colocar os respectivos chats em modo somente leitura e garantir que nenhum telefone ou endereço seja liberado para eles.
+Ator(es):;Sistema
+Pré-Condições:;UC31 concluído (Empregador escolher um prestador).
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. A escolha atômica do empregador é confirmada e persistida no sistema;
+;2. O sistema move as demais aplicações de Pendente para Encerrada, coloca os respectivos chats em somente leitura, impede novas aplicações naquele anúncio e não libera telefone/endereço completo aos não escolhidos.
+;3. O sistema notifica os candidatos não escolhidos de que o anúncio foi combinado com outro prestador.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. Um candidato que já estava Recusada antes da escolha permanece Recusada e não é transicionado para Encerrada.

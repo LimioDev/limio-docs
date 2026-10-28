@@ -1,0 +1,17 @@
+﻿Nome do Caso de Uso;Avaliar a outra parte
+Finalidade/Objetivo:;Após Concluido, permitir nota 1–5 (comentário opcional) de cada lado, uma vez por par por serviço. Não bloqueia o uso da plataforma.
+Ator(es):;Empregador ou Prestador
+Pré-Condições:;Anúncio Concluido. O ator ainda não avaliou aquele serviço.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O sistema oferece (ou o usuário abre) a avaliação da outra parte.;
+;2. O sistema apresenta nota 1–5 e comentário opcional.
+3. O ator informa a nota (comentário opcional) e confirma.;
+;4. O sistema grava a avaliação, recusa comentário sem nota, aceita nota sem comentário recalcula a média e a exibe no perfil se houver ≥ 1 nota.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O ator tenta avaliar o mesmo serviço pela segunda vez.;
+;2. O sistema recusa.
+3. O ator envia comentário sem nota.;
+;4. O sistema recusa.
+5. O ator escolhe pular.;

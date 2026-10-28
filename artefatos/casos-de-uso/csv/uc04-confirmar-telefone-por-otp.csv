@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Confirmar telefone por OTP
+Finalidade/Objetivo:;Verificar o telefone informado, condição para concluir o cadastro utilizável (criar anúncio ou aplicar).
+Ator(es):;Usuário em cadastro (ou usuário com telefone ainda não verificado)
+Pré-Condições:;CPF e e-mail válidos. Telefone informado. Cadastro ainda não utilizável para criar anúncio ou aplicar.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário solicita (ou o cadastro dispara) a confirmação do telefone.;
+;2. O sistema envia OTP por SMS.
+3. O usuário informa o código recebido.;
+;4. O sistema valida o OTP e marca o telefone como verificado.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário informa OTP expirado ou inválido, ou excede as tentativas.;
+;2. O sistema recusa a confirmação e permite novo envio, com rate limit.
+3. O usuário tenta criar anúncio ou aplicar sem telefone verificado.;
+;4. O sistema bloqueia a ação até a confirmação.

@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Confirmar e-mail
+Finalidade/Objetivo:;"Marcar o e-mail da conta como verificado. Login com senha pode ocorrer antes; criar anúncio e aplicar exigem e-mail confirmado."
+Ator(es):;Usuário
+Pré-Condições:;Conta criada. E-mail ainda não confirmado.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+Conta criada. E-mail ainda não confirmado.;
+;2. O sistema valida o token/código e marca email_verificado = true.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário tenta criar anúncio ou aplicar com e-mail ainda pendente.;
+;2. O sistema bloqueia a ação até a confirmação.
+3. O usuário usa link/código expirado ou inválido.;
+;4. O sistema recusa e oferece reenvio.

@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Visualizar mural com dados básicos
+Finalidade/Objetivo:;Exibir ao prestador (FREE ou GOLD) os anúncios compatíveis com os dados básicos do mural — sem endereço completo, telefone, e-mail ou WhatsApp.
+Ator(es):;Prestador (FREE ou GOLD)
+Pré-Condições:;Perfil prestador completo. Telefone e e-mail confirmados. Papel prestador ativo.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador abre o mural/radar.;
+;2. O sistema lista anúncios compatíveis com descrição, fotos, nome de exibição e foto do empregador, categoria, data/hora e bairro/região. GOLD e FREE veem os mesmos campos.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O prestador GOLD abre o mural.;
+;2. O sistema não antecipa telefone/endereço nem dá prioridade de listagem.
+3. O perfil prestador está incompleto.;
+;4. O sistema redireciona a UC12 antes de exibir o mural.

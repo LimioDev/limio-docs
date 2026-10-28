@@ -1,0 +1,21 @@
+﻿Nome do Caso de Uso;Empregador escolhe um prestador
+Finalidade/Objetivo:;Permitir que o empregador selecione, de forma atômica, um único candidato entre os prestadores com aplicação Pendente: trava o anúncio , consome a cota FREE do prestador escolhido quando aplicável e libera o lead (telefone/WhatsApp e endereço completo) somente para o escolhido.
+Ator(es):;Empregador
+Pré-Condições:;Anúncio em AguardandoCandidatos. Ao menos uma aplicação Pendente.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador lista os candidatos do anúncio e seleciona um.;
+;2. O sistema verifica se o prestador FREE selecionado ainda possui saldo de cota no mês calendário corrente.
+3. O empregador confirma a escolha.;
+;4. O sistema executa a transação atômica de escolha, o anúncio muda para Combinado, a aplicação escolhida muda para Escolhida, as demais aplicações Pendente mudam para Encerrada, incrementa a cota FREE do prestador se ele não estiver com GOLD ativo e libera o lead (telefone/WhatsApp e endereço completo) ao escolhido.
+;5. O sistema notifica o prestador escolhido e os não escolhidos.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. Duas requisições tentam escolher candidatos distintos no mesmo anúncio simultaneamente.;
+;2. Apenas a primeira requisição prevalece, a segunda recebe erro de conflito.
+3. Entre o momento da aplicação e o da escolha, a cota mensal do prestador FREE se esgota.;
+;4. O sistema recusa a escolha desse candidato e informa o empregador. Os demais candidatos permanecem disponíveis.
+5. O prestador escolhido está com assinatura GOLD ativa no instante da escolha.;
+;6. O sistema não incrementa a cota FREE dele.
+7. O empregador tenta realizar uma segunda escolha após o sucesso da primeira.;
+;8. O sistema recusa a operação, pois o anúncio já está Combinado.

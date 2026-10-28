@@ -1,0 +1,18 @@
+﻿Nome do Caso de Uso;Solicitante validar o serviço (presencial ou pela foto)
+Finalidade/Objetivo:;Confirmar que o serviço está feito (viu/testou no local ou analisou a foto). A validação marca Concluido e é o sinal para pagar o prestador fora do LIMIO.
+Ator(es):;Empregador / Solicitante
+Pré-Condições:;Combinado ou EmAndamento (validação presencial) ou AguardandoValidacao (validação pela foto).
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O solicitante acessa a validação do serviço.;
+;2. O sistema apresenta o modo aplicável (presencial sem exigir foto, ou foto do check-out) e deixa explícito que, ao validar, o solicitante deve pagar o prestador fora do LIMIO.
+3. O solicitante confirma a validação.;
+;4. O sistema marca Concluido, oferece avaliação e não rastreia se o PIX/dinheiro ocorreu.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O solicitante tenta validar à distância sem check-out com foto.;
+;2. O sistema recusa.
+3. O solicitante pagou presencialmente antes de validar no app.;
+;"4. O sistema ainda exige a validação no app para fechar o ciclo; não verifica se o pagamento ocorreu."
+5. Após Concluido, o prestador alega que não foi pago.;
+;6. O prestador usa (denúncia de não pagamento). O LIMIO não estorna nem media o valor .

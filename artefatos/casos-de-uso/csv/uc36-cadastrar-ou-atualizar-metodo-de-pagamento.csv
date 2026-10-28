@@ -1,0 +1,13 @@
+﻿Nome do Caso de Uso;Cadastrar ou atualizar método de pagamento
+Finalidade/Objetivo:;Tokenizar o cartão de crédito do prestador junto ao gateway de pagamento, exclusivamente para a assinatura GOLD. A plataforma não armazena PAN/CVV e este método nunca é usado para pagar o serviço combinado entre as partes.
+Ator(es):;Prestador
+Pré-Condições:;Prestador autenticado.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador acessa o cadastro ou a atualização do cartão.;
+;2. O sistema encaminha a tokenização ao gateway de pagamento.
+3. O prestador informa os dados do cartão diretamente no fluxo do gateway.;
+;4. O sistema persiste apenas o token retornado, disponível para a cobrança da assinatura e para retentativas.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. Em caso de falha do gateway, o sistema não armazena o PAN localmente e informa o erro ao prestador.

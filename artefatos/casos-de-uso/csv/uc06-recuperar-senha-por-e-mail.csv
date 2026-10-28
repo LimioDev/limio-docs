@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Recuperar senha por e-mail
+Finalidade/Objetivo:;Permitir que o usuário redefina a senha por link de uso único enviado ao e-mail cadastrado.
+Ator(es):;Usuário (não autenticado)
+Pré-Condições:;O usuário acessa a opção de recuperação de senha.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário solicita recuperação informando o e-mail.;
+;2. O sistema envia link de uso único com validade definida (ex.: 1 hora)
+3. O usuário abre o link e define a nova senha.;
+;4. O sistema valida o token, atualiza a senha e invalida o link.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário informa e-mail inexistente na base.;
+;2. O sistema responde de forma genérica (anti-enumeração), sem confirmar se o e-mail existe.
+3. O usuário usa link expirado ou já utilizado.;
+;4. O sistema recusa a redefinição.

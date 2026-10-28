@@ -1,0 +1,11 @@
+﻿Nome do Caso de Uso;Exibir média somente com avaliações
+Finalidade/Objetivo:;Garantir que o perfil público não mostre média fantasma (0,0) quando não há notas.
+Ator(es):;Qualquer usuário autenticado
+Pré-Condições:;O ator abre um perfil público.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário abre o perfil público.;
+;"2. O sistema aplica a regra que: se há zero avaliações, exibe “sem avaliações” (sem número de média); se ≥ 1, exibe média com uma casa decimal."
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. A primeira avaliação acaba de ser gravada: o sistema passa a exibir a média imediatamente.

@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Criar anúncio de serviço (sem valor)
+Finalidade/Objetivo:;"Publicar uma demanda pontual no mural. O sistema não exige valor monetário. Endereço completo fica interno; no mural aparece só bairro/região."
+Ator(es):;Empregador
+Pré-Condições:;Cadastro completo (telefone e e-mail confirmados). Papel empregador ativo. Data/hora pretendida no futuro. Categoria válida (incluindo Outros).
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador acessa “criar anúncio”.;
+;2. O sistema apresenta o formulário: categoria (incluindo Outros), descrição, data/hora, localização, observações e campos opcionais (tamanho do local, quantidade de pessoas). Valor não é obrigatório.
+3. O empregador preenche os dados (endereço salvo ou avulso) e publica.;
+;4. O sistema valida data/hora futura, cria o anúncio em AguardandoCandidatos e o torna visível no mural compatível.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O empregador informa data/hora no passado.;
+;2. O sistema recusa a criação.
+3. O empregador tenta criar anúncio sem telefone ou e-mail confirmados.;
+;4. O sistema recusa até UC04/UC05.

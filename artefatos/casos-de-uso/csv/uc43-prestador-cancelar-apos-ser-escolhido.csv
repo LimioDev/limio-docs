@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Prestador cancelar após ser escolhido
+Finalidade/Objetivo:;Permitir que o prestador escolhido cancele em Combinado ou EmAndamento. A cota não é estornada. O anúncio não reabre no mural.
+Ator(es):;Prestador escolhido
+Pré-Condições:;Anúncio em Combinado ou EmAndamento.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador escolhido solicita o cancelamento e confirma.;
+;2. O sistema marca Cancelado, não estorna cota , notifica o empregador e não republica o anúncio no mural (estado terminal).
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. Prestador FREE cancela sem executar o serviço.;
+;2. O sistema mantém a cota daquele mês consumida.
+3. O anúncio está AguardandoValidacao.;
+;"4. O sistema recusa o cancelamento; seguem validação, silêncio ou denúncia."
+5. Existe proposta de reagendamento pendente no serviço no momento do cancelamento.;
+;6. O sistema encerra a proposta sem efeito junto com o cancelamento. A cota permanece consumida (o motivo `CanceladoTardio` não se aplica ao prestador).

@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Prestador iniciar serviço
+Finalidade/Objetivo:;Permitir que o prestador escolhido registre manualmente o início da execução do serviço. A transição de status não ocorre automaticamente no horário agendado vigente.
+Ator(es):;Prestador
+Pré-Condições:;Anúncio em Combinado. Aplicação do prestador em Escolhida.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+"1. O prestador escolhido marca ""iniciar/cheguei"".";
+;2. O sistema altera o status do anúncio para EmAndamento e notifica o empregador. A partir deste ponto, o empregador não pode mais cancelar o serviço e o reagendamento deixa de ser possível. Proposta pendente no momento do início é encerrada sem efeito.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. Um prestador não escolhido tenta marcar o início do serviço.;
+;2. O sistema recusa a operação.
+3. O solicitante valida o serviço presencialmente sem que este passo tenha sido realizado.;
+;4. O sistema aceita a validação diretamente a partir de Combinado, sem exigir o registro de início.

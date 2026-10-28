@@ -1,0 +1,12 @@
+﻿Nome do Caso de Uso;Cancelar anúncio antes da escolha
+Finalidade/Objetivo:;Encerrar o anúncio livremente em AguardandoCandidatos, sem consumir cota de ninguém.
+Ator(es):;Empregador (dono do anúncio)
+Pré-Condições:;Anúncio em AguardandoCandidatos.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador solicita o cancelamento e confirma.;
+;2. O sistema marca o anúncio Cancelado, move aplicações Pendente para Encerrada, deixa chats em somente leitura e não altera cota.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O anúncio já está Combinado.;
+;"2. Este caso de uso não se aplica; o empregador deve cancelar após combinação, se ≥ 24h para a agenda vigente."

@@ -1,0 +1,12 @@
+﻿Nome do Caso de Uso;Desistir da aplicação
+Finalidade/Objetivo:;Permitir que o prestador cancele a própria candidatura enquanto estiver Pendente, sem consumo de cota.
+Ator(es):;Prestador
+Pré-Condições:;Aplicação no status Pendente.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador seleciona desistir da candidatura e confirma.;
+;2. O sistema marca a aplicação Encerrada por desistência, deixa o chat em somente leitura e não altera cota. O candidato some da lista ativa do empregador.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O prestador já foi escolhido (Escolhida) e tenta desistir.;
+;"2. O sistema recusa; o prestador deve usar UC43 (cancelar após ser escolhido)."

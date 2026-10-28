@@ -1,0 +1,15 @@
+﻿Nome do Caso de Uso;Bloquear aplicação com cota esgotada
+Finalidade/Objetivo:;Impedir que um prestador FREE que já atingiu o teto de 4 escolhas no mês calendário corrente aplique para novos anúncios, apresentando uma chamada para ação (CTA) de assinatura GOLD.
+Ator(es):;Prestador
+Pré-Condições:;O prestador já teve 4 escolhas confirmadas no mês calendário corrente. O prestador não possui assinatura GOLD ativa.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador FREE tenta aplicar para um anúncio.;
+;2. O sistema recusa a aplicação, informa que a cota mensal foi esgotada e apresenta CTA para assinatura GOLD. O anúncio permanece inalterado.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O prestador assina o plano GOLD ainda no mesmo mês (UC35) e tenta aplicar novamente.;
+;2. O sistema permite a aplicação, sem teto de cota.
+;3. Ao virar o mês (dia 1, 00:00 ), o sistema zera o contador de cota FREE e libera novas aplicações.
+4. Existe aplicação Pendente de mês anterior e a cota já se esgotou no intervalo.;
+;5. O sistema não apaga a aplicação pendente, mas recusa a escolha desse candidato.
