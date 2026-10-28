@@ -96,15 +96,7 @@ Exportados da planilha em 27/10/2026. Separador `;` e acentos em UTF-8, para abr
 | UC51 | Propor reagendamento do serviço | Empregador ou Prestador escolhido | [`uc51-propor-reagendamento-do-servico.csv`](csv/uc51-propor-reagendamento-do-servico.csv) |
 | UC52 | Responder proposta de reagendamento | Contraparte (Empregador ou Prestador escolhido) | [`uc52-responder-proposta-de-reagendamento.csv`](csv/uc52-responder-proposta-de-reagendamento.csv) |
 
-O UC16 não existe: a numeração pula do UC15 para o UC17 desde a primeira versão da planilha.
 
-## Pontos a revisar na planilha
-
-Os CSVs mantêm o texto da planilha como está. Na exportação apareceram três pontos que valem uma revisão:
-
-- **UC05 (Confirmar e-mail):** o primeiro passo do fluxo principal repete a pré-condição ("Conta criada. E-mail ainda não confirmado.") em vez da ação do usuário.
-- **UC07 (Alterar senha autenticado):** falta o título "Fluxo Alternativo" antes dos passos alternativos. No `casos-de-uso-passos.csv` esses passos foram marcados como alternativos.
-- **UC08 (Logout do dispositivo):** o fluxo alternativo está vazio.
 
 ## Diferenças conhecidas em relação ao código
 
