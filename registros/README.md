@@ -14,4 +14,4 @@ Os dois endereços abrem o healthcheck da API: [api-dev.limio.dev.br/actuator/he
 
 - [ ] `limio-dev-br-whois.png`: print da consulta do domínio no [Registro.br](https://registro.br) (titular, data de criação e expiração)
 - [ ] `limio-dev-br-painel.png`: print do painel do domínio com os servidores DNS
-- [ ] `limio-dev-br-dns.png`: print dos registros que apontam `api` e `api-dev` para a Railway
+
