@@ -6,19 +6,6 @@
 
 **Alterações da 1.3:** incorporação das decisões de Acesso e Identidade tomadas até 06/10 e alinhamento com o DER de 06/10. Novo **RF70** (política de senha). Prazos e limites definidos em RF05, RF06, RF07 e RF08. Encerramento de sessões em RF08 e RF09. Detalhamento da exclusão de conta (RF13, RNF02) e das preferências de notificação e opt-in de WhatsApp (RF01, RF19). RF59 passa a recusar o login de conta suspensa. CPF incluído entre os dados sensíveis (RNF03). Limites de segurança referenciados no RNF04. Glossário: papel ativo por conta e status da conta. Revisão de texto em RB12, RB19 e RNF13.
 
-> [!WARNING]
-> **Pontos em aberto com o tech lead (não alterados nesta versão):**
->
-> - **RNF02:** a rotina diária de limpeza não anonimiza contas sem login há 5 anos. Incluir na rotina ou retirar do RNF.
->
-> - **RNF10:** o app é Expo mobile. Confirmar se a web responsiva vale para a fase 1.
->
-> - **RNF01:** a tabela `sessao` não tem coluna de expiração. Definir validade e rotação do refresh token.
->
-> - **Administrador:** nenhum requisito define como o admin entra; o papel `ADMIN` e a entidade `Administrador` coexistem no DER.
->
->
-
 **Alterações da 1.2:** remoção do RF20 (listar sessões ativas) do escopo da fase 1 — a gestão de sessões e dispositivos deixa de ser requisito do produto. O encerramento de sessão continua coberto pelo RF10 (logout do dispositivo atual) e pelo RNF01. O número RF20 passa a não ser utilizado, conforme a regra de identificadores estáveis da seção 3.
 
 **Alterações da 1.1:** separação entre edição unilateral do anúncio (RF26) e reagendamento consensual do serviço combinado (RF69, RB35, RB36). Novos parâmetros de reagendamento no RF68. Ajustes de consistência em RB08, RB09, RB17, RB27 e RB31. Complemento: RB35 (e RF69) admitem no máximo uma proposta após a data vigente, para o job de silêncio não ficar suspenso em cadeia.
@@ -30,9 +17,9 @@
 | Ator                         | Descrição                                                                                            |
 |------------------------------|------------------------------------------------------------------------------------------------------|
 | **Usuário**                  | Pessoa física com conta única (CPF + e-mail). Pode alternar papéis.                                  |
-| **Empregador (Solicitante)** | Papel que cria anúncios, recebe aplicações, conversa e escolhe um prestador.                         |
+| **Empregador**               | Papel que cria anúncios, recebe aplicações, conversa e escolhe um prestador.                         |
 | **Prestador**                | Papel que vê o mural, aplica, conversa e executa o serviço se for escolhido.                         |
-| **Prestador FREE**           | Prestador sem assinatura GOLD ativa. Teto de 4 serviços *escolhidos* por mês calendário.             |
+| **Prestador FREE**           | Prestador sem assinatura GOLD ativa. Teto de 4 serviços *escolhidos* por mês calendário.             |  
 | **Prestador GOLD**           | Prestador com assinatura GOLD ativa. Combinações ilimitadas. Mesma visibilidade de mural que o FREE. |
 | **Administrador**            | Operador interno que modera denúncias, avaliações e contas, e acompanha volumetria.                  |
 | **Sistema**                  | Jobs, notificações, expiração, cobrança recorrente e auditoria.                                      |
