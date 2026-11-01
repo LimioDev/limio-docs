@@ -15,7 +15,7 @@
   | 8. Moderação e Admin | [`08-moderacao-e-admin.png`](diagramas/08-moderacao-e-admin.png) |
 
   Legenda das elipses: amarelo é caso de uso iniciado por um ator humano; verde é executado automaticamente pelo Sistema; cinza tracejado é caso de uso de outro pacote, mostrado só para indicar o relacionamento.
-- **Especificação:** [`especificacao-casos-de-uso.pdf`](especificacao-casos-de-uso.pdf), com finalidade, atores, pré-condições, fluxo principal e fluxos alternativos de cada caso de uso (cards [ETI-8](https://kaueamaral96.atlassian.net/browse/ETI-8) e [ETI-24](https://kaueamaral96.atlassian.net/browse/ETI-24))
+- **Especificação:** os 51 casos de uso em CSV, na seção "Arquivos CSV" abaixo, com finalidade, atores, pré-condições, fluxo principal e fluxos alternativos de cada um.
 - **Planilha de trabalho:** [Google Sheets](https://docs.google.com/spreadsheets/d/1kWNyoly5FkJhXvtluj5rvOOADmTCcx7xr4R0tdRfUdw/edit?usp=sharing), uma aba por caso de uso
 - **Página no Confluence:** [Documentação de Casos de Uso](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/7667713)
 
