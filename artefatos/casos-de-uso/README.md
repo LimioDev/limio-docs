@@ -15,6 +15,8 @@
   | 8. Moderação e Admin | [`08-moderacao-e-admin.png`](diagramas/08-moderacao-e-admin.png) |
 
   Legenda das elipses: amarelo é caso de uso iniciado por um ator humano; verde é executado automaticamente pelo Sistema; cinza tracejado é caso de uso de outro pacote, mostrado só para indicar o relacionamento.
+
+  O UC16 (Gerenciar sessões e dispositivos) saiu do escopo na versão 1.2 dos requisitos (RF20). Ele ainda aparece desenhado na página 2 do diagrama, mas não tem especificação nem CSV.
 - **Especificação:** os 51 casos de uso em CSV, na seção "Arquivos CSV" abaixo, com finalidade, atores, pré-condições, fluxo principal e fluxos alternativos de cada um.
 - **Planilha de trabalho:** [Google Sheets](https://docs.google.com/spreadsheets/d/1kWNyoly5FkJhXvtluj5rvOOADmTCcx7xr4R0tdRfUdw/edit?usp=sharing), uma aba por caso de uso
 - **Página no Confluence:** [Documentação de Casos de Uso](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/7667713)
@@ -74,7 +76,7 @@ Exportados da planilha em 27/10/2026. Separador `;` e acentos em UTF-8, para abr
 | UC29 | Recusar um candidato | Empregador | [`uc29-recusar-um-candidato.csv`](csv/uc29-recusar-um-candidato.csv) |
 | UC30 | Conversar no chat após aplicar | Empregador e Prestador candidato | [`uc30-conversar-no-chat-apos-aplicar.csv`](csv/uc30-conversar-no-chat-apos-aplicar.csv) |
 | UC31 | Empregador escolhe um prestador | Empregador | [`uc31-empregador-escolhe-um-prestador.csv`](csv/uc31-empregador-escolhe-um-prestador.csv) |
-| UC32 | Encerrar demais aplicações após a escolha. | Sistema | [`uc32-encerrar-demais-aplicacoes-apos-a-escolha.csv`](csv/uc32-encerrar-demais-aplicacoes-apos-a-escolha.csv) |
+| UC32 | Encerrar demais aplicações após a escolha | Sistema | [`uc32-encerrar-demais-aplicacoes-apos-a-escolha.csv`](csv/uc32-encerrar-demais-aplicacoes-apos-a-escolha.csv) |
 | UC33 | Consumir cota FREE na escolha | Sistema | [`uc33-consumir-cota-free-na-escolha.csv`](csv/uc33-consumir-cota-free-na-escolha.csv) |
 | UC34 | Bloquear aplicação com cota esgotada | Prestador | [`uc34-bloquear-aplicacao-com-cota-esgotada.csv`](csv/uc34-bloquear-aplicacao-com-cota-esgotada.csv) |
 | UC35 | Assinar plano GOLD | Prestador | [`uc35-assinar-plano-gold.csv`](csv/uc35-assinar-plano-gold.csv) |
@@ -95,8 +97,6 @@ Exportados da planilha em 27/10/2026. Separador `;` e acentos em UTF-8, para abr
 | UC50 | Dashboard administrativo | Administrador | [`uc50-dashboard-administrativo.csv`](csv/uc50-dashboard-administrativo.csv) |
 | UC51 | Propor reagendamento do serviço | Empregador ou Prestador escolhido | [`uc51-propor-reagendamento-do-servico.csv`](csv/uc51-propor-reagendamento-do-servico.csv) |
 | UC52 | Responder proposta de reagendamento | Contraparte (Empregador ou Prestador escolhido) | [`uc52-responder-proposta-de-reagendamento.csv`](csv/uc52-responder-proposta-de-reagendamento.csv) |
-
-
 
 ## Diferenças conhecidas em relação ao código
 

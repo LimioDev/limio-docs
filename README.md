@@ -22,7 +22,7 @@ O trabalho do dia a dia fica nos dois repositórios de código. Os branches de d
 
 | Item pedido | Onde está | Resumo |
 | --- | --- | --- |
-| Estimativa de horas do produto | [`estimativa/`](estimativa/) | **1.001 h** estimadas para os 110 cards do MVP; **405,74 h** trabalhadas até 01/11, medidas pelo Clockify. Em [CSV](estimativa/estimativa-horas.csv) e em [Markdown](estimativa/estimativa-horas.md). |
+| Estimativa de horas do produto | [`estimativa/`](estimativa/) | **1.020,5 h** estimadas para os 115 cards do MVP; **405,74 h** trabalhadas até 01/11, medidas pelo Clockify. Em [CSV](estimativa/estimativa-horas.csv) e em [Markdown](estimativa/estimativa-horas.md). |
 | Artefatos | [`artefatos/`](artefatos/) | Requisitos (v1.3), casos de uso, diagrama de classes, DER, 13 diagramas de atividade e backlog de user stories. |
 | Design | [`design/`](design/) | Fundamentos visuais, mapa das telas e as 90 telas do protótipo (exportação de 27/10), separadas por módulo. |
 | System design | [`system-design/`](system-design/system-design.md) | Arquitetura, módulos, fluxos, dados, segurança, infraestrutura e as 3 ADRs. |
@@ -36,7 +36,7 @@ O trabalho do dia a dia fica nos dois repositórios de código. Os branches de d
 ├── README.md                     este índice
 ├── equipe.md                     papéis, horas e entregas por pessoa
 ├── estimativa/
-│   ├── estimativa-horas.csv      110 cards: estimativa, trabalhado, faixa ±30% e saldo
+│   ├── estimativa-horas.csv      115 cards: estimativa, trabalhado, faixa ±30% e saldo
 │   ├── estimativa-horas.md       método, resumos e tabela completa
 │   └── horas-por-pessoa.csv      horas do Clockify por pessoa e por card
 ├── artefatos/
@@ -64,7 +64,7 @@ O trabalho do dia a dia fica nos dois repositórios de código. Os branches de d
 | --- | --- | --- | --- |
 | Inicial | 05/08 – 19/08 | Requisitos, regras de negócio e casos de uso | Concluída |
 | 2 | 20/08 – 31/08 | DER, Termos de Uso e Política de Privacidade | Concluída |
-| 3 | 31/08 – 14/09 | Repositórios, diagrama de casos de uso, agente de validação de código | Concluída |
+| 3 | 01/09 – 14/09 | Repositórios, diagrama de casos de uso, agente de validação de código | Concluída |
 | 4 | 15/09 – 11/10 | Arquitetura (ADR-0001), Railway, protótipo, diagramas de classes e de atividade | Concluída |
 | 5 | 12/10 – 25/10 | Login e sessão, cadastro no app, senhas, preferências, perfis de Empregador e Prestador, foto | Concluída |
 | 6 | 27/10 – 08/11 | Ciclo principal: anúncio, mural, candidatura, chat, escolha, execução, validação e avaliação | Em andamento |

@@ -7,16 +7,17 @@
 
 | Indicador | Valor |
 | --- | ---: |
-| Total estimado do produto (MVP) | **1.001 h** |
-| Horas trabalhadas (Clockify) | 405,74 h (40,5%) |
+| Total estimado do produto (MVP) | **1.020,5 h** |
+| Horas trabalhadas (Clockify) | 405,74 h (39,8%) |
 | Horas trabalhadas em cards do backlog | 403,69 h (mais 2,05 h sem card) |
-| Saldo a fazer | 636,83 h |
-| Cards | 110 |
-| Cards dentro da faixa de ±30% | 32 |
+| Saldo (estimado − trabalhado, todos os cards) | 656,33 h |
+| Saldo só dos cards ainda não concluídos | 525,01 h |
+| Cards | 115 |
+| Cards dentro da faixa de ±30% | 33 |
 | Cards acima de 130% | 7 (ETI-10, ETI-37, ETI-42, ETI-50, ETI-52, ETI-64, ETI-76) |
-| Cards concluídos abaixo de 70% | 12 (ETI-4, ETI-23, ETI-27, ETI-40, ETI-44, ETI-51, ETI-53, ETI-59, ETI-60, ETI-74, ETI-79, ETI-101) |
+| Cards concluídos abaixo de 70% | 11 (ETI-4, ETI-23, ETI-27, ETI-44, ETI-51, ETI-53, ETI-59, ETI-60, ETI-74, ETI-79, ETI-101) |
 | Cards em andamento, ainda abaixo de 70% | 9 |
-| Cards sem horas (não iniciados) | 50 |
+| Cards sem horas (não iniciados) | 55 |
 
 ## Como a estimativa foi feita
 
@@ -24,11 +25,12 @@
 2. **Cards que já tinham horas na época da estimativa:** a estimativa foi escolhida para que as horas fiquem entre 70% e 130% dela.
 3. **Cards ainda não iniciados:** estimados pelo escopo da descrição do card (quantidade de telas, cenários de teste, rotinas automáticas, integrações externas e pendências).
 4. **Referência do próprio time:** mediana de 7,2 h por card de back-end e 4,3 h por card de front-end, medida nos cards já concluídos.
-5. **Fechamento:** as estimativas base foram multiplicadas por um fator único (1,12) para fechar o total combinado pelo time de 1.000 h, e arredondadas para 0,5 h. Depois entrou a subtarefa ETI-120 (1 h), o que levou o total a 1.001 h.
+5. **Fechamento:** as estimativas base foram multiplicadas por um fator único (1,12) para fechar o total combinado pelo time de 1.000 h, e arredondadas para 0,5 h (exceções: ETI-10 e ETI-25). Depois entrou a subtarefa ETI-120 (1 h), o que levou o total a 1.001 h.
+6. **Revisão de 01/11:** a estimativa do ETI-40 foi corrigida de 126,5 h para 6 h (veja abaixo) e entraram cinco cards da Sprint 7 que faltavam no backlog: homologação do MVP (ETI-121, 40 h), correção dos bugs da homologação (ETI-122, 40 h), publicação na Play Store (ETI-123, 15 h), deploy de produção (ETI-124, 20 h) e apresentação e documentação final (ETI-125, 25 h). O total passou a 1.020,5 h.
 
 **Maiores incertezas:** chat em tempo real (ETI-101), assinatura GOLD com gateway de pagamento ainda não escolhido (ETI-81 e ETI-85) e envio de notificações em quatro canais (ETI-112).
 
-**Leitura dos desvios:** a maior parte dos cards fora da faixa são cards concluídos com menos horas que o estimado. Isso indica estimativa alta para esses cards e será usado na reestimativa da Sprint 7.
+**Leitura dos desvios:** a maior parte dos cards fora da faixa são cards concluídos com menos horas que o estimado, ou seja, estimativas altas. Isso será usado ao estimar os próximos cards.
 
 ### De onde vêm as horas
 
@@ -36,6 +38,8 @@ As horas foram medidas pelo Clockify, o cronômetro que cada integrante usa ao t
 
 - **Andrey:** usou dois workspaces no Clockify ("kaueamaral96.atlassian.net" e "LIMIO"). As horas dele juntam os dois, contando uma vez só as entradas repetidas entre eles.
 - **Augusto:** o Clockify enviado trazia só o total de cada dia. Em quatro dias com dois cards (02/09, 08/09, 09/10 e 21/10), o total do dia foi dividido igualmente entre os dois. Em 02/09 a segunda entrada não tinha card e ficou como "sem card" (2,05 h). Uma entrada de outro projeto foi excluída.
+
+**Erro encontrado e corrigido em 01/11:** a estimativa do ETI-40 (fluxo de cadastro em 3 passos, front-end) tinha sido calibrada em 27/10 com as 112,97 h que estavam lançadas no Jira, o que levou a 126,5 h. A comparação com o Clockify mostrou que o lançamento estava errado e que o trabalho real foi de 5,43 h. A estimativa foi corrigida para 6 h. Esse erro foi o motivo de o Clockify passar a ser a fonte das horas.
 
 ### Regra da faixa ±30%
 
@@ -64,36 +68,37 @@ Soma do Clockify de cada integrante. Detalhe card a card em [`horas-por-pessoa.c
 | Sprint | Cards | Estimado (h) | Trabalhado (h) | Saldo (h) | % do estimado |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Sprint Inicial | 6 | 39,5 | 26,38 | 15,5 | 3,9% |
-| Sprint 2 | 5 | 28 | 22,8 | 7,21 | 2,8% |
-| Sprint 3 | 6 | 69,5 | 38,26 | 32,42 | 6,9% |
-| Sprint 4 | 6 | 104,5 | 100,74 | 12,48 | 10,4% |
-| Sprint 5 | 14 | 196,5 | 71,97 | 127,06 | 19,6% |
-| Sprint 6 | 43 | 324,5 | 143,54 | 203,66 | 32,4% |
-| Sprint 7 | 30 | 238,5 | 0 | 238,5 | 23,8% |
+| Sprint 2 | 5 | 28 | 22,8 | 7,21 | 2,7% |
+| Sprint 3 | 6 | 69,5 | 38,26 | 32,42 | 6,8% |
+| Sprint 4 | 6 | 104,5 | 100,74 | 12,48 | 10,2% |
+| Sprint 5 | 14 | 76 | 71,97 | 6,56 | 7,4% |
+| Sprint 6 | 43 | 324,5 | 143,54 | 203,66 | 31,8% |
+| Sprint 7 | 35 | 378,5 | 0 | 378,5 | 37,1% |
 
 ## Por status
 
 | Status | Cards | Estimado (h) | Trabalhado (h) | Saldo (h) | % do estimado |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| CONCLUIDO | 51 | 548,5 | 331,78 | 251,82 | 54,8% |
-| À TESTAR | 6 | 32 | 26,94 | 8,15 | 3,2% |
+| CONCLUIDO | 51 | 428 | 331,78 | 131,32 | 41,9% |
+| À TESTAR | 6 | 32 | 26,94 | 8,15 | 3,1% |
 | PARA AJUSTE | 2 | 14,5 | 11,14 | 4,68 | 1,4% |
-| AJUSTANDO | 5 | 62,5 | 28,64 | 33,86 | 6,2% |
-| EM PROGRESSO | 5 | 30 | 5,18 | 24,82 | 3% |
-| À FAZER | 41 | 313,5 | 0 | 313,5 | 31,3% |
+| AJUSTANDO | 5 | 62,5 | 28,64 | 33,86 | 6,1% |
+| EM PROGRESSO | 5 | 30 | 5,18 | 24,82 | 2,9% |
+| À FAZER | 46 | 453,5 | 0 | 453,5 | 44,4% |
 
 ## Por camada
 
 | Camada | Cards | Estimado (h) | Trabalhado (h) | Saldo (h) | % do estimado |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| AEP | 1 | 39 | 10,94 | 28,06 | 3,9% |
-| BACK-END | 45 | 415 | 144,59 | 287,33 | 41,5% |
-| DESIGN | 1 | 70,5 | 63,37 | 7,13 | 7% |
+| AEP | 1 | 39 | 10,94 | 28,06 | 3,8% |
+| BACK-END | 45 | 415 | 144,59 | 287,33 | 40,7% |
+| DESIGN | 1 | 70,5 | 63,37 | 7,13 | 6,9% |
 | DEV | 2 | 9 | 6,2 | 2,8 | 0,9% |
-| DOCS | 10 | 77,9 | 77,33 | 6,13 | 7,8% |
-| FRONT-END | 37 | 331,5 | 65,24 | 274,56 | 33,1% |
+| DOCS | 11 | 102,9 | 77,33 | 31,13 | 10,1% |
+| FRONT-END | 37 | 211 | 65,24 | 154,06 | 20,7% |
 | GESTÃO | 1 | 1 | 1 | 0 | 0,1% |
-| INFRA | 2 | 2,5 | 10,84 | 0,38 | 0,2% |
+| INFRA | 4 | 37,5 | 10,84 | 35,38 | 3,7% |
+| QA | 2 | 80 | 0 | 80 | 7,8% |
 | REUNIÃO | 6 | 36,5 | 19,6 | 16,9 | 3,6% |
 | SUBTAREFA | 5 | 18,1 | 4,56 | 13,54 | 1,8% |
 
@@ -131,7 +136,7 @@ Soma do Clockify de cada integrante. Detalhe card a card em [`horas-por-pessoa.c
 | [ETI-37](https://kaueamaral96.atlassian.net/browse/ETI-37) | INFRA | Sprint 4 | CONCLUIDO | [INFRA] Subir limio-api + Postgres na Railway (ambientes dev e prod) | 1 | 9,73 | Fora da faixa | 0 |
 | [ETI-38](https://kaueamaral96.atlassian.net/browse/ETI-38) | FRONT-END | Sprint 5 | CONCLUIDO | [auth] [FRONT-END] Tela de login, sessão do app, logout e seletor de papel | 4 | 3,58 | OK | 0,42 |
 | [ETI-39](https://kaueamaral96.atlassian.net/browse/ETI-39) | FRONT-END | Sprint 5 | CONCLUIDO | [auth] [FRONT-END] Telas de solicitar recuperação e de alterar senha | 8 | 7,46 | OK | 0,54 |
-| [ETI-40](https://kaueamaral96.atlassian.net/browse/ETI-40) | FRONT-END | Sprint 5 | CONCLUIDO | [auth] [FRONT-END] Fluxo de cadastro em 3 passos | 126,5 | 5,43 | Fora da faixa | 121,07 |
+| [ETI-40](https://kaueamaral96.atlassian.net/browse/ETI-40) | FRONT-END | Sprint 5 | CONCLUIDO | [auth] [FRONT-END] Fluxo de cadastro em 3 passos | 6 | 5,43 | OK | 0,57 |
 | [ETI-41](https://kaueamaral96.atlassian.net/browse/ETI-41) | FRONT-END | Sprint 5 | CONCLUIDO | [conta] [FRONT-END] Toggles de notificação em Ajustes | 2 | 2,03 | OK | 0 |
 | [ETI-42](https://kaueamaral96.atlassian.net/browse/ETI-42) | FRONT-END | Sprint 5 | CONCLUIDO | [conta] [FRONT-END] Tela "Encerrar conta" | 4,5 | 7 | Fora da faixa | 0 |
 | [ETI-44](https://kaueamaral96.atlassian.net/browse/ETI-44) | SUBTAREFA | Sprint 6 | CONCLUIDO | remodelar estrutura de diretorio, ADR e INCONSISTENCIA DE CPNJ | 9 | 4,56 | Fora da faixa | 4,44 |
@@ -211,4 +216,9 @@ Soma do Clockify de cada integrante. Detalhe card a card em [`horas-por-pessoa.c
 | [ETI-118](https://kaueamaral96.atlassian.net/browse/ETI-118) | FRONT-END | Sprint 7 | À FAZER | [administracao] [FRONT-END] Área do admin: fila de denúncias, análise, sanção e dashboard | 16 | 0 | Sem lançamento | 16 |
 | [ETI-119](https://kaueamaral96.atlassian.net/browse/ETI-119) | SUBTAREFA | Sprint 6 | CONCLUIDO | Remover .env do front end | 1 | 0 | Sem lançamento | 1 |
 | [ETI-120](https://kaueamaral96.atlassian.net/browse/ETI-120) | SUBTAREFA | Sprint 6 | CONCLUIDO | atualizar secure e cors do projeto para teste local | 1 | 0 | Sem lançamento | 1 |
-| **Total** | | | | **110 cards** | **1.001** | **403,69** | | **636,83** |
+| [ETI-121](https://kaueamaral96.atlassian.net/browse/ETI-121) | QA | Sprint 7 | À FAZER | [QA] Homologação de ponta a ponta dos fluxos do MVP | 40 | 0 | Sem lançamento | 40 |
+| [ETI-122](https://kaueamaral96.atlassian.net/browse/ETI-122) | QA | Sprint 7 | À FAZER | [QA] Correção dos bugs encontrados na homologação | 40 | 0 | Sem lançamento | 40 |
+| [ETI-123](https://kaueamaral96.atlassian.net/browse/ETI-123) | INFRA | Sprint 7 | À FAZER | [INFRA] Publicação do app na Play Store | 15 | 0 | Sem lançamento | 15 |
+| [ETI-124](https://kaueamaral96.atlassian.net/browse/ETI-124) | INFRA | Sprint 7 | À FAZER | [INFRA] Deploy de produção: develop para main, migrations, variáveis e smoke test | 20 | 0 | Sem lançamento | 20 |
+| [ETI-125](https://kaueamaral96.atlassian.net/browse/ETI-125) | DOCS | Sprint 7 | À FAZER | [DOCS] Apresentação e documentação final da entrega | 25 | 0 | Sem lançamento | 25 |
+| **Total** | | | | **115 cards** | **1.020,5** | **403,69** | | **656,33** |

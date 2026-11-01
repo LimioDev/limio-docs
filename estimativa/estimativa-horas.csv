@@ -29,7 +29,7 @@ ETI-36;Tarefa;BACK-END;Sprint 6;AJUSTANDO;Augusto Ogawa;[conta] [BACK-END] Encer
 ETI-37;Tarefa;INFRA;Sprint 4;CONCLUIDO;Augusto Ogawa;[INFRA] Subir limio-api + Postgres na Railway (ambientes dev e prod);1;9,73;9,7256;Fora da faixa;0
 ETI-38;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[auth] [FRONT-END] Tela de login, sessão do app, logout e seletor de papel;4;3,58;0,8947;OK;0,42
 ETI-39;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[auth] [FRONT-END] Telas de solicitar recuperação e de alterar senha;8;7,46;0,9327;OK;0,54
-ETI-40;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Augusto Ogawa;[auth] [FRONT-END] Fluxo de cadastro em 3 passos;126,5;5,43;0,043;Fora da faixa;121,07
+ETI-40;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Augusto Ogawa;[auth] [FRONT-END] Fluxo de cadastro em 3 passos;6;5,43;0,9056;OK;0,57
 ETI-41;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[conta] [FRONT-END] Toggles de notificação em Ajustes;2;2,03;1,0144;OK;0
 ETI-42;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;"[conta] [FRONT-END] Tela ""Encerrar conta""";4,5;7;1,5556;Fora da faixa;0
 ETI-44;Subtarefa;SUBTAREFA;Sprint 6;CONCLUIDO;Augusto Ogawa;remodelar estrutura de diretorio, ADR e INCONSISTENCIA DE CPNJ;9;4,56;0,5062;Fora da faixa;4,44
@@ -109,3 +109,8 @@ ETI-117;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[administracao] [BA
 ETI-118;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);[administracao] [FRONT-END] Área do admin: fila de denúncias, análise, sanção e dashboard;16;0;0;Sem lançamento;16
 ETI-119;Subtarefa;SUBTAREFA;Sprint 6;CONCLUIDO;Augusto Ogawa;Remover .env do front end;1;0;0;Sem lançamento;1
 ETI-120;Subtarefa;SUBTAREFA;Sprint 6;CONCLUIDO;Augusto Ogawa;atualizar secure e cors do projeto para teste local;1;0;0;Sem lançamento;1
+ETI-121;Tarefa;QA;Sprint 7;À FAZER;(sem responsável);[QA] Homologação de ponta a ponta dos fluxos do MVP;40;0;0;Sem lançamento;40
+ETI-122;Tarefa;QA;Sprint 7;À FAZER;(sem responsável);[QA] Correção dos bugs encontrados na homologação;40;0;0;Sem lançamento;40
+ETI-123;Tarefa;INFRA;Sprint 7;À FAZER;(sem responsável);[INFRA] Publicação do app na Play Store;15;0;0;Sem lançamento;15
+ETI-124;Tarefa;INFRA;Sprint 7;À FAZER;(sem responsável);[INFRA] Deploy de produção: develop para main, migrations, variáveis e smoke test;20;0;0;Sem lançamento;20
+ETI-125;Tarefa;DOCS;Sprint 7;À FAZER;(sem responsável);[DOCS] Apresentação e documentação final da entrega;25;0;0;Sem lançamento;25

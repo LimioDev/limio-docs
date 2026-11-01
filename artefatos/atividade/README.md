@@ -5,7 +5,6 @@ Um diagrama por fluxo do app, com raias (quem faz) e decisões (o que muda o cam
 - **Página no Confluence:** [Diagramas de Atividade](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/28442625), com a descrição completa de cada fluxo
 - **Card original:** [ETI-18](https://kaueamaral96.atlassian.net/browse/ETI-18) · Criação de Diagrama de Atividade (Astah, setembro)
 - **Versão atual:** 27/10/2026, redesenhada a partir do Astah e alinhada aos cards das Sprints 5 a 7 e ao código
-- **Arquivos originais do Astah:** [`astah/`](astah/)
 
 ## Índice
 

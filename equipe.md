@@ -22,7 +22,7 @@ A composição oficial do time não muda até o fim do período letivo. As funç
 
 | Onde | Como identificar |
 | --- | --- |
-| Jira | Cada tarefa é um card `ETI-<número>`, com responsável, horas lançadas e critérios de aceitação. Cards de código vêm em pares `[BACK-END]` e `[FRONT-END]`, com a tag do módulo no título (ex.: `[anuncio]`). |
+| Jira | Cada tarefa é um card `ETI-<número>`, com responsável e critérios de aceitação. Cards de código vêm em pares `[BACK-END]` e `[FRONT-END]`, com a tag do módulo no título (ex.: `[anuncio]`). |
 | Branch | `feature/<número do card>` (ex.: `feature/60` para o ETI-60). |
 | Pull request | Aberto da branch para a `develop`, com aprovação obrigatória de um dono do código (`.github/CODEOWNERS`). |
 | Documentação no código | Cada módulo da API tem `docs/features/TICKET-<número>-<descrição>.md`, com a regra pedida e a decisão técnica tomada. |
@@ -167,7 +167,7 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 
 ### Cards sem responsável
 
-37 cards ainda não têm responsável no Jira. Quase todos são da Sprint 7, que será distribuída no planejamento dela; os demais são tarefas antigas de documentação e reunião feitas em conjunto.
+42 cards ainda não têm responsável no Jira. Quase todos são da Sprint 7, que será distribuída no planejamento dela; os demais são tarefas antigas de documentação e reunião feitas em conjunto.
 
 ## Cerimônias
 

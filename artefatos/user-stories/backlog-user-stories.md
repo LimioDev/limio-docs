@@ -30,7 +30,7 @@
 
 ---
 
-# Módulo `auth`
+## Módulo `auth`
 
 Todas as histórias deste módulo já têm card no Jira. O texto completo está em `cards-jira-acesso-identidade.md` e no site de copia e cola.
 
@@ -133,7 +133,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo `conta`
+## Módulo `conta`
 
 ### US10 · [conta] Encerrar minha conta
 - **User Story:** Como um usuário autenticado, eu quero encerrar definitivamente minha conta, para que meus dados pessoais sejam anonimizados conforme a LGPD.
@@ -193,7 +193,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo `contratante`
+## Módulo `contratante`
 
 ### US15 · [contratante] Gerenciar meu perfil de Empregador
 - **User Story:** Como um Empregador, eu quero editar meu nome de exibição, foto e contatos, para que os prestadores me reconheçam.
@@ -231,7 +231,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo `prestador`
+## Módulo `prestador`
 
 ### US18 · [prestador] Preencher meu perfil de atuação
 - **User Story:** Como um Prestador, eu quero informar especialidades, raio, município-base e horários, para que eu veja no mural só os anúncios que combinam comigo.
@@ -356,7 +356,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo `anuncio`
+## Módulo `anuncio`
 
 ### US29 · [anuncio] Criar e publicar um anúncio
 - **User Story:** Como um Empregador, eu quero publicar uma demanda de serviço, para que prestadores próximos se candidatem.
@@ -472,7 +472,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo `servico`
+## Módulo `servico`
 
 ### US39 · [servico] Ver o serviço combinado
 - **User Story:** Como Empregador ou Prestador escolhido, eu quero ver os detalhes do serviço combinado com os contatos da outra parte, para que a gente se organize.
@@ -577,7 +577,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo `chat`
+## Módulo `chat`
 
 ### US48 · [chat] Conversar com a outra parte
 - **User Story:** Como Empregador ou Prestador candidato, eu quero conversar em tempo real, para que a gente combine escopo e valor.
@@ -614,7 +614,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo `perfil`
+## Módulo `perfil`
 
 ### US51 · [perfil] Enviar foto de perfil
 - **User Story:** Como usuário, eu quero colocar minha foto, para que as pessoas me reconheçam no mural e no perfil.
@@ -662,7 +662,7 @@ Todas as histórias deste módulo já têm card no Jira. O texto completo está 
 
 ---
 
-# Módulo a definir
+## Módulo a definir
 
 > Estas histórias não se encaixam com clareza nos 8 módulos atuais (notificações, moderação e administração). **Decisão do tech lead:** criar módulos novos ou distribuir nos existentes. A sugestão de módulo está ao lado de cada uma.
 
