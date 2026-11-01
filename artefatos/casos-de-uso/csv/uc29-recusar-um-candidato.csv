@@ -1,0 +1,12 @@
+﻿Nome do Caso de Uso;Recusar um candidato
+Finalidade/Objetivo:;Recusar uma aplicação Pendente sem escolher ninguém. Os demais candidatos permanecem.
+Ator(es):;Empregador
+Pré-Condições:;Aplicação no status Pendente. Anúncio em AguardandoCandidatos.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador seleciona um candidato e recusa.;
+;2. O sistema marca a aplicação Recusada, deixa o chat daquele par em somente leitura, mantém os demais candidatos e o anúncio em AguardandoCandidatos. Notifica o prestador recusado.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O empregador recusa o único candidato.;
+;"2. O sistema não escolhe ninguém; o anúncio segue AguardandoCandidatos."

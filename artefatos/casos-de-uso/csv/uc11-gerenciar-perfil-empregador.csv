@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Gerenciar perfil empregador
+Finalidade/Objetivo:;Permitir edição de nome de exibição, foto, contatos e endereços salvos do papel empregador.
+Ator(es):;Empregador
+Pré-Condições:;Usuário autenticado no papel empregador.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador acessa o perfil.;
+;2. O sistema apresenta nome de exibição, foto, telefones, e-mail de contato e endereços salvos.
+3. O empregador edita os dados (inclui cadastrar, editar, remover ou marcar endereço padrão) e salva.;
+;"4. O sistema persiste as alterações. Anúncios futuros passam a usar os novos dados; anúncios já Combinado mantêm snapshot do endereço do momento da escolha."
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O empregador tenta remover endereço usado somente em anúncios já terminais.;
+;2. O sistema permite a remoção.
+3. O empregador envia foto inválida (tipo/tamanho).;
+;4. O sistema recusa o upload.

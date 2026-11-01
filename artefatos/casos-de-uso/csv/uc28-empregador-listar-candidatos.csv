@@ -1,0 +1,11 @@
+﻿Nome do Caso de Uso;Empregador listar candidatos
+Finalidade/Objetivo:;Exibir ao empregador os prestadores com aplicação Pendente (nome, foto, média se houver, especialidades), sem liberar telefone.
+Ator(es):;Empregador
+Pré-Condições:;Anúncio do empregador existente, com zero ou mais aplicações Pendente. Usuário autenticado no dashboard empregador.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador abre o anúncio / lista de candidatos.;
+;2. O sistema apresenta os candidatos Pendente com nome, foto, média (se houver) e especialidades. Telefone e endereço não são exigidos nem liberados nesta etapa.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. Zero candidatos: o sistema exibe estado vazio com CTA de aguardar / divulgar.

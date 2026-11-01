@@ -1,0 +1,20 @@
+﻿Nome do Caso de Uso;Cadastrar conta universal
+Finalidade/Objetivo:;Permitir que um visitante crie uma conta única (CPF + e-mail) para usar a plataforma. A escolha de papel ocorre depois do login, por alternância.
+Ator(es):;Visitante
+Pré-Condições:;O visitante não está autenticado. E-mail e CPF informados ainda não existem na base
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O visitante acessa a opção de cadastro.;
+;2. O sistema apresenta o formulário: nome, e-mail, telefone, senha, CPF, data de nascimento e cidade/UF.
+3. O visitante preenche os dados e confirma.;
+;4. O sistema valida maioridade, unicidade de CPF/e-mail e dígitos/formato do CPF.
+;5. O sistema envia OTP por SMS ao telefone informado.
+6. O visitante informa o código OTP recebido.;
+;7. O sistema marca o telefone como verificado, cria a conta, define o papel ativo padrão Empregador e dispara a confirmação de e-mail.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. O sistema identifica idade menor que 18 anos e recusa o cadastro, sem criar conta.
+;2. O sistema identifica CPF inválido (formato ou dígitos verificadores) e recusa o cadastro.
+3. O visitante informa OTP inválido, expirado ou esgota as tentativas.;
+;4. O sistema não conclui o cadastro e permite novo envio de OTP, respeitando rate limit.
+;5. O sistema identifica CPF ou e-mail já existentes e recusa (ver UC02).

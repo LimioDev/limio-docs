@@ -1,0 +1,19 @@
+﻿Nome do Caso de Uso;Responder proposta de reagendamento
+Finalidade/Objetivo:;Aceitar ou recusar a nova data/hora proposta. Com o aceite, a nova data passa a valer e os prazos de cancelamento e de conclusão por silêncio passam a ser contados a partir dela. A cota não é alterada.
+Ator(es):;Contraparte (Empregador ou Prestador escolhido)
+Pré-Condições:;Existe proposta pendente dirigida ao ator, dentro do prazo de resposta. Anúncio ainda em Combinado.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+;1. O sistema apresenta à contraparte a data vigente, a data proposta, a justificativa do proponente e o prazo de resposta.
+2. A contraparte aceita a proposta.;
+;3. O sistema atualiza a data/hora pretendida, mantém o anúncio em Combinado, incrementa o contador de reagendamentos aceitos do serviço, recalcula os prazos a partir da nova data, inicia a carência, retoma a conclusão por silêncio contra a nova data, registra auditoria com a data anterior e a nova, e notifica ambas as partes.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. A contraparte recusa a proposta.;
+;2. O sistema mantém a data original, encerra a proposta, retoma a contagem normal dos prazos e notifica o proponente.
+;3. O prazo de resposta se esgota sem resposta: a proposta expira sem efeito, a data original é mantida e a conclusão por silêncio volta a valer.
+;4. O anúncio deixou de estar Combinado antes da resposta (cancelado, iniciado ou concluído): a proposta perde o efeito.
+5. A data proposta já passou no momento do aceite.;
+;"6. O sistema recusa o aceite e encerra a proposta; as partes podem propor nova data, respeitado o `limite_reagendamentos` e a restrição de uma única proposta após a data vigente."
+7. O empregador cancela o serviço dentro da carência posterior ao aceite.;
+;8. O sistema registra o cancelamento com motivo `CanceladoTardio`, sem estorno de cota.

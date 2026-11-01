@@ -1,0 +1,18 @@
+﻿Nome do Caso de Uso;Aplicar para um serviço
+Finalidade/Objetivo:;Candidatar o prestador a um anúncio aberto. Aplicar não consome cota e abre o chat 1:1.
+Ator(es):;Prestador
+Pré-Condições:;Anúncio em AguardandoCandidatos. Sem aplicação ativa (Pendente/Escolhida) daquele prestador. Prestador FREE com cota do mês < 4. Prestador não é o dono do anúncio. Telefone e e-mail confirmados.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador visualiza o anúncio no mural (dados básicos) e seleciona aplicar.;
+;2. O sistema cria aplicação Pendente, não incrementa cota, abre thread de chat 1:1 e notifica o empregador.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. Prestador FREE com 4 escolhas no mês tenta aplicar.;
+;2. O sistema recusa e apresenta CTA GOLD (UC34).
+3. O usuário tenta aplicar no próprio anúncio.;
+;4. O sistema recusa.
+5. Já existe aplicação Pendente ou Escolhida do mesmo par.;
+;6. O sistema recusa.
+7. Aplicação anterior estava Recusada ou Encerrada e o anúncio segue AguardandoCandidatos.;
+;8. O sistema permite nova aplicação.

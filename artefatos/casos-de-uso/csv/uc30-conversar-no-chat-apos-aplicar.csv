@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Conversar no chat após aplicar
+Finalidade/Objetivo:;Permitir negociação de escopo e valor em thread 1:1 somente depois da aplicação. A plataforma não cobra o valor negociado.
+Ator(es):;Empregador e Prestador candidato
+Pré-Condições:;Empregador e Prestador candidato
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. Uma das partes abre o chat do anúncio.;
+;2. O sistema apresenta a thread 1:1 já criada na aplicação.
+3. As partes enviam texto (e imagem, se suportado).;
+;4. O sistema entrega em tempo real, persiste o histórico e não trata o valor conversado como cobrança.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário tenta abrir chat sem aplicação Pendente/Escolhida.;
+;2. O sistema não cria/não exibe chat.
+3. A aplicação foi recusada, encerrada ou o prestador não foi escolhido.;
+;4. O sistema deixa a thread em somente leitura UC32. Histórico permanece para as partes e para admin em denúncia.

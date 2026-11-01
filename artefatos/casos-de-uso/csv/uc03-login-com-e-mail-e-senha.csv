@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Login com e-mail e senha
+Finalidade/Objetivo:;Autenticar o usuário e encaminhá-lo ao dashboard do último papel ativo.
+Ator(es):;Usuário
+Pré-Condições:;Conta existente. O usuário informa e-mail e senha.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário acessa a tela de login.;
+;2. O sistema apresenta os campos de e-mail e senha.
+3. O usuário informa as credenciais e confirma.;
+;4. O sistema valida as credenciais, emite JWT de acesso e refresh token, restaura o último papel ativo (ou Empregador, se nunca definido) e roteia ao dashboard correspondente.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário informa senha inválida.;
+;2. O sistema recusa (401), aplica rate limit e registra falha relevante de login.
+3. O usuário tenta autenticar com conta suspensa.;
+;4. O sistema bloqueia o acesso(não autentica ou autentica somente com aviso de bloqueio).

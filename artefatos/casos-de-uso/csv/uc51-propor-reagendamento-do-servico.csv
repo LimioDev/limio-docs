@@ -1,0 +1,27 @@
+﻿Nome do Caso de Uso;Propor reagendamento do serviço
+Finalidade/Objetivo:;Registrar proposta de nova data/hora para um serviço já combinado. A proposta não altera nada sozinha: depende do aceite da contraparte (UC52). Não devolve o anúncio ao mural, não reabre aplicações e não altera cota.
+Ator(es):;Empregador ou Prestador escolhido
+Pré-Condições:;Anúncio em Combinado. Aplicação do prestador em Escolhida. Não existe proposta pendente no serviço. Reagendamentos aceitos < `limite_reagendamentos`. Nova data/hora futura. Se a data vigente já passou, não existe proposta anterior recusada ou expirada no mesmo serviço.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. A parte abre o serviço combinado e seleciona “propor novo horário”.;
+;2. O sistema apresenta a data/hora vigente, o campo de nova data/hora e o campo de justificativa (obrigatório).
+3. A parte informa a nova data/hora, no futuro, e a justificativa, e confirma.;
+;"4. O sistema valida status Combinado, ausência de proposta pendente, limite de reagendamentos não excedido, data futura e, se a data vigente já passou, ausência de proposta anterior recusada ou expirada; grava a proposta com data anterior, data proposta, justificativa, proponente e prazo de resposta."
+;5. O sistema notifica a contraparte, suspende a conclusão por silêncio enquanto a proposta estiver pendente e registra auditoria. O anúncio permanece em Combinado e a data original continua vigente até o aceite.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. A parte propõe reagendamento depois de a data vigente já ter passado, com o anúncio ainda em Combinado.;
+;2. O sistema aceita a proposta (é o caso de imprevisto na véspera ou no dia) e mantém a conclusão por silêncio suspensa até a resposta.
+3. A parte tenta propor com o anúncio em EmAndamento, AguardandoValidacao, Concluido, Cancelado ou Expirado.;
+;4. O sistema recusa a proposta.
+5. Já existe proposta pendente no mesmo serviço.;
+;6. O sistema recusa e exibe a proposta em aberto.
+7. O serviço já atingiu o `limite_reagendamentos` de propostas aceitas.;
+;8. O sistema recusa e orienta a executar na data vigente ou cancelar.
+9. A parte informa data/hora no passado.;
+;10. O sistema recusa a gravação.
+11. O proponente cancela a própria proposta antes da resposta.;
+;12. O sistema encerra a proposta sem efeito, retoma a contagem normal dos prazos e notifica a contraparte.
+13. A parte propõe reagendamento após a data vigente ter passado, mas já houve proposta recusada ou expirada nesse serviço.;
+;"14. O sistema recusa a nova proposta; o anúncio segue para conclusão por silêncio."

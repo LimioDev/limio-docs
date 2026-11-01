@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Dashboard administrativo
+Finalidade/Objetivo:;Exibir volumetria operacional (usuários, anúncios, aplicações, escolhas, GOLD ativas, denúncias abertas e saúde resumida) em modo consulta..
+Ator(es):;Administrador
+Pré-Condições:;Papel administrador autenticado.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O administrador acessa o dashboard.;
+;2. O sistema apresenta volumetria de usuários, anúncios, aplicações, escolhas, assinaturas GOLD ativas, denúncias abertas e status operacional resumido. Neste UC a visão é somente leitura.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. Usuário comum tenta acessar o dashboard admin.;
+;2. O sistema recusa pois nao e autorizado (403).
+3. O administrador precisa agir sobre uma denúncia.;
+;4. O sistema encaminha a analisar uma denúncia (chat, fotos, histórico) e aplicar sanção — advertência, ocultar avaliação, suspender ou encerrar conta.

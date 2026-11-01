@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Consultar histórico com filtros
+Finalidade/Objetivo:;Permitir que empregador e prestador consultem o próprio histórico de anúncios/serviços, filtrando por status e período.
+Ator(es):;Empregador ou Prestador
+Pré-Condições:;Usuário autenticado.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário acessa o histórico.;
+;2. O sistema apresenta filtros de status e período.
+3. O usuário seleciona filtros e/ou informa o período.;
+;4. O sistema retorna somente registros do próprio usuário (anti-IDOR).
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O prestador abre um anúncio do histórico no qual não foi escolhido.;
+;2. O sistema não exibe endereço completo, telefone, e-mail nem WhatsApp.
+3. Nenhum registro corresponde ao filtro.;
+;4. O sistema retorna lista vazia (sem erro de permissão).

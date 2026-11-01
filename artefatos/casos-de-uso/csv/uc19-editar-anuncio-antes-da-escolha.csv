@@ -1,0 +1,16 @@
+﻿Nome do Caso de Uso;Editar anúncio antes da escolha
+Finalidade/Objetivo:;Alterar descrição, data/hora, categoria, fotos e campos opcionais somente enquanto o anúncio aguarda candidatos. Após a combinação, a edição unilateral fica bloqueada e a data/hora só muda por reagendamento com aceite da contraparte (UC51/UC52).
+Ator(es):;Empregador (dono do anúncio)
+Pré-Condições:;Anúncio em AguardandoCandidatos.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador abre o anúncio para edição.;
+;2. O sistema apresenta os campos editáveis.
+3. O empregador altera os dados (data/hora continua no futuro) e salva.;
+;4. O sistema valida e atualiza o mural com a nova versão.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O empregador tenta editar anúncio Combinado (ou posterior).;
+;2. O sistema recusa a edição unilateral e, se a alteração pretendida for de data/hora, encaminha à proposta de reagendamento.
+3. O empregador informa data/hora no passado.;
+;4. O sistema recusa a gravação.

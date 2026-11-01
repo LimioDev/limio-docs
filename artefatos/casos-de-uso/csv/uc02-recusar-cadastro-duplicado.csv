@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Recusar cadastro duplicado
+Finalidade/Objetivo:;Impedir criação de conta com CPF ou e-mail já existentes, inclusive de conta excluída há menos de 12 meses, para não burlar cota.
+Ator(es):;Visitante
+Pré-Condições:;Já existe conta com o mesmo CPF ou o mesmo e-mail
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O visitante informa CPF de conta excluída há menos de 12 meses.;
+;2. O sistema detecta colisão de identidade.
+;3. O sistema rejeita o cadastro sem criar conta e sem revelar, de forma enumerável além do necessário, qual campo colidiu.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O visitante informa CPF de conta excluída há menos de 12 meses.;
+;2. O sistema recusa o cadastro
+;3. O sistema identifica que o período de bloqueio de reuso de CPF já expirou e segue o fluxo normal de cadastro

@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Assinar plano GOLD
+Finalidade/Objetivo:;Permitir que o prestador contrate a assinatura recorrente GOLD para remover o teto de 4 escolhas por mês. A assinatura GOLD não altera a visibilidade do mural, não concede prioridade e não antecipa a liberação do lead.
+Ator(es):;Prestador
+Pré-Condições:;Prestador autenticado. Método de pagamento válido já tokenizado, ou informado durante este fluxo.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador inicia a adesão ao plano GOLD.;
+;2. O sistema apresenta o plano (preço e ciclo parametrizáveis) e encaminha ao checkout do gateway de pagamento, exclusivamente para a assinatura.
+3. O prestador confirma o pagamento.;
+;4. O gateway efetua a cobrança, o sistema marca o prestador como GOLD imediatamente, deixa de aplicar o teto de cota e envia o recibo. O mural permanece igual para o prestador.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O método de pagamento informado é recusado pelo gateway.;
+;2. O sistema mantém o prestador como FREE e informa a falha no pagamento.

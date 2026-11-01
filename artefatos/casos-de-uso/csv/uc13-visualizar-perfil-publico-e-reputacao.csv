@@ -1,0 +1,13 @@
+﻿Nome do Caso de Uso;Visualizar perfil público e reputação
+Finalidade/Objetivo:;Exibir nome, foto, média (se houver), quantidade de avaliações e histórico resumido de serviços concluídos, sem endereço/telefone de terceiros.
+Ator(es):;Usuário autenticado
+Pré-Condições:;O perfil alvo existe e não está anonimizado.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário abre o perfil público de outro usuário (ou o próprio).;
+;2. O sistema exibe nome, foto, quantidade de avaliações, histórico resumido de serviços concluídos e, se houver ao menos uma nota, a média com uma casa decimal.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. O sistema identifica zero avaliações e exibe “sem avaliações”, sem nota 0,0.
+2. O usuário tenta abrir perfil anonimizado/excluído.;
+;3. O sistema não exibe dados pessoais identificáveis.

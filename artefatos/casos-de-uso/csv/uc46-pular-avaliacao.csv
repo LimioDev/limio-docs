@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Pular avaliação
+Finalidade/Objetivo:;Permitir dispensar a avaliação pós-Concluido sem gerar nota e sem bloquear o uso da plataforma.
+Ator(es):;Empregador ou Prestador
+Pré-Condições:;Modal/oferta de avaliação após Concluido.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O ator seleciona “pular”.;
+;2. O sistema não grava nota . O uso da plataforma segue normal.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O ator decide avaliar depois, ainda dentro da janela (default: 7 dias após Concluido).;
+;2. O sistema permite enquanto a janela estiver aberta.
+3. A janela expirou.;
+;4. O sistema não aceita mais avaliação daquele serviço.

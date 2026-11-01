@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Anexar fotos ao anúncio
+Finalidade/Objetivo:;Incluir uma ou mais fotos nos dados básicos do mural, visíveis sem o prestador aplicar. As fotos do anúncio não substituem evidência de check-out.
+Ator(es):;Empregador
+Pré-Condições:;Anúncio em AguardandoCandidatos (criação ou edição).
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador envia uma ou mais fotos.;
+;2. O sistema valida e anexa as fotos. Prestadores passam a vê-las no mural sem aplicar.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O empregador tenta anexar foto com anúncio já Combinado (ou estado posterior).;
+;2. O sistema recusa o upload.
+3. O empregador envia arquivo inválido.;
+;4. O sistema recusa e informa o erro.

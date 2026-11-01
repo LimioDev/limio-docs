@@ -1,0 +1,17 @@
+﻿Nome do Caso de Uso;Admin moderar denúncia e suspender conta
+Finalidade/Objetivo:;Analisar denúncia (chat, fotos, histórico) e aplicar advertência, ocultar avaliação, suspender ou encerrar conta. O admin não determina quem deve pagar o serviço nem transfere valores.
+Ator(es):;Administrador
+Pré-Condições:;Denúncia aberta. Papel administrador.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O administrador abre a denúncia na fila.;
+;2. O sistema apresenta histórico, chat, fotos e dados do alvo.
+3. O administrador aplica advertência, oculta avaliação, suspende ou encerra a conta — sem marcar o serviço como pago/não pago.;
+;4. O sistema executa a sanção, registra auditoria e, em suspensão, invalida sessões e encerra anúncios/aplicações abertos .
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O administrador classifica a denúncia como improcedente.;
+;2. O sistema fecha sem sanção.
+3. Há conflito de pagamento/qualidade.;
+;"4. O sistema não transfere valor; o conflito permanece entre as partes, nos Termos de Uso."
+;5. Propostas de reagendamento pendentes envolvendo o usuário que sai ou é suspenso são encerradas sem efeito.

@@ -1,0 +1,12 @@
+﻿Nome do Caso de Uso;Alternar papel Empregador/Prestador
+Finalidade/Objetivo:;Trocar a visão da sessão entre Empregador e Prestador sem novo cadastro.
+Ator(es):;Usuário autenticado
+Pré-Condições:;Conta válida e não suspensa
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário seleciona a troca de papel no menu/dashboard.;
+;2. O sistema troca o papel e apresenta o dashboard correspondente
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário tenta assumir o papel Prestador com perfil de atuação incompleto;
+;2. O sistema redireciona ao preenchimento do perfil prestador antes de exibir o mural ou permitir aplicar.

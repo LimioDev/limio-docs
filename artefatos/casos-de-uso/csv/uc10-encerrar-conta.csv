@@ -1,0 +1,18 @@
+﻿Nome do Caso de Uso;Encerrar conta
+Finalidade/Objetivo:;Anonimizar dados pessoais identificáveis, encerrar anúncios/aplicações abertos e registrar auditoria, sob solicitação explícita do titular.
+Ator(es):;Usuário autenticado
+Pré-Condições:;Sessão válida. O usuário confirma explicitamente a exclusão.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário solicita exclusão da conta e confirma.;
+;2. O sistema anonimiza dados pessoais de perfil.
+;3. O sistema encerra anúncios e aplicações abertos.
+;4. O sistema registra auditoria. Logs de auditoria permanecem 5 anos, sem identificadores diretos quando tecnicamente possível.
+;5. O sistema impede novo login e bloqueia reuso do CPF por 12 meses.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário possui anúncio Combinado com menos de 24h para a agenda vigente.;
+;2. O sistema cancela o anúncio por impossibilidade operacional, não estorna cota e registra em auditoria.
+3. O usuário possui anúncio AguardandoValidacao.;
+;4. O sistema marca Cancelado por saída de conta (não aplica conclusão por silêncio neste caso).
+;5. Propostas de reagendamento pendentes envolvendo o usuário que sai ou é suspenso são encerradas sem efeito.

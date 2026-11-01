@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Prestador marcar conclusão com foto
+Finalidade/Objetivo:;Registrar o check-out do prestador escolhido com evidência fotográfica, permitindo que o solicitante valide a conclusão à distância. O prestador não marca o anúncio como Concluido sozinho, e não há pagamento processado pela plataforma.
+Ator(es):;Prestador
+Pré-Condições:;Anúncio em EmAndamento ou Combinado. Ao menos uma foto de evidência anexada.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O prestador envia ao menos uma foto de evidência e confirma a conclusão.;
+;"2. O sistema recusa a operação caso não haja foto anexada; havendo foto, marca o anúncio como AguardandoValidacao e notifica o solicitante para validar pela foto e efetuar o pagamento fora da plataforma."
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O prestador tenta realizar o check-out sem anexar nenhuma foto.;
+;2. O sistema recusa a operação.
+3. O prestador tenta transicionar o anúncio diretamente para Concluido.;
+;4. O sistema não permite, a conclusão só ocorre por validação do solicitante ou por conclusão automática por silêncio.

@@ -1,0 +1,12 @@
+﻿Nome do Caso de Uso;Consumir cota FREE na escolha
+Finalidade/Objetivo:;Incrementar em 1 o contador mensal de escolhas do prestador FREE selecionado, exclusivamente no momento da escolha do empregador, nunca no momento da aplicação.
+Ator(es):;Sistema
+Pré-Condições:;Prestador escolhido é FREE (sem assinatura GOLD ativa). Mês calendário vigente considerado no fuso America/Sao_Paulo. UC31 em execução.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador confirma a escolha de um prestador FREE.;
+;2. O sistema incrementa o contador de quantidade de escolhas do mês corrente em 1 e atualiza o saldo de cota visível ao prestador.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. O prestador escolhido está GOLD no instante da escolha: o sistema não incrementa o contador.
+;2. Se, após o incremento, o contador atingir 4, novas aplicações desse prestador passam a ser bloqueadas até o reset do ciclo (dia 1, 00:00) ou até a adesão ao GOLD.

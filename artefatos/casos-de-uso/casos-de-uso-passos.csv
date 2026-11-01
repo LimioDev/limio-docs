@@ -1,0 +1,356 @@
+﻿UC;Caso de uso;Fluxo;Passo;Quem executa;Descrição
+UC01;Cadastrar conta universal;principal;1;Ator;O visitante acessa a opção de cadastro.
+UC01;Cadastrar conta universal;principal;2;Sistema;O sistema apresenta o formulário: nome, e-mail, telefone, senha, CPF, data de nascimento e cidade/UF.
+UC01;Cadastrar conta universal;principal;3;Ator;O visitante preenche os dados e confirma.
+UC01;Cadastrar conta universal;principal;4;Sistema;O sistema valida maioridade, unicidade de CPF/e-mail e dígitos/formato do CPF.
+UC01;Cadastrar conta universal;principal;5;Sistema;O sistema envia OTP por SMS ao telefone informado.
+UC01;Cadastrar conta universal;principal;6;Ator;O visitante informa o código OTP recebido.
+UC01;Cadastrar conta universal;principal;7;Sistema;O sistema marca o telefone como verificado, cria a conta, define o papel ativo padrão Empregador e dispara a confirmação de e-mail.
+UC01;Cadastrar conta universal;alternativo;1;Sistema;O sistema identifica idade menor que 18 anos e recusa o cadastro, sem criar conta.
+UC01;Cadastrar conta universal;alternativo;2;Sistema;O sistema identifica CPF inválido (formato ou dígitos verificadores) e recusa o cadastro.
+UC01;Cadastrar conta universal;alternativo;3;Ator;O visitante informa OTP inválido, expirado ou esgota as tentativas.
+UC01;Cadastrar conta universal;alternativo;4;Sistema;O sistema não conclui o cadastro e permite novo envio de OTP, respeitando rate limit.
+UC01;Cadastrar conta universal;alternativo;5;Sistema;O sistema identifica CPF ou e-mail já existentes e recusa (ver UC02).
+UC02;Recusar cadastro duplicado;principal;1;Ator;O visitante informa CPF de conta excluída há menos de 12 meses.
+UC02;Recusar cadastro duplicado;principal;2;Sistema;O sistema detecta colisão de identidade.
+UC02;Recusar cadastro duplicado;principal;3;Sistema;O sistema rejeita o cadastro sem criar conta e sem revelar, de forma enumerável além do necessário, qual campo colidiu.
+UC02;Recusar cadastro duplicado;alternativo;1;Ator;O visitante informa CPF de conta excluída há menos de 12 meses.
+UC02;Recusar cadastro duplicado;alternativo;2;Sistema;O sistema recusa o cadastro
+UC02;Recusar cadastro duplicado;alternativo;3;Sistema;O sistema identifica que o período de bloqueio de reuso de CPF já expirou e segue o fluxo normal de cadastro
+UC03;Login com e-mail e senha;principal;1;Ator;O usuário acessa a tela de login.
+UC03;Login com e-mail e senha;principal;2;Sistema;O sistema apresenta os campos de e-mail e senha.
+UC03;Login com e-mail e senha;principal;3;Ator;O usuário informa as credenciais e confirma.
+UC03;Login com e-mail e senha;principal;4;Sistema;O sistema valida as credenciais, emite JWT de acesso e refresh token, restaura o último papel ativo (ou Empregador, se nunca definido) e roteia ao dashboard correspondente.
+UC03;Login com e-mail e senha;alternativo;1;Ator;O usuário informa senha inválida.
+UC03;Login com e-mail e senha;alternativo;2;Sistema;O sistema recusa (401), aplica rate limit e registra falha relevante de login.
+UC03;Login com e-mail e senha;alternativo;3;Ator;O usuário tenta autenticar com conta suspensa.
+UC03;Login com e-mail e senha;alternativo;4;Sistema;O sistema bloqueia o acesso(não autentica ou autentica somente com aviso de bloqueio).
+UC04;Confirmar telefone por OTP;principal;1;Ator;O usuário solicita (ou o cadastro dispara) a confirmação do telefone.
+UC04;Confirmar telefone por OTP;principal;2;Sistema;O sistema envia OTP por SMS.
+UC04;Confirmar telefone por OTP;principal;3;Ator;O usuário informa o código recebido.
+UC04;Confirmar telefone por OTP;principal;4;Sistema;O sistema valida o OTP e marca o telefone como verificado.
+UC04;Confirmar telefone por OTP;alternativo;1;Ator;O usuário informa OTP expirado ou inválido, ou excede as tentativas.
+UC04;Confirmar telefone por OTP;alternativo;2;Sistema;O sistema recusa a confirmação e permite novo envio, com rate limit.
+UC04;Confirmar telefone por OTP;alternativo;3;Ator;O usuário tenta criar anúncio ou aplicar sem telefone verificado.
+UC04;Confirmar telefone por OTP;alternativo;4;Sistema;O sistema bloqueia a ação até a confirmação.
+UC05;Confirmar e-mail;principal;;Ator;Conta criada. E-mail ainda não confirmado.
+UC05;Confirmar e-mail;principal;2;Sistema;O sistema valida o token/código e marca email_verificado = true.
+UC05;Confirmar e-mail;alternativo;1;Ator;O usuário tenta criar anúncio ou aplicar com e-mail ainda pendente.
+UC05;Confirmar e-mail;alternativo;2;Sistema;O sistema bloqueia a ação até a confirmação.
+UC05;Confirmar e-mail;alternativo;3;Ator;O usuário usa link/código expirado ou inválido.
+UC05;Confirmar e-mail;alternativo;4;Sistema;O sistema recusa e oferece reenvio.
+UC06;Recuperar senha por e-mail;principal;1;Ator;O usuário solicita recuperação informando o e-mail.
+UC06;Recuperar senha por e-mail;principal;2;Sistema;O sistema envia link de uso único com validade definida (ex.: 1 hora)
+UC06;Recuperar senha por e-mail;principal;3;Ator;O usuário abre o link e define a nova senha.
+UC06;Recuperar senha por e-mail;principal;4;Sistema;O sistema valida o token, atualiza a senha e invalida o link.
+UC06;Recuperar senha por e-mail;alternativo;1;Ator;O usuário informa e-mail inexistente na base.
+UC06;Recuperar senha por e-mail;alternativo;2;Sistema;O sistema responde de forma genérica (anti-enumeração), sem confirmar se o e-mail existe.
+UC06;Recuperar senha por e-mail;alternativo;3;Ator;O usuário usa link expirado ou já utilizado.
+UC06;Recuperar senha por e-mail;alternativo;4;Sistema;O sistema recusa a redefinição.
+UC07;Alterar senha autenticado;principal;1;Ator;O usuário acessa a opção de alterar senha.
+UC07;Alterar senha autenticado;principal;2;Sistema;O sistema apresenta os campos de senha atual e nova senha.
+UC07;Alterar senha autenticado;principal;3;Ator;O usuário informa a senha atual e a nova senha e confirma.
+UC07;Alterar senha autenticado;principal;4;Sistema;O sistema valida a senha atual, atualiza o hash e confirma a alteração.
+UC07;Alterar senha autenticado;alternativo;1;Ator;O usuário informa a senha atual incorreta.
+UC07;Alterar senha autenticado;alternativo;2;Sistema;O sistema recusa a alteração.
+UC08;Logout do dispositivo;principal;1;Ator;O usuário seleciona logout.
+UC08;Logout do dispositivo;principal;2;Sistema;O sistema invalida o refresh token do dispositivo atual e encerra a sessão naquele device.
+UC09;Alternar papel Empregador/Prestador;principal;1;Ator;O usuário seleciona a troca de papel no menu/dashboard.
+UC09;Alternar papel Empregador/Prestador;principal;2;Sistema;O sistema troca o papel e apresenta o dashboard correspondente
+UC09;Alternar papel Empregador/Prestador;alternativo;1;Ator;O usuário tenta assumir o papel Prestador com perfil de atuação incompleto
+UC09;Alternar papel Empregador/Prestador;alternativo;2;Sistema;O sistema redireciona ao preenchimento do perfil prestador antes de exibir o mural ou permitir aplicar.
+UC10;Encerrar conta;principal;1;Ator;O usuário solicita exclusão da conta e confirma.
+UC10;Encerrar conta;principal;2;Sistema;O sistema anonimiza dados pessoais de perfil.
+UC10;Encerrar conta;principal;3;Sistema;O sistema encerra anúncios e aplicações abertos.
+UC10;Encerrar conta;principal;4;Sistema;O sistema registra auditoria. Logs de auditoria permanecem 5 anos, sem identificadores diretos quando tecnicamente possível.
+UC10;Encerrar conta;principal;5;Sistema;O sistema impede novo login e bloqueia reuso do CPF por 12 meses.
+UC10;Encerrar conta;alternativo;1;Ator;O usuário possui anúncio Combinado com menos de 24h para a agenda vigente.
+UC10;Encerrar conta;alternativo;2;Sistema;O sistema cancela o anúncio por impossibilidade operacional, não estorna cota e registra em auditoria.
+UC10;Encerrar conta;alternativo;3;Ator;O usuário possui anúncio AguardandoValidacao.
+UC10;Encerrar conta;alternativo;4;Sistema;O sistema marca Cancelado por saída de conta (não aplica conclusão por silêncio neste caso).
+UC10;Encerrar conta;alternativo;5;Sistema;Propostas de reagendamento pendentes envolvendo o usuário que sai ou é suspenso são encerradas sem efeito.
+UC11;Gerenciar perfil empregador;principal;1;Ator;O empregador acessa o perfil.
+UC11;Gerenciar perfil empregador;principal;2;Sistema;O sistema apresenta nome de exibição, foto, telefones, e-mail de contato e endereços salvos.
+UC11;Gerenciar perfil empregador;principal;3;Ator;O empregador edita os dados (inclui cadastrar, editar, remover ou marcar endereço padrão) e salva.
+UC11;Gerenciar perfil empregador;principal;4;Sistema;"O sistema persiste as alterações. Anúncios futuros passam a usar os novos dados; anúncios já Combinado mantêm snapshot do endereço do momento da escolha."
+UC11;Gerenciar perfil empregador;alternativo;1;Ator;O empregador tenta remover endereço usado somente em anúncios já terminais.
+UC11;Gerenciar perfil empregador;alternativo;2;Sistema;O sistema permite a remoção.
+UC11;Gerenciar perfil empregador;alternativo;3;Ator;O empregador envia foto inválida (tipo/tamanho).
+UC11;Gerenciar perfil empregador;alternativo;4;Sistema;O sistema recusa o upload.
+UC12;Gerenciar perfil prestador;principal;1;Ator;O prestador acessa o perfil de atuação.
+UC12;Gerenciar perfil prestador;principal;2;Sistema;O sistema apresenta especialidades, raio (km), município-base e horários.
+UC12;Gerenciar perfil prestador;principal;3;Ator;O prestador preenche/altera os parâmetros e salva.
+UC12;Gerenciar perfil prestador;principal;4;Sistema;O sistema persiste o perfil. O mural passa a filtrar com os novos parâmetros.
+UC12;Gerenciar perfil prestador;alternativo;1;Ator;O prestador remove todas as especialidades.
+UC12;Gerenciar perfil prestador;alternativo;2;Sistema;O sistema aceita a gravação, mas o mural fica vazio até haver ao menos uma especialidade.
+UC12;Gerenciar perfil prestador;alternativo;3;Ator;O prestador tenta desativar Outros no catálogo (ação administrativa).
+UC12;Gerenciar perfil prestador;alternativo;4;Sistema;O sistema impede: Outros permanece ativo.
+UC13;Visualizar perfil público e reputação;principal;1;Ator;O usuário abre o perfil público de outro usuário (ou o próprio).
+UC13;Visualizar perfil público e reputação;principal;2;Sistema;O sistema exibe nome, foto, quantidade de avaliações, histórico resumido de serviços concluídos e, se houver ao menos uma nota, a média com uma casa decimal.
+UC13;Visualizar perfil público e reputação;alternativo;1;Sistema;O sistema identifica zero avaliações e exibe “sem avaliações”, sem nota 0,0.
+UC13;Visualizar perfil público e reputação;alternativo;2;Ator;O usuário tenta abrir perfil anonimizado/excluído.
+UC13;Visualizar perfil público e reputação;alternativo;3;Sistema;O sistema não exibe dados pessoais identificáveis.
+UC14;Enviar foto de perfil;principal;1;Ator;O usuário seleciona uma imagem e envia.
+UC14;Enviar foto de perfil;principal;2;Sistema;O sistema valida tipo/tamanho, processa o upload e passa a exibir a foto no mural e no perfil público.
+UC14;Enviar foto de perfil;alternativo;1;Ator;O usuário envia arquivo inválido.
+UC14;Enviar foto de perfil;alternativo;2;Sistema;O sistema recusa o upload e informa o erro.
+UC14;Enviar foto de perfil;alternativo;3;Sistema;O administrador remove a foto via moderação.
+UC15;Configurar preferências de notificação;principal;1;Ator;O usuário acessa preferências de notificação.
+UC15;Configurar preferências de notificação;principal;2;Sistema;O sistema apresenta os canais Push, e-mail, SMS e WhatsApp com o estado atual.
+UC15;Configurar preferências de notificação;principal;3;Ator;O usuário habilita ou desabilita cada canal e salva.
+UC15;Configurar preferências de notificação;principal;4;Sistema;O sistema persiste as flags e passa a respeitar as preferências.
+UC15;Configurar preferências de notificação;alternativo;1;Ator;O usuário tenta habilitar WhatsApp sem opt-in.
+UC15;Configurar preferências de notificação;alternativo;2;Sistema;O sistema mantém o canal desligado até o opt-in.
+UC17;Criar anúncio de serviço (sem valor);principal;1;Ator;O empregador acessa “criar anúncio”.
+UC17;Criar anúncio de serviço (sem valor);principal;2;Sistema;O sistema apresenta o formulário: categoria (incluindo Outros), descrição, data/hora, localização, observações e campos opcionais (tamanho do local, quantidade de pessoas). Valor não é obrigatório.
+UC17;Criar anúncio de serviço (sem valor);principal;3;Ator;O empregador preenche os dados (endereço salvo ou avulso) e publica.
+UC17;Criar anúncio de serviço (sem valor);principal;4;Sistema;O sistema valida data/hora futura, cria o anúncio em AguardandoCandidatos e o torna visível no mural compatível.
+UC17;Criar anúncio de serviço (sem valor);alternativo;1;Ator;O empregador informa data/hora no passado.
+UC17;Criar anúncio de serviço (sem valor);alternativo;2;Sistema;O sistema recusa a criação.
+UC17;Criar anúncio de serviço (sem valor);alternativo;3;Ator;O empregador tenta criar anúncio sem telefone ou e-mail confirmados.
+UC17;Criar anúncio de serviço (sem valor);alternativo;4;Sistema;O sistema recusa até UC04/UC05.
+UC18;Anexar fotos ao anúncio;principal;1;Ator;O empregador envia uma ou mais fotos.
+UC18;Anexar fotos ao anúncio;principal;2;Sistema;O sistema valida e anexa as fotos. Prestadores passam a vê-las no mural sem aplicar.
+UC18;Anexar fotos ao anúncio;alternativo;1;Ator;O empregador tenta anexar foto com anúncio já Combinado (ou estado posterior).
+UC18;Anexar fotos ao anúncio;alternativo;2;Sistema;O sistema recusa o upload.
+UC18;Anexar fotos ao anúncio;alternativo;3;Ator;O empregador envia arquivo inválido.
+UC18;Anexar fotos ao anúncio;alternativo;4;Sistema;O sistema recusa e informa o erro.
+UC19;Editar anúncio antes da escolha;principal;1;Ator;O empregador abre o anúncio para edição.
+UC19;Editar anúncio antes da escolha;principal;2;Sistema;O sistema apresenta os campos editáveis.
+UC19;Editar anúncio antes da escolha;principal;3;Ator;O empregador altera os dados (data/hora continua no futuro) e salva.
+UC19;Editar anúncio antes da escolha;principal;4;Sistema;O sistema valida e atualiza o mural com a nova versão.
+UC19;Editar anúncio antes da escolha;alternativo;1;Ator;O empregador tenta editar anúncio Combinado (ou posterior).
+UC19;Editar anúncio antes da escolha;alternativo;2;Sistema;O sistema recusa a edição unilateral e, se a alteração pretendida for de data/hora, encaminha à proposta de reagendamento.
+UC19;Editar anúncio antes da escolha;alternativo;3;Ator;O empregador informa data/hora no passado.
+UC19;Editar anúncio antes da escolha;alternativo;4;Sistema;O sistema recusa a gravação.
+UC20;Cancelar anúncio antes da escolha;principal;1;Ator;O empregador solicita o cancelamento e confirma.
+UC20;Cancelar anúncio antes da escolha;principal;2;Sistema;O sistema marca o anúncio Cancelado, move aplicações Pendente para Encerrada, deixa chats em somente leitura e não altera cota.
+UC20;Cancelar anúncio antes da escolha;alternativo;1;Ator;O anúncio já está Combinado.
+UC20;Cancelar anúncio antes da escolha;alternativo;2;Sistema;"Este caso de uso não se aplica; o empregador deve cancelar após combinação, se ≥ 24h para a agenda vigente."
+UC21;Publicar no mural geográfico;principal;1;Ator;O empregador publica o anúncio.
+UC21;Publicar no mural geográfico;principal;2;Sistema;O sistema indexa por categoria e geo.
+UC21;Publicar no mural geográfico;principal;3;Sistema;O sistema lista o anúncio no mural dos prestadores cujo raio e especialidades forem compatíveis, expondo apenas bairro/região.
+UC21;Publicar no mural geográfico;principal;4;Sistema;O sistema dispara alerta de nova demanda para prestadores compatíveis com a preferência ativa.
+UC21;Publicar no mural geográfico;alternativo;1;Sistema;O sistema não encontra prestador no raio: o anúncio existe, mas o mural desses prestadores permanece sem o item.
+UC21;Publicar no mural geográfico;alternativo;2;Sistema;O sistema não envia push a quem desabilitou o canal.
+UC22;Expirar anúncio sem combinação;principal;1;Ator;O job de expiração é disparado.
+UC22;Expirar anúncio sem combinação;principal;2;Sistema;O sistema verifica: status AguardandoCandidatos, data/hora passada e nenhuma aplicação.
+UC22;Expirar anúncio sem combinação;principal;3;Sistema;O sistema marca Expirado, remove do mural, não altera cota e notifica o empregador.
+UC22;Expirar anúncio sem combinação;alternativo;1;Sistema;A data/hora ainda está no futuro: o sistema não expira.
+UC22;Expirar anúncio sem combinação;alternativo;2;Sistema;"Já existe ao menos uma aplicação: o sistema não expira por esta regra; o empregador ainda pode escolher, recusar ou cancelar."
+UC22;Expirar anúncio sem combinação;alternativo;3;Sistema;O anúncio já está Combinado, Concluido ou Cancelado: o sistema não reprocessa para Expirado.
+UC23;Consultar histórico com filtros;principal;1;Ator;O usuário acessa o histórico.
+UC23;Consultar histórico com filtros;principal;2;Sistema;O sistema apresenta filtros de status e período.
+UC23;Consultar histórico com filtros;principal;3;Ator;O usuário seleciona filtros e/ou informa o período.
+UC23;Consultar histórico com filtros;principal;4;Sistema;O sistema retorna somente registros do próprio usuário (anti-IDOR).
+UC23;Consultar histórico com filtros;alternativo;1;Ator;O prestador abre um anúncio do histórico no qual não foi escolhido.
+UC23;Consultar histórico com filtros;alternativo;2;Sistema;O sistema não exibe endereço completo, telefone, e-mail nem WhatsApp.
+UC23;Consultar histórico com filtros;alternativo;3;Ator;Nenhum registro corresponde ao filtro.
+UC23;Consultar histórico com filtros;alternativo;4;Sistema;O sistema retorna lista vazia (sem erro de permissão).
+UC24;Visualizar mural com dados básicos;principal;1;Ator;O prestador abre o mural/radar.
+UC24;Visualizar mural com dados básicos;principal;2;Sistema;O sistema lista anúncios compatíveis com descrição, fotos, nome de exibição e foto do empregador, categoria, data/hora e bairro/região. GOLD e FREE veem os mesmos campos.
+UC24;Visualizar mural com dados básicos;alternativo;1;Ator;O prestador GOLD abre o mural.
+UC24;Visualizar mural com dados básicos;alternativo;2;Sistema;O sistema não antecipa telefone/endereço nem dá prioridade de listagem.
+UC24;Visualizar mural com dados básicos;alternativo;3;Ator;O perfil prestador está incompleto.
+UC24;Visualizar mural com dados básicos;alternativo;4;Sistema;O sistema redireciona a UC12 antes de exibir o mural.
+UC25;Filtrar mural por categoria, raio e Outros;principal;1;Ator;O prestador abre o mural (UC24).
+UC25;Filtrar mural por categoria, raio e Outros;principal;2;Sistema;O sistema aplica: (categoria ∈ especialidades ou categoria = Outros ou prestador possui Outros) e distância ≤ raio. Horários declarados são filtro opcional de UX, não bloqueio rígido na fase 1.
+UC25;Filtrar mural por categoria, raio e Outros;alternativo;1;Sistema;Prestador só com especialidade elétrica não vê anúncio de limpeza, salvo se o anúncio for Outros.
+UC25;Filtrar mural por categoria, raio e Outros;alternativo;2;Sistema;Anúncio Outros aparece para quem tem a categoria correspondente ou possui Outros.
+UC25;Filtrar mural por categoria, raio e Outros;alternativo;3;Ator;O prestador aplica filtro de horário na UX.
+UC25;Filtrar mural por categoria, raio e Outros;alternativo;4;Sistema;O sistema pode ocultar itens na interface, mas não é bloqueio rígido de match na fase 1.
+UC26;Aplicar para um serviço;principal;1;Ator;O prestador visualiza o anúncio no mural (dados básicos) e seleciona aplicar.
+UC26;Aplicar para um serviço;principal;2;Sistema;O sistema cria aplicação Pendente, não incrementa cota, abre thread de chat 1:1 e notifica o empregador.
+UC26;Aplicar para um serviço;alternativo;1;Ator;Prestador FREE com 4 escolhas no mês tenta aplicar.
+UC26;Aplicar para um serviço;alternativo;2;Sistema;O sistema recusa e apresenta CTA GOLD (UC34).
+UC26;Aplicar para um serviço;alternativo;3;Ator;O usuário tenta aplicar no próprio anúncio.
+UC26;Aplicar para um serviço;alternativo;4;Sistema;O sistema recusa.
+UC26;Aplicar para um serviço;alternativo;5;Ator;Já existe aplicação Pendente ou Escolhida do mesmo par.
+UC26;Aplicar para um serviço;alternativo;6;Sistema;O sistema recusa.
+UC26;Aplicar para um serviço;alternativo;7;Ator;Aplicação anterior estava Recusada ou Encerrada e o anúncio segue AguardandoCandidatos.
+UC26;Aplicar para um serviço;alternativo;8;Sistema;O sistema permite nova aplicação.
+UC27;Desistir da aplicação;principal;1;Ator;O prestador seleciona desistir da candidatura e confirma.
+UC27;Desistir da aplicação;principal;2;Sistema;O sistema marca a aplicação Encerrada por desistência, deixa o chat em somente leitura e não altera cota. O candidato some da lista ativa do empregador.
+UC27;Desistir da aplicação;alternativo;1;Ator;O prestador já foi escolhido (Escolhida) e tenta desistir.
+UC27;Desistir da aplicação;alternativo;2;Sistema;"O sistema recusa; o prestador deve usar UC43 (cancelar após ser escolhido)."
+UC28;Empregador listar candidatos;principal;1;Ator;O empregador abre o anúncio / lista de candidatos.
+UC28;Empregador listar candidatos;principal;2;Sistema;O sistema apresenta os candidatos Pendente com nome, foto, média (se houver) e especialidades. Telefone e endereço não são exigidos nem liberados nesta etapa.
+UC28;Empregador listar candidatos;alternativo;1;Sistema;Zero candidatos: o sistema exibe estado vazio com CTA de aguardar / divulgar.
+UC29;Recusar um candidato;principal;1;Ator;O empregador seleciona um candidato e recusa.
+UC29;Recusar um candidato;principal;2;Sistema;O sistema marca a aplicação Recusada, deixa o chat daquele par em somente leitura, mantém os demais candidatos e o anúncio em AguardandoCandidatos. Notifica o prestador recusado.
+UC29;Recusar um candidato;alternativo;1;Ator;O empregador recusa o único candidato.
+UC29;Recusar um candidato;alternativo;2;Sistema;"O sistema não escolhe ninguém; o anúncio segue AguardandoCandidatos."
+UC30;Conversar no chat após aplicar;principal;1;Ator;Uma das partes abre o chat do anúncio.
+UC30;Conversar no chat após aplicar;principal;2;Sistema;O sistema apresenta a thread 1:1 já criada na aplicação.
+UC30;Conversar no chat após aplicar;principal;3;Ator;As partes enviam texto (e imagem, se suportado).
+UC30;Conversar no chat após aplicar;principal;4;Sistema;O sistema entrega em tempo real, persiste o histórico e não trata o valor conversado como cobrança.
+UC30;Conversar no chat após aplicar;alternativo;1;Ator;O usuário tenta abrir chat sem aplicação Pendente/Escolhida.
+UC30;Conversar no chat após aplicar;alternativo;2;Sistema;O sistema não cria/não exibe chat.
+UC30;Conversar no chat após aplicar;alternativo;3;Ator;A aplicação foi recusada, encerrada ou o prestador não foi escolhido.
+UC30;Conversar no chat após aplicar;alternativo;4;Sistema;O sistema deixa a thread em somente leitura UC32. Histórico permanece para as partes e para admin em denúncia.
+UC31;Empregador escolhe um prestador;principal;1;Ator;O empregador lista os candidatos do anúncio e seleciona um.
+UC31;Empregador escolhe um prestador;principal;2;Sistema;O sistema verifica se o prestador FREE selecionado ainda possui saldo de cota no mês calendário corrente.
+UC31;Empregador escolhe um prestador;principal;3;Ator;O empregador confirma a escolha.
+UC31;Empregador escolhe um prestador;principal;4;Sistema;O sistema executa a transação atômica de escolha, o anúncio muda para Combinado, a aplicação escolhida muda para Escolhida, as demais aplicações Pendente mudam para Encerrada, incrementa a cota FREE do prestador se ele não estiver com GOLD ativo e libera o lead (telefone/WhatsApp e endereço completo) ao escolhido.
+UC31;Empregador escolhe um prestador;principal;5;Sistema;O sistema notifica o prestador escolhido e os não escolhidos.
+UC31;Empregador escolhe um prestador;alternativo;1;Ator;Duas requisições tentam escolher candidatos distintos no mesmo anúncio simultaneamente.
+UC31;Empregador escolhe um prestador;alternativo;2;Sistema;Apenas a primeira requisição prevalece, a segunda recebe erro de conflito.
+UC31;Empregador escolhe um prestador;alternativo;3;Ator;Entre o momento da aplicação e o da escolha, a cota mensal do prestador FREE se esgota.
+UC31;Empregador escolhe um prestador;alternativo;4;Sistema;O sistema recusa a escolha desse candidato e informa o empregador. Os demais candidatos permanecem disponíveis.
+UC31;Empregador escolhe um prestador;alternativo;5;Ator;O prestador escolhido está com assinatura GOLD ativa no instante da escolha.
+UC31;Empregador escolhe um prestador;alternativo;6;Sistema;O sistema não incrementa a cota FREE dele.
+UC31;Empregador escolhe um prestador;alternativo;7;Ator;O empregador tenta realizar uma segunda escolha após o sucesso da primeira.
+UC31;Empregador escolhe um prestador;alternativo;8;Sistema;O sistema recusa a operação, pois o anúncio já está Combinado.
+UC32;Encerrar demais aplicações após a escolha.;principal;1;Ator;A escolha atômica do empregador é confirmada e persistida no sistema
+UC32;Encerrar demais aplicações após a escolha.;principal;2;Sistema;O sistema move as demais aplicações de Pendente para Encerrada, coloca os respectivos chats em somente leitura, impede novas aplicações naquele anúncio e não libera telefone/endereço completo aos não escolhidos.
+UC32;Encerrar demais aplicações após a escolha.;principal;3;Sistema;O sistema notifica os candidatos não escolhidos de que o anúncio foi combinado com outro prestador.
+UC32;Encerrar demais aplicações após a escolha.;alternativo;1;Sistema;Um candidato que já estava Recusada antes da escolha permanece Recusada e não é transicionado para Encerrada.
+UC33;Consumir cota FREE na escolha;principal;1;Ator;O empregador confirma a escolha de um prestador FREE.
+UC33;Consumir cota FREE na escolha;principal;2;Sistema;O sistema incrementa o contador de quantidade de escolhas do mês corrente em 1 e atualiza o saldo de cota visível ao prestador.
+UC33;Consumir cota FREE na escolha;alternativo;1;Sistema;O prestador escolhido está GOLD no instante da escolha: o sistema não incrementa o contador.
+UC33;Consumir cota FREE na escolha;alternativo;2;Sistema;Se, após o incremento, o contador atingir 4, novas aplicações desse prestador passam a ser bloqueadas até o reset do ciclo (dia 1, 00:00) ou até a adesão ao GOLD.
+UC34;Bloquear aplicação com cota esgotada;principal;1;Ator;O prestador FREE tenta aplicar para um anúncio.
+UC34;Bloquear aplicação com cota esgotada;principal;2;Sistema;O sistema recusa a aplicação, informa que a cota mensal foi esgotada e apresenta CTA para assinatura GOLD. O anúncio permanece inalterado.
+UC34;Bloquear aplicação com cota esgotada;alternativo;1;Ator;O prestador assina o plano GOLD ainda no mesmo mês (UC35) e tenta aplicar novamente.
+UC34;Bloquear aplicação com cota esgotada;alternativo;2;Sistema;O sistema permite a aplicação, sem teto de cota.
+UC34;Bloquear aplicação com cota esgotada;alternativo;3;Sistema;Ao virar o mês (dia 1, 00:00 ), o sistema zera o contador de cota FREE e libera novas aplicações.
+UC34;Bloquear aplicação com cota esgotada;alternativo;4;Ator;Existe aplicação Pendente de mês anterior e a cota já se esgotou no intervalo.
+UC34;Bloquear aplicação com cota esgotada;alternativo;5;Sistema;O sistema não apaga a aplicação pendente, mas recusa a escolha desse candidato.
+UC35;Assinar plano GOLD;principal;1;Ator;O prestador inicia a adesão ao plano GOLD.
+UC35;Assinar plano GOLD;principal;2;Sistema;O sistema apresenta o plano (preço e ciclo parametrizáveis) e encaminha ao checkout do gateway de pagamento, exclusivamente para a assinatura.
+UC35;Assinar plano GOLD;principal;3;Ator;O prestador confirma o pagamento.
+UC35;Assinar plano GOLD;principal;4;Sistema;O gateway efetua a cobrança, o sistema marca o prestador como GOLD imediatamente, deixa de aplicar o teto de cota e envia o recibo. O mural permanece igual para o prestador.
+UC35;Assinar plano GOLD;alternativo;1;Ator;O método de pagamento informado é recusado pelo gateway.
+UC35;Assinar plano GOLD;alternativo;2;Sistema;O sistema mantém o prestador como FREE e informa a falha no pagamento.
+UC36;Cadastrar ou atualizar método de pagamento;principal;1;Ator;O prestador acessa o cadastro ou a atualização do cartão.
+UC36;Cadastrar ou atualizar método de pagamento;principal;2;Sistema;O sistema encaminha a tokenização ao gateway de pagamento.
+UC36;Cadastrar ou atualizar método de pagamento;principal;3;Ator;O prestador informa os dados do cartão diretamente no fluxo do gateway.
+UC36;Cadastrar ou atualizar método de pagamento;principal;4;Sistema;O sistema persiste apenas o token retornado, disponível para a cobrança da assinatura e para retentativas.
+UC36;Cadastrar ou atualizar método de pagamento;alternativo;1;Sistema;Em caso de falha do gateway, o sistema não armazena o PAN localmente e informa o erro ao prestador.
+UC37;Cancelar assinatura GOLD;principal;1;Ator;O prestador solicita o cancelamento da renovação do plano GOLD.
+UC37;Cancelar assinatura GOLD;principal;2;Sistema;O sistema cancela a renovação, mantém o status GOLD até o fim do período pago e notifica o prestador.
+UC37;Cancelar assinatura GOLD;principal;3;Sistema;Ao final do ciclo, o sistema realiza o downgrade para FREE. Escolhas ocorridas enquanto o prestador ainda era GOLD não contam para o teto de 4, apenas novas escolhas feitas após o downgrade passam a consumir a cota.
+UC37;Cancelar assinatura GOLD;alternativo;1;Ator;O prestador reassina o plano GOLD antes do fim do ciclo vigente.
+UC37;Cancelar assinatura GOLD;alternativo;2;Sistema;O sistema mantém o status GOLD de forma contínua, sem interrupção.
+UC38;Falha de cobrança e retry;principal;1;Ator;O gateway informa falha na renovação, via webhook/evento.
+UC38;Falha de cobrança e retry;principal;2;Sistema;O sistema registra a falha, notifica o prestador e agenda uma nova tentativa em fila.
+UC38;Falha de cobrança e retry;principal;3;Sistema;Se a nova tentativa for bem-sucedida, o sistema mantém o status GOLD.
+UC38;Falha de cobrança e retry;principal;4;Sistema;Após inúmeras tentativas parametrizáveis sem sucesso, o sistema realiza o downgrade do prestador para FREE.
+UC38;Falha de cobrança e retry;alternativo;1;Ator;O gateway reenvia o mesmo webhook de cobrança (duplicado).
+UC38;Falha de cobrança e retry;alternativo;2;Sistema;O sistema trata o evento de forma idempotente e não realiza a cobrança em duplicidade.
+UC39;Prestador iniciar serviço;principal;1;Ator;"O prestador escolhido marca ""iniciar/cheguei""."
+UC39;Prestador iniciar serviço;principal;2;Sistema;O sistema altera o status do anúncio para EmAndamento e notifica o empregador. A partir deste ponto, o empregador não pode mais cancelar o serviço e o reagendamento deixa de ser possível. Proposta pendente no momento do início é encerrada sem efeito.
+UC39;Prestador iniciar serviço;alternativo;1;Ator;Um prestador não escolhido tenta marcar o início do serviço.
+UC39;Prestador iniciar serviço;alternativo;2;Sistema;O sistema recusa a operação.
+UC39;Prestador iniciar serviço;alternativo;3;Ator;O solicitante valida o serviço presencialmente sem que este passo tenha sido realizado.
+UC39;Prestador iniciar serviço;alternativo;4;Sistema;O sistema aceita a validação diretamente a partir de Combinado, sem exigir o registro de início.
+UC40;Prestador marcar conclusão com foto;principal;1;Ator;O prestador envia ao menos uma foto de evidência e confirma a conclusão.
+UC40;Prestador marcar conclusão com foto;principal;2;Sistema;"O sistema recusa a operação caso não haja foto anexada; havendo foto, marca o anúncio como AguardandoValidacao e notifica o solicitante para validar pela foto e efetuar o pagamento fora da plataforma."
+UC40;Prestador marcar conclusão com foto;alternativo;1;Ator;O prestador tenta realizar o check-out sem anexar nenhuma foto.
+UC40;Prestador marcar conclusão com foto;alternativo;2;Sistema;O sistema recusa a operação.
+UC40;Prestador marcar conclusão com foto;alternativo;3;Ator;O prestador tenta transicionar o anúncio diretamente para Concluido.
+UC40;Prestador marcar conclusão com foto;alternativo;4;Sistema;O sistema não permite, a conclusão só ocorre por validação do solicitante ou por conclusão automática por silêncio.
+UC41;Solicitante validar o serviço (presencial ou pela foto);principal;1;Ator;O solicitante acessa a validação do serviço.
+UC41;Solicitante validar o serviço (presencial ou pela foto);principal;2;Sistema;O sistema apresenta o modo aplicável (presencial sem exigir foto, ou foto do check-out) e deixa explícito que, ao validar, o solicitante deve pagar o prestador fora do LIMIO.
+UC41;Solicitante validar o serviço (presencial ou pela foto);principal;3;Ator;O solicitante confirma a validação.
+UC41;Solicitante validar o serviço (presencial ou pela foto);principal;4;Sistema;O sistema marca Concluido, oferece avaliação e não rastreia se o PIX/dinheiro ocorreu.
+UC41;Solicitante validar o serviço (presencial ou pela foto);alternativo;1;Ator;O solicitante tenta validar à distância sem check-out com foto.
+UC41;Solicitante validar o serviço (presencial ou pela foto);alternativo;2;Sistema;O sistema recusa.
+UC41;Solicitante validar o serviço (presencial ou pela foto);alternativo;3;Ator;O solicitante pagou presencialmente antes de validar no app.
+UC41;Solicitante validar o serviço (presencial ou pela foto);alternativo;4;Sistema;"O sistema ainda exige a validação no app para fechar o ciclo; não verifica se o pagamento ocorreu."
+UC41;Solicitante validar o serviço (presencial ou pela foto);alternativo;5;Ator;Após Concluido, o prestador alega que não foi pago.
+UC41;Solicitante validar o serviço (presencial ou pela foto);alternativo;6;Sistema;O prestador usa (denúncia de não pagamento). O LIMIO não estorna nem media o valor .
+UC42;Empregador cancelar após combinação (≥ 24h);principal;1;Ator;O empregador solicita o cancelamento e confirma.
+UC42;Empregador cancelar após combinação (≥ 24h);principal;2;Sistema;O sistema verifica (≥ 24h em relação à agenda vigente e status Combinado), marca Cancelado, estorna a cota FREE se aplicável , deixa o chat em somente leitura e notifica o prestador . O lead já visto permanece no histórico do escolhido, mas o serviço encerra.
+UC42;Empregador cancelar após combinação (≥ 24h);alternativo;1;Ator;Faltam menos de 24h para a agenda vigente.
+UC42;Empregador cancelar após combinação (≥ 24h);alternativo;2;Sistema;O sistema recusa o cancelamento.
+UC42;Empregador cancelar após combinação (≥ 24h);alternativo;3;Ator;O anúncio está EmAndamento ou AguardandoValidacao.
+UC42;Empregador cancelar após combinação (≥ 24h);alternativo;4;Sistema;"O sistema recusa este fluxo; o empregador usa denúncia."
+UC42;Empregador cancelar após combinação (≥ 24h);alternativo;5;Ator;O empregador cancela dentro da carência posterior a um reagendamento aceito.
+UC42;Empregador cancelar após combinação (≥ 24h);alternativo;6;Sistema;O sistema permite o cancelamento, desde que a antecedência de 24h em relação à data vigente seja respeitada, mas registra o motivo `CanceladoTardio`, não estorna a cota do prestador FREE e registra auditoria com a data anterior e a nova
+UC43;Prestador cancelar após ser escolhido;principal;1;Ator;O prestador escolhido solicita o cancelamento e confirma.
+UC43;Prestador cancelar após ser escolhido;principal;2;Sistema;O sistema marca Cancelado, não estorna cota , notifica o empregador e não republica o anúncio no mural (estado terminal).
+UC43;Prestador cancelar após ser escolhido;alternativo;1;Ator;Prestador FREE cancela sem executar o serviço.
+UC43;Prestador cancelar após ser escolhido;alternativo;2;Sistema;O sistema mantém a cota daquele mês consumida.
+UC43;Prestador cancelar após ser escolhido;alternativo;3;Ator;O anúncio está AguardandoValidacao.
+UC43;Prestador cancelar após ser escolhido;alternativo;4;Sistema;"O sistema recusa o cancelamento; seguem validação, silêncio ou denúncia."
+UC43;Prestador cancelar após ser escolhido;alternativo;5;Ator;Existe proposta de reagendamento pendente no serviço no momento do cancelamento.
+UC43;Prestador cancelar após ser escolhido;alternativo;6;Sistema;O sistema encerra a proposta sem efeito junto com o cancelamento. A cota permanece consumida (o motivo `CanceladoTardio` não se aplica ao prestador).
+UC44;Conclusão automática por silêncio;principal;1;Ator;O job de silêncio é disparado.
+UC44;Conclusão automática por silêncio;principal;2;Sistema;O sistema aplica e marca Concluido.
+UC44;Conclusão automática por silêncio;principal;3;Sistema;O sistema pode oferecer avaliação. Se não houve pagamento, o prestador denuncia Conflito financeiro permanece off-platform.
+UC44;Conclusão automática por silêncio;alternativo;1;Sistema;Anúncio ainda AguardandoCandidatos.
+UC44;Conclusão automática por silêncio;alternativo;2;Sistema;Anúncio já Concluido ou Cancelado: o sistema não reprocessa.
+UC44;Conclusão automática por silêncio;alternativo;3;Sistema;Existe proposta de reagendamento pendente: o sistema adia a avaliação e não conclui o anúncio, até o aceite, a recusa ou a expiração da proposta (no máximo `prazo_resposta_reagendamento`).
+UC44;Conclusão automática por silêncio;alternativo;4;Sistema;A proposta é recusada ou expira: o job volta a considerar o anúncio na execução seguinte, contra a data original.
+UC45;Avaliar a outra parte;principal;1;Ator;O sistema oferece (ou o usuário abre) a avaliação da outra parte.
+UC45;Avaliar a outra parte;principal;2;Sistema;O sistema apresenta nota 1–5 e comentário opcional.
+UC45;Avaliar a outra parte;principal;3;Ator;O ator informa a nota (comentário opcional) e confirma.
+UC45;Avaliar a outra parte;principal;4;Sistema;O sistema grava a avaliação, recusa comentário sem nota, aceita nota sem comentário recalcula a média e a exibe no perfil se houver ≥ 1 nota.
+UC45;Avaliar a outra parte;alternativo;1;Ator;O ator tenta avaliar o mesmo serviço pela segunda vez.
+UC45;Avaliar a outra parte;alternativo;2;Sistema;O sistema recusa.
+UC45;Avaliar a outra parte;alternativo;3;Ator;O ator envia comentário sem nota.
+UC45;Avaliar a outra parte;alternativo;4;Sistema;O sistema recusa.
+UC45;Avaliar a outra parte;alternativo;5;Ator;O ator escolhe pular.
+UC46;Pular avaliação;principal;1;Ator;O ator seleciona “pular”.
+UC46;Pular avaliação;principal;2;Sistema;O sistema não grava nota . O uso da plataforma segue normal.
+UC46;Pular avaliação;alternativo;1;Ator;O ator decide avaliar depois, ainda dentro da janela (default: 7 dias após Concluido).
+UC46;Pular avaliação;alternativo;2;Sistema;O sistema permite enquanto a janela estiver aberta.
+UC46;Pular avaliação;alternativo;3;Ator;A janela expirou.
+UC46;Pular avaliação;alternativo;4;Sistema;O sistema não aceita mais avaliação daquele serviço.
+UC47;Exibir média somente com avaliações;principal;1;Ator;O usuário abre o perfil público.
+UC47;Exibir média somente com avaliações;principal;2;Sistema;"O sistema aplica a regra que: se há zero avaliações, exibe “sem avaliações” (sem número de média); se ≥ 1, exibe média com uma casa decimal."
+UC47;Exibir média somente com avaliações;alternativo;1;Sistema;A primeira avaliação acaba de ser gravada: o sistema passa a exibir a média imediatamente.
+UC48;Registrar denúncia;principal;1;Ator;O usuário acessa a central de denúncias e escolhe o alvo.
+UC48;Registrar denúncia;principal;2;Sistema;O sistema apresenta motivos (incluindo mau comportamento, fraude, serviço não realizado e não pagamento do valor combinado fora da plataforma) e evidência opcional.
+UC48;Registrar denúncia;principal;3;Ator;O usuário informa motivo, anexa evidência se desejar e confirma.
+UC48;Registrar denúncia;principal;4;Sistema;O sistema abre a denúncia na fila admin. Não altera a máquina de estados do anúncio para reabrir o serviço e não transfere valor .
+UC48;Registrar denúncia;alternativo;1;Ator;Prestador denuncia não pagamento após Concluido (ou em AguardandoValidacao).
+UC48;Registrar denúncia;alternativo;2;Sistema;"O sistema registra a denúncia; admin não marca “pago/não pago” nem media o PIX."
+UC48;Registrar denúncia;alternativo;3;Ator;Solicitante denuncia serviço não feito.
+UC48;Registrar denúncia;alternativo;4;Sistema;O sistema registra da mesma forma, sem estorno.
+UC49;Admin moderar denúncia e suspender conta;principal;1;Ator;O administrador abre a denúncia na fila.
+UC49;Admin moderar denúncia e suspender conta;principal;2;Sistema;O sistema apresenta histórico, chat, fotos e dados do alvo.
+UC49;Admin moderar denúncia e suspender conta;principal;3;Ator;O administrador aplica advertência, oculta avaliação, suspende ou encerra a conta — sem marcar o serviço como pago/não pago.
+UC49;Admin moderar denúncia e suspender conta;principal;4;Sistema;O sistema executa a sanção, registra auditoria e, em suspensão, invalida sessões e encerra anúncios/aplicações abertos .
+UC49;Admin moderar denúncia e suspender conta;alternativo;1;Ator;O administrador classifica a denúncia como improcedente.
+UC49;Admin moderar denúncia e suspender conta;alternativo;2;Sistema;O sistema fecha sem sanção.
+UC49;Admin moderar denúncia e suspender conta;alternativo;3;Ator;Há conflito de pagamento/qualidade.
+UC49;Admin moderar denúncia e suspender conta;alternativo;4;Sistema;"O sistema não transfere valor; o conflito permanece entre as partes, nos Termos de Uso."
+UC49;Admin moderar denúncia e suspender conta;alternativo;5;Sistema;Propostas de reagendamento pendentes envolvendo o usuário que sai ou é suspenso são encerradas sem efeito.
+UC50;Dashboard administrativo;principal;1;Ator;O administrador acessa o dashboard.
+UC50;Dashboard administrativo;principal;2;Sistema;O sistema apresenta volumetria de usuários, anúncios, aplicações, escolhas, assinaturas GOLD ativas, denúncias abertas e status operacional resumido. Neste UC a visão é somente leitura.
+UC50;Dashboard administrativo;alternativo;1;Ator;Usuário comum tenta acessar o dashboard admin.
+UC50;Dashboard administrativo;alternativo;2;Sistema;O sistema recusa pois nao e autorizado (403).
+UC50;Dashboard administrativo;alternativo;3;Ator;O administrador precisa agir sobre uma denúncia.
+UC50;Dashboard administrativo;alternativo;4;Sistema;O sistema encaminha a analisar uma denúncia (chat, fotos, histórico) e aplicar sanção — advertência, ocultar avaliação, suspender ou encerrar conta.
+UC51;Propor reagendamento do serviço;principal;1;Ator;A parte abre o serviço combinado e seleciona “propor novo horário”.
+UC51;Propor reagendamento do serviço;principal;2;Sistema;O sistema apresenta a data/hora vigente, o campo de nova data/hora e o campo de justificativa (obrigatório).
+UC51;Propor reagendamento do serviço;principal;3;Ator;A parte informa a nova data/hora, no futuro, e a justificativa, e confirma.
+UC51;Propor reagendamento do serviço;principal;4;Sistema;"O sistema valida status Combinado, ausência de proposta pendente, limite de reagendamentos não excedido, data futura e, se a data vigente já passou, ausência de proposta anterior recusada ou expirada; grava a proposta com data anterior, data proposta, justificativa, proponente e prazo de resposta."
+UC51;Propor reagendamento do serviço;principal;5;Sistema;O sistema notifica a contraparte, suspende a conclusão por silêncio enquanto a proposta estiver pendente e registra auditoria. O anúncio permanece em Combinado e a data original continua vigente até o aceite.
+UC51;Propor reagendamento do serviço;alternativo;1;Ator;A parte propõe reagendamento depois de a data vigente já ter passado, com o anúncio ainda em Combinado.
+UC51;Propor reagendamento do serviço;alternativo;2;Sistema;O sistema aceita a proposta (é o caso de imprevisto na véspera ou no dia) e mantém a conclusão por silêncio suspensa até a resposta.
+UC51;Propor reagendamento do serviço;alternativo;3;Ator;A parte tenta propor com o anúncio em EmAndamento, AguardandoValidacao, Concluido, Cancelado ou Expirado.
+UC51;Propor reagendamento do serviço;alternativo;4;Sistema;O sistema recusa a proposta.
+UC51;Propor reagendamento do serviço;alternativo;5;Ator;Já existe proposta pendente no mesmo serviço.
+UC51;Propor reagendamento do serviço;alternativo;6;Sistema;O sistema recusa e exibe a proposta em aberto.
+UC51;Propor reagendamento do serviço;alternativo;7;Ator;O serviço já atingiu o `limite_reagendamentos` de propostas aceitas.
+UC51;Propor reagendamento do serviço;alternativo;8;Sistema;O sistema recusa e orienta a executar na data vigente ou cancelar.
+UC51;Propor reagendamento do serviço;alternativo;9;Ator;A parte informa data/hora no passado.
+UC51;Propor reagendamento do serviço;alternativo;10;Sistema;O sistema recusa a gravação.
+UC51;Propor reagendamento do serviço;alternativo;11;Ator;O proponente cancela a própria proposta antes da resposta.
+UC51;Propor reagendamento do serviço;alternativo;12;Sistema;O sistema encerra a proposta sem efeito, retoma a contagem normal dos prazos e notifica a contraparte.
+UC51;Propor reagendamento do serviço;alternativo;13;Ator;A parte propõe reagendamento após a data vigente ter passado, mas já houve proposta recusada ou expirada nesse serviço.
+UC51;Propor reagendamento do serviço;alternativo;14;Sistema;"O sistema recusa a nova proposta; o anúncio segue para conclusão por silêncio."
+UC52;Responder proposta de reagendamento;principal;1;Sistema;O sistema apresenta à contraparte a data vigente, a data proposta, a justificativa do proponente e o prazo de resposta.
+UC52;Responder proposta de reagendamento;principal;2;Ator;A contraparte aceita a proposta.
+UC52;Responder proposta de reagendamento;principal;3;Sistema;O sistema atualiza a data/hora pretendida, mantém o anúncio em Combinado, incrementa o contador de reagendamentos aceitos do serviço, recalcula os prazos a partir da nova data, inicia a carência, retoma a conclusão por silêncio contra a nova data, registra auditoria com a data anterior e a nova, e notifica ambas as partes.
+UC52;Responder proposta de reagendamento;alternativo;1;Ator;A contraparte recusa a proposta.
+UC52;Responder proposta de reagendamento;alternativo;2;Sistema;O sistema mantém a data original, encerra a proposta, retoma a contagem normal dos prazos e notifica o proponente.
+UC52;Responder proposta de reagendamento;alternativo;3;Sistema;O prazo de resposta se esgota sem resposta: a proposta expira sem efeito, a data original é mantida e a conclusão por silêncio volta a valer.
+UC52;Responder proposta de reagendamento;alternativo;4;Sistema;O anúncio deixou de estar Combinado antes da resposta (cancelado, iniciado ou concluído): a proposta perde o efeito.
+UC52;Responder proposta de reagendamento;alternativo;5;Ator;A data proposta já passou no momento do aceite.
+UC52;Responder proposta de reagendamento;alternativo;6;Sistema;"O sistema recusa o aceite e encerra a proposta; as partes podem propor nova data, respeitado o `limite_reagendamentos` e a restrição de uma única proposta após a data vigente."
+UC52;Responder proposta de reagendamento;alternativo;7;Ator;O empregador cancela o serviço dentro da carência posterior ao aceite.
+UC52;Responder proposta de reagendamento;alternativo;8;Sistema;O sistema registra o cancelamento com motivo `CanceladoTardio`, sem estorno de cota.

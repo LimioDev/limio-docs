@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Configurar preferências de notificação
+Finalidade/Objetivo:;Permitir ligar/desligar Push, e-mail, SMS e WhatsApp de forma independente, respeitando opt-in.
+Ator(es):;Usuário autenticado
+Pré-Condições:;Sessão válida.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário acessa preferências de notificação.;
+;2. O sistema apresenta os canais Push, e-mail, SMS e WhatsApp com o estado atual.
+3. O usuário habilita ou desabilita cada canal e salva.;
+;4. O sistema persiste as flags e passa a respeitar as preferências.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+1. O usuário tenta habilitar WhatsApp sem opt-in.;
+;2. O sistema mantém o canal desligado até o opt-in.

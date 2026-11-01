@@ -1,0 +1,14 @@
+﻿Nome do Caso de Uso;Publicar no mural geográfico
+Finalidade/Objetivo:;Indexar o anúncio por categoria e geo para que prestadores compatíveis o listem no mural, sem expor lat/long exata nem logradouro.
+Ator(es):;"Sistema; Empregador (disparo pela criação)"
+Pré-Condições:;Anúncio recém-criado com localização interna.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O empregador publica o anúncio.;
+;2. O sistema indexa por categoria e geo.
+;3. O sistema lista o anúncio no mural dos prestadores cujo raio e especialidades forem compatíveis, expondo apenas bairro/região.
+;4. O sistema dispara alerta de nova demanda para prestadores compatíveis com a preferência ativa.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema
+;1. O sistema não encontra prestador no raio: o anúncio existe, mas o mural desses prestadores permanece sem o item.
+;2. O sistema não envia push a quem desabilitou o canal.

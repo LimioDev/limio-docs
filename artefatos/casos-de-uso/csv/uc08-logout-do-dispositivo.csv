@@ -1,0 +1,10 @@
+﻿Nome do Caso de Uso;Logout do dispositivo
+Finalidade/Objetivo:;Encerrar a sessão no dispositivo atual, invalidando o refresh token daquele device.
+Ator(es):;Usuário autenticado
+Pré-Condições:;Sessão válida no dispositivo atual.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário seleciona logout.;
+;2. O sistema invalida o refresh token do dispositivo atual e encerra a sessão naquele device.
+Fluxo Alternativo;
+Ações do Ator;Ações do Sistema

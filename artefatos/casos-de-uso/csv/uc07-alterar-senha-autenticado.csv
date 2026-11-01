@@ -1,0 +1,13 @@
+﻿Nome do Caso de Uso;Alterar senha autenticado
+Finalidade/Objetivo:;Permitir que o usuário logado troque a senha informando a senha atual e a nova.
+Ator(es):;Usuário autenticado
+Pré-Condições:;Sessão válida. O usuário conhece a senha atual.
+Fluxo Principal;
+Ações do Ator;Ações do Sistema
+1. O usuário acessa a opção de alterar senha.;
+;2. O sistema apresenta os campos de senha atual e nova senha.
+3. O usuário informa a senha atual e a nova senha e confirma.;
+;4. O sistema valida a senha atual, atualiza o hash e confirma a alteração.
+Ações do Ator;Ações do Sistema
+1. O usuário informa a senha atual incorreta.;
+;2. O sistema recusa a alteração.
