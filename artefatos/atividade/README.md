@@ -11,20 +11,20 @@ Um diagrama por fluxo do app, com raias (quem faz) e decisões (o que muda o cam
 
 | Diagrama | Fluxo | Cards | Situação no código |
 | --- | --- | --- | --- |
-| [AD-01](ad-01-cadastro.png) | Cadastro | ETI-30, ETI-40, ETI-47 | Parcial |
-| [AD-02](ad-02-login.png) | Login | ETI-32, ETI-38 | No código |
-| [AD-03](ad-03-criacao-do-anuncio.png) | Criação e publicação do anúncio | ETI-59, ETI-60, ETI-65 | Em desenvolvimento |
-| [AD-04](ad-04-candidatura.png) | Candidatura do Prestador | ETI-73 a ETI-76, ETI-101 | Não iniciado |
-| [AD-05](ad-05-escolha.png) | Escolha do Prestador | ETI-67 a ETI-70 | Não iniciado |
-| [AD-06](ad-06-execucao-e-conclusao.png) | Execução e conclusão do serviço | ETI-86 a ETI-93, ETI-98 | Não iniciado |
-| [AD-07a](ad-07a-adesao-gold.png) | Adesão à assinatura GOLD | ETI-81, ETI-82 | Depende da escolha do gateway |
-| [AD-07b](ad-07b-renovacao-gold.png) | Renovação da assinatura GOLD | ETI-85 | Depende da escolha do gateway |
-| [AD-08](ad-08-avaliacao.png) | Avaliação entre Prestador e Empregador | ETI-107, ETI-108 | Em desenvolvimento |
-| [AD-09](ad-09-denuncia-e-moderacao.png) | Denúncia e moderação | ETI-114 a ETI-116, ETI-118 | Depende do acesso do admin |
-| [AD-10](ad-10-reagendamento.png) | Reagendamento consensual | ETI-99, ETI-100 | Não iniciado |
-| [AD-11](ad-11-cancelamento-empregador.png) | Cancelamento pelo Empregador | ETI-94, ETI-95 | Não iniciado |
-| [AD-12](ad-12-cancelamento-prestador.png) | Cancelamento pelo Prestador | ETI-96, ETI-97 | Não iniciado |
-| [AD-13](ad-13-encerramento-em-cascata.png) | Encerramento ou suspensão em cascata | ETI-36, ETI-42, ETI-46, ETI-116 | Parcial |
+| [AD-01](AD-01.png) | Cadastro | ETI-30, ETI-40, ETI-47 | Parcial |
+| [AD-02](AD-02.png) | Login | ETI-32, ETI-38 | No código |
+| [AD-03](AD-03.png) | Criação e publicação do anúncio | ETI-59, ETI-60, ETI-65 | Em desenvolvimento |
+| [AD-04](AD-04.png) | Candidatura do Prestador | ETI-73 a ETI-76, ETI-101 | Não iniciado |
+| [AD-05](AD-05.png) | Escolha do Prestador | ETI-67 a ETI-70 | Não iniciado |
+| [AD-06](AD-06.png) | Execução e conclusão do serviço | ETI-86 a ETI-93, ETI-98 | Não iniciado |
+| [AD-07a](AD-07a.png) | Adesão à assinatura GOLD | ETI-81, ETI-82 | Depende da escolha do gateway |
+| [AD-07b](AD-07b.png) | Renovação da assinatura GOLD | ETI-85 | Depende da escolha do gateway |
+| [AD-08](AD-08.png) | Avaliação entre Prestador e Empregador | ETI-107, ETI-108 | Em desenvolvimento |
+| [AD-09](AD-09.png) | Denúncia e moderação | ETI-114 a ETI-116, ETI-118 | Depende do acesso do admin |
+| [AD-10](AD-10.png) | Reagendamento consensual | ETI-99, ETI-100 | Não iniciado |
+| [AD-11](AD-11.png) | Cancelamento pelo Empregador | ETI-94, ETI-95 | Não iniciado |
+| [AD-12](AD-12.png) | Cancelamento pelo Prestador | ETI-96, ETI-97 | Não iniciado |
+| [AD-13](AD-13.png) | Encerramento ou suspensão em cascata | ETI-36, ETI-42, ETI-46, ETI-116 | Parcial |
 
 ## Status usados nos diagramas
 

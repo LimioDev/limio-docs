@@ -1,67 +1,91 @@
-﻿Pessoa;Ticket;Horas lançadas
-Victor Hugo Rodrigues de Oliveira;ETI-2;3,0
-kaueamaral96;ETI-3;3,0
+﻿Pessoa;Ticket;Horas (Clockify)
 Augusto Ogawa;ETI-4;3,5
-andreyindras;ETI-4;9,0
-Gabriel Sena;ETI-6;3,0
+Augusto Ogawa;ETI-7;3,5
+Augusto Ogawa;ETI-10;1,71
+Augusto Ogawa;ETI-23;2,05
+Augusto Ogawa;ETI-26;1,1
+Augusto Ogawa;ETI-27;5,96
+Augusto Ogawa;ETI-28;4,15
+Augusto Ogawa;ETI-30;6,87
+Augusto Ogawa;ETI-33;1,58
+Augusto Ogawa;ETI-35;3,31
+Augusto Ogawa;ETI-36;5,87
+Augusto Ogawa;ETI-37;8,71
+Augusto Ogawa;ETI-44;4,56
+Augusto Ogawa;ETI-45;1,12
+Augusto Ogawa;ETI-46;6,09
+Augusto Ogawa;ETI-47;7,82
+Augusto Ogawa;ETI-50;5,47
+Augusto Ogawa;ETI-63;4
+Augusto Ogawa;ETI-75;3,32
+Augusto Ogawa;ETI-77;3,17
+Augusto Ogawa;(sem card);2,05
 Gabriel Sena;ETI-7;2,5
-Victor Hugo Rodrigues de Oliveira;ETI-7;2,07
-andreyindras;ETI-7;2,75
-kaueamaral96;ETI-7;2,9
-Victor Hugo Rodrigues de Oliveira;ETI-8;9,67
-andreyindras;ETI-8;0,02
-kaueamaral96;ETI-8;1,0
-Gabriel Sena;ETI-9;8,9
-Victor Hugo Rodrigues de Oliveira;ETI-9;2,38
-kaueamaral96;ETI-9;1,5
-Victor Hugo Rodrigues de Oliveira;ETI-10;0,3
-Victor Hugo Rodrigues de Oliveira;ETI-17;9,07
-andreyindras;ETI-18;12,53
-kaueamaral96;ETI-19;1,0
-Victor Hugo Rodrigues de Oliveira;ETI-20;42,48
-kaueamaral96;ETI-20;20,68
-Gabriel Sena;ETI-21;6,68
-Victor Hugo Rodrigues de Oliveira;ETI-21;0,67
-Augusto Ogawa;ETI-23;3,83
-Victor Hugo Rodrigues de Oliveira;ETI-24;2,82
-Gabriel Sena;ETI-26;1,18
-Victor Hugo Rodrigues de Oliveira;ETI-26;1,5
-andreyindras;ETI-26;3,17
-kaueamaral96;ETI-26;1,63
-Augusto Ogawa;ETI-27;29,93
+Gabriel Sena;ETI-9;8,93
+Gabriel Sena;ETI-21;6,71
+Gabriel Sena;ETI-26;1,2
 Gabriel Sena;ETI-27;1,6
-andreyindras;ETI-27;2,15
-kaueamaral96;ETI-27;1,22
-Victor Hugo Rodrigues de Oliveira;ETI-29;0,83
-Augusto Ogawa;ETI-30;6,7
-Gabriel Sena;ETI-32;7,62
-andreyindras;ETI-34;8,9
-Augusto Ogawa;ETI-35;3,3
-Augusto Ogawa;ETI-36;15,27
-kaueamaral96;ETI-37;1,0
-kaueamaral96;ETI-38;3,55
-kaueamaral96;ETI-39;7,33
-Victor Hugo Rodrigues de Oliveira;ETI-40;112,97
-kaueamaral96;ETI-41;1,85
+Gabriel Sena;ETI-32;7,66
+Gabriel Sena;ETI-52;7,35
+Gabriel Sena;ETI-54;4,81
+Gabriel Sena;ETI-56;3,77
+Gabriel Sena;ETI-59;9,67
+Gabriel Sena;ETI-79;3,97
+Gabriel Sena;ETI-88;4,49
+Gabriel Sena;ETI-101;10,1
+Victor Hugo Rodrigues de Oliveira;ETI-2;3
+Victor Hugo Rodrigues de Oliveira;ETI-7;2,08
+Victor Hugo Rodrigues de Oliveira;ETI-8;9,69
+Victor Hugo Rodrigues de Oliveira;ETI-9;0,34
+Victor Hugo Rodrigues de Oliveira;ETI-10;0,31
+Victor Hugo Rodrigues de Oliveira;ETI-17;11,18
+Victor Hugo Rodrigues de Oliveira;ETI-20;42,64
+Victor Hugo Rodrigues de Oliveira;ETI-21;0,68
+Victor Hugo Rodrigues de Oliveira;ETI-24;2,83
+Victor Hugo Rodrigues de Oliveira;ETI-26;1,5
+Victor Hugo Rodrigues de Oliveira;ETI-29;0,84
+Victor Hugo Rodrigues de Oliveira;ETI-40;5,43
 Victor Hugo Rodrigues de Oliveira;ETI-42;0,4
-kaueamaral96;ETI-42;6,6
-andreyindras;ETI-48;10,65
-Victor Hugo Rodrigues de Oliveira;ETI-49;3,75
-kaueamaral96;ETI-49;0,6
-andreyindras;ETI-50;12,18
-Victor Hugo Rodrigues de Oliveira;ETI-51;2,85
-kaueamaral96;ETI-51;0,28
-Gabriel Sena;ETI-52;7,28
-Victor Hugo Rodrigues de Oliveira;ETI-53;0,02
-kaueamaral96;ETI-53;1,23
-Gabriel Sena;ETI-54;4,77
-Victor Hugo Rodrigues de Oliveira;ETI-55;4,15
-kaueamaral96;ETI-55;0,92
-Gabriel Sena;ETI-56;3,73
+Victor Hugo Rodrigues de Oliveira;ETI-49;3,77
+Victor Hugo Rodrigues de Oliveira;ETI-51;2,86
+Victor Hugo Rodrigues de Oliveira;ETI-53;0,01
+Victor Hugo Rodrigues de Oliveira;ETI-55;4,16
 Victor Hugo Rodrigues de Oliveira;ETI-57;3,37
+Victor Hugo Rodrigues de Oliveira;ETI-60;3,9
+Victor Hugo Rodrigues de Oliveira;ETI-76;4,09
+andreyindras;ETI-4;3
+andreyindras;ETI-7;2,75
+andreyindras;ETI-8;1,69
+andreyindras;ETI-18;12,72
+andreyindras;ETI-26;1,67
+andreyindras;ETI-27;2,16
+andreyindras;ETI-34;8,95
+andreyindras;ETI-48;10,71
+andreyindras;ETI-50;12,29
+andreyindras;ETI-61;4,19
+andreyindras;ETI-67;4,22
+andreyindras;ETI-73;8,22
+kaueamaral96;ETI-3;3
+kaueamaral96;ETI-7;3,05
+kaueamaral96;ETI-8;1
+kaueamaral96;ETI-9;1,51
+kaueamaral96;ETI-19;1
+kaueamaral96;ETI-20;20,74
+kaueamaral96;ETI-26;1,64
+kaueamaral96;ETI-27;1,22
+kaueamaral96;ETI-37;1,01
+kaueamaral96;ETI-38;3,58
+kaueamaral96;ETI-39;7,46
+kaueamaral96;ETI-41;2,03
+kaueamaral96;ETI-42;6,6
+kaueamaral96;ETI-49;0,61
+kaueamaral96;ETI-51;0,29
+kaueamaral96;ETI-53;1,25
+kaueamaral96;ETI-55;0,91
 kaueamaral96;ETI-57;0,32
-Gabriel Sena;ETI-59;9,65
-Victor Hugo Rodrigues de Oliveira;ETI-60;3,88
-kaueamaral96;ETI-60;0,15
-kaueamaral96;ETI-74;1,17
-kaueamaral96;ETI-108;1,98
+kaueamaral96;ETI-60;0,16
+kaueamaral96;ETI-64;5,09
+kaueamaral96;ETI-68;4,96
+kaueamaral96;ETI-74;1,58
+kaueamaral96;ETI-76;0,41
+kaueamaral96;ETI-108;2,01

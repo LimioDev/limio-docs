@@ -2,7 +2,7 @@
 
 App que conecta quem precisa de um serviço pontual (**Empregador**) a prestadores próximos (**Prestador**). O Empregador publica a demanda, os prestadores compatíveis se candidatam, os dois conversam no chat e o Empregador escolhe um. Só o escolhido recebe telefone e endereço. O pagamento do serviço é feito fora da plataforma; o único produto pago é a assinatura **GOLD**, que tira o limite de 4 escolhas por mês do Prestador.
 
-Projeto da Escola de TI · Situação em **27/10/2026** · Sprint 6 em andamento
+Projeto da Escola de TI · Situação em **01/11/2026** · Sprint 6 em andamento
 
 ## Repositórios e ambientes
 
@@ -22,7 +22,7 @@ O trabalho do dia a dia fica nos dois repositórios de código. Os branches de d
 
 | Item pedido | Onde está | Resumo |
 | --- | --- | --- |
-| Estimativa de horas do produto | [`estimativa/`](estimativa/) | **1.001 h** estimadas para os 110 cards do MVP; **446,87 h** já lançadas no Jira. Em [CSV](estimativa/estimativa-horas.csv) e em [Markdown](estimativa/estimativa-horas.md). |
+| Estimativa de horas do produto | [`estimativa/`](estimativa/) | **1.001 h** estimadas para os 110 cards do MVP; **405,74 h** trabalhadas até 01/11, medidas pelo Clockify. Em [CSV](estimativa/estimativa-horas.csv) e em [Markdown](estimativa/estimativa-horas.md). |
 | Artefatos | [`artefatos/`](artefatos/) | Requisitos (v1.3), casos de uso, diagrama de classes, DER, 13 diagramas de atividade e backlog de user stories. |
 | Design | [`design/`](design/) | Fundamentos visuais, mapa das telas e as 90 telas do protótipo (exportação de 27/10), separadas por módulo. |
 | System design | [`system-design/`](system-design/system-design.md) | Arquitetura, módulos, fluxos, dados, segurança, infraestrutura e as 3 ADRs. |
@@ -36,9 +36,9 @@ O trabalho do dia a dia fica nos dois repositórios de código. Os branches de d
 ├── README.md                     este índice
 ├── equipe.md                     papéis, horas e entregas por pessoa
 ├── estimativa/
-│   ├── estimativa-horas.csv      110 cards: estimativa, lançado, faixa ±30% e saldo
+│   ├── estimativa-horas.csv      110 cards: estimativa, trabalhado, faixa ±30% e saldo
 │   ├── estimativa-horas.md       método, resumos e tabela completa
-│   └── horas-por-pessoa.csv      horas lançadas por pessoa e por card
+│   └── horas-por-pessoa.csv      horas do Clockify por pessoa e por card
 ├── artefatos/
 │   ├── requisitos/               especificação de requisitos e regras de negócio v1.3
 │   ├── casos-de-uso/             diagrama e especificação dos casos de uso
