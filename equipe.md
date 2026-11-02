@@ -14,7 +14,6 @@
 
 A composição oficial do time não muda até o fim do período letivo. As funções podem rotacionar para destravar tarefas:
 
-- **Sprints 4 e 5:** o front-end do fluxo de cadastro (ETI-40) está com o Augusto no Jira; quem registrou horas no card foi o Victor.
 - **Sprint 5:** Augusto passou a acumular o papel de Tech Lead; Gabriel assumiu o back-end do painel do Empregador, no módulo `anuncio` (ETI-52).
 - **Documentação (agosto e setembro):** quem é de código também trabalhou nos documentos. Exemplos: Andrey no diagrama de atividade (ETI-18), Gabriel no diagrama de classes (ETI-9) e nos Termos de Uso (ETI-21), Victor nos casos de uso (ETI-8, ETI-17).
 
