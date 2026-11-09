@@ -1,6 +1,6 @@
 # Equipe — LIMIO
 
-> Horas medidas pelo **Clockify** de cada integrante (copiado em **01/11/2026**); cards, status e responsáveis do Jira (projeto ETI) na mesma data. Cerimônias e decisões completas na página [Gestão de Equipe](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/2981889) do Confluence.
+> Cards, status e responsáveis do Jira (projeto ETI) em **08/11/2026**. Horas por pessoa medidas pelo **Clockify** de cada integrante até **01/11/2026**, com cerimônias e dailies; em 08/11 o time somava 603,64 h no Clockify, ainda sem o detalhe por pessoa. Cerimônias e decisões completas na página [Gestão de Equipe](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/2981889) do Confluence.
 
 ## Integrantes e papéis
 
@@ -28,16 +28,16 @@ A composição oficial do time não muda até o fim do período letivo. As funç
 
 ## Horas por pessoa
 
-Soma do Clockify de cada integrante, o cronômetro que cada um usa ao trabalhar em um card. Detalhe card a card em [`estimativa/horas-por-pessoa.csv`](estimativa/horas-por-pessoa.csv).
+Soma do Clockify de cada integrante até 01/11: horas nos cards e horas de cerimônias e dailies, que não têm card. Em 08/11 o total do time era 603,64 h; as 55,4 h lançadas depois de 01/11 (fim da Sprint 6 e code review) ainda não estão separadas por pessoa. Detalhe card a card em [`estimativa/horas-por-pessoa.csv`](estimativa/horas-por-pessoa.csv).
 
-| Integrante | Cards com horas | Horas | % do total |
-| --- | ---: | ---: | ---: |
-| Victor | 20 | 103,07 h | 25,4% |
-| Augusto | 20 | 85,92 h | 21,2% |
-| Gabriel | 13 | 72,76 h | 17,9% |
-| Andrey | 12 | 72,56 h | 17,9% |
-| Kauê | 24 | 71,43 h | 17,6% |
-| **Total** | | **405,74 h** | 100% |
+| Integrante | Cards com horas | Em cards | Cerimônias e dailies | Total | % do total |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Victor | 20 | 103,07 h | 28,5 h | 131,57 h | 24,0% |
+| Augusto | 20 | 85,92 h | 28,5 h | 114,42 h | 20,9% |
+| Gabriel | 13 | 72,76 h | 28,5 h | 101,26 h | 18,5% |
+| Andrey | 12 | 72,56 h | 28,5 h | 101,06 h | 18,4% |
+| Kauê | 24 | 71,43 h | 28,5 h | 99,93 h | 18,2% |
+| **Total** | | **405,74 h** | **142,5 h** | **548,24 h** | 100% |
 
 > O Andrey usou dois workspaces no Clockify; as horas dele juntam os dois, contando uma vez só as entradas repetidas. No Clockify do Augusto, quatro dias com dois cards tiveram o total do dia dividido igualmente entre eles. Detalhes em [`estimativa/estimativa-horas.md`](estimativa/estimativa-horas.md).
 
@@ -47,7 +47,7 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 
 ### Kauê — Product Owner e Frontend
 
-14 cards como responsável: 9 concluídos, 3 em andamento e 2 a fazer.
+14 cards como responsável: 9 concluídos, 4 em andamento e 1 a fazer.
 
 **Concluídos**
 
@@ -63,15 +63,16 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 
 **Em andamento**
 
-- [ETI-64](https://kaueamaral96.atlassian.net/browse/ETI-64) [anuncio] [FRONT-END] Confirmação "Cancelar este anúncio?" — À TESTAR
+- [ETI-64](https://kaueamaral96.atlassian.net/browse/ETI-64) [anuncio] [FRONT-END] Confirmação "Cancelar este anúncio?" — AJUSTANDO
 - [ETI-68](https://kaueamaral96.atlassian.net/browse/ETI-68) [anuncio] [FRONT-END] Telas "Candidatos" e "Candidatos vazio", com recusar — À TESTAR
+- [ETI-89](https://kaueamaral96.atlassian.net/browse/ETI-89) [anuncio] [FRONT-END] Botão "Iniciar serviço" e tela "Serviço em andamento" — À TESTAR
 - [ETI-108](https://kaueamaral96.atlassian.net/browse/ETI-108) [moderacao] [FRONT-END] Tela "Avaliação" — EM PROGRESSO
 
-**Onde trabalhou mais horas:** ETI-20 (20,74 h); ETI-39 (7,46 h); ETI-42 (6,6 h); ETI-64 (5,09 h); ETI-68 (4,96 h)
+**Onde trabalhou mais horas (até 01/11):** ETI-20 (20,74 h); ETI-39 (7,46 h); ETI-42 (6,6 h); ETI-64 (5,09 h); ETI-68 (4,96 h)
 
 ### Augusto — Backend e Tech Lead
 
-22 cards como responsável: 12 concluídos, 10 em andamento e 0 a fazer.
+26 cards como responsável: 16 concluídos, 6 em andamento e 4 a fazer.
 
 **Concluídos**
 
@@ -80,32 +81,32 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 - [ETI-23](https://kaueamaral96.atlassian.net/browse/ETI-23) [DEV] Criação de Repositório para o projeto LIMIO
 - [ETI-25](https://kaueamaral96.atlassian.net/browse/ETI-25) Criacao do DIAGRAMA DE ENTIDADE E RELACIONAMENTO
 - [ETI-28](https://kaueamaral96.atlassian.net/browse/ETI-28) [DEV] Setup Inicial dos Repositórios limio-api e limio-app
+- [ETI-30](https://kaueamaral96.atlassian.net/browse/ETI-30) [auth] [BACK-END] Cadastrar conta e confirmar telefone (OTP) e e-mail
+- [ETI-33](https://kaueamaral96.atlassian.net/browse/ETI-33) [auth] [BACK-END] Recuperação de senha por link e alteração de senha autenticada
 - [ETI-35](https://kaueamaral96.atlassian.net/browse/ETI-35) [DOCS] Criacão de ADR's
+- [ETI-36](https://kaueamaral96.atlassian.net/browse/ETI-36) [conta] [BACK-END] Encerrar conta: anonimização, bloqueio de acesso, bloqueio de CPF e auditoria
 - [ETI-37](https://kaueamaral96.atlassian.net/browse/ETI-37) [INFRA] Subir limio-api + Postgres na Railway (ambientes dev e prod)
 - [ETI-40](https://kaueamaral96.atlassian.net/browse/ETI-40) [auth] [FRONT-END] Fluxo de cadastro em 3 passos
 - [ETI-44](https://kaueamaral96.atlassian.net/browse/ETI-44) remodelar estrutura de diretorio, ADR e INCONSISTENCIA DE CPNJ
 - [ETI-45](https://kaueamaral96.atlassian.net/browse/ETI-45) [INFRA] Criar conta no Resend e configurar o domínio de envio de e-mails
+- [ETI-46](https://kaueamaral96.atlassian.net/browse/ETI-46) [anuncio] [BACK-END] Encerrar anúncios, candidaturas e combinados de conta encerrada
 - [ETI-119](https://kaueamaral96.atlassian.net/browse/ETI-119) Remover .env do front end
 - [ETI-120](https://kaueamaral96.atlassian.net/browse/ETI-120) atualizar secure e cors do projeto para teste local
 
 **Em andamento**
 
-- [ETI-30](https://kaueamaral96.atlassian.net/browse/ETI-30) [auth] [BACK-END] Cadastrar conta e confirmar telefone (OTP) e e-mail — AJUSTANDO
-- [ETI-33](https://kaueamaral96.atlassian.net/browse/ETI-33) [auth] [BACK-END] Recuperação de senha por link e alteração de senha autenticada — AJUSTANDO
-- [ETI-36](https://kaueamaral96.atlassian.net/browse/ETI-36) [conta] [BACK-END] Encerrar conta: anonimização, bloqueio de acesso, bloqueio de CPF e auditoria — AJUSTANDO
-- [ETI-46](https://kaueamaral96.atlassian.net/browse/ETI-46) [anuncio] [BACK-END] Encerrar anúncios, candidaturas e combinados de conta encerrada — AJUSTANDO
-- [ETI-47](https://kaueamaral96.atlassian.net/browse/ETI-47) [auth] [BACK-END] Páginas web "Confirmar e-mail" e "Nova senha" — PARA AJUSTE
-- [ETI-63](https://kaueamaral96.atlassian.net/browse/ETI-63) [anuncio] [BACK-END] Cancelar anúncio antes da escolha — À TESTAR
-- [ETI-75](https://kaueamaral96.atlassian.net/browse/ETI-75) [anuncio] [BACK-END] Candidatar-se a um anúncio — PARA AJUSTE
-- [ETI-77](https://kaueamaral96.atlassian.net/browse/ETI-77) [anuncio] [BACK-END] Listar minhas candidaturas e desistir de candidatura pendente — EM PROGRESSO
-- [ETI-86](https://kaueamaral96.atlassian.net/browse/ETI-86) [anuncio] [BACK-END] Consultar o serviço combinado com os contatos liberados — EM PROGRESSO
+- [ETI-47](https://kaueamaral96.atlassian.net/browse/ETI-47) [auth] [BACK-END] Páginas web "Confirmar e-mail" e "Nova senha" — AJUSTANDO
+- [ETI-63](https://kaueamaral96.atlassian.net/browse/ETI-63) [anuncio] [BACK-END] Cancelar anúncio antes da escolha — AJUSTANDO
+- [ETI-75](https://kaueamaral96.atlassian.net/browse/ETI-75) [anuncio] [BACK-END] Candidatar-se a um anúncio — AJUSTANDO
+- [ETI-77](https://kaueamaral96.atlassian.net/browse/ETI-77) [anuncio] [BACK-END] Listar minhas candidaturas e desistir de candidatura pendente — PARA AJUSTE
+- [ETI-86](https://kaueamaral96.atlassian.net/browse/ETI-86) [anuncio] [BACK-END] Consultar o serviço combinado com os contatos liberados — PARA AJUSTE
 - [ETI-92](https://kaueamaral96.atlassian.net/browse/ETI-92) [anuncio] [BACK-END] Validar o serviço (presencial ou pela foto) — EM PROGRESSO
 
-**Onde trabalhou mais horas:** ETI-37 (8,71 h); ETI-47 (7,82 h); ETI-30 (6,87 h); ETI-46 (6,09 h); ETI-27 (5,96 h)
+**Onde trabalhou mais horas (até 01/11):** ETI-37 (8,71 h); ETI-47 (7,82 h); ETI-30 (6,87 h); ETI-46 (6,09 h); ETI-27 (5,96 h)
 
 ### Andrey — Backend
 
-10 cards como responsável: 5 concluídos, 3 em andamento e 2 a fazer.
+10 cards como responsável: 7 concluídos, 3 em andamento e 0 a fazer.
 
 **Concluídos**
 
@@ -114,14 +115,16 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 - [ETI-34](https://kaueamaral96.atlassian.net/browse/ETI-34) [conta] [BACK-END] Consultar e atualizar preferências de notificação
 - [ETI-48](https://kaueamaral96.atlassian.net/browse/ETI-48) [empregador] [BACK-END] Consultar e editar o perfil de Empregador
 - [ETI-50](https://kaueamaral96.atlassian.net/browse/ETI-50) [empregador] [BACK-END] Cadastrar, editar, remover e marcar endereço padrão
+- [ETI-67](https://kaueamaral96.atlassian.net/browse/ETI-67) [anuncio] [BACK-END] Listar os candidatos do anúncio e recusar candidato
+- [ETI-73](https://kaueamaral96.atlassian.net/browse/ETI-73) [anuncio] [BACK-END] Listar o mural e o detalhe do anúncio para o Prestador
 
 **Em andamento**
 
-- [ETI-61](https://kaueamaral96.atlassian.net/browse/ETI-61) [anuncio] [BACK-END] Editar anúncio antes da escolha — À TESTAR
-- [ETI-67](https://kaueamaral96.atlassian.net/browse/ETI-67) [anuncio] [BACK-END] Listar os candidatos do anúncio e recusar candidato — À TESTAR
-- [ETI-73](https://kaueamaral96.atlassian.net/browse/ETI-73) [anuncio] [BACK-END] Listar o mural e o detalhe do anúncio para o Prestador — AJUSTANDO
+- [ETI-61](https://kaueamaral96.atlassian.net/browse/ETI-61) [anuncio] [BACK-END] Editar anúncio antes da escolha — AJUSTANDO
+- [ETI-69](https://kaueamaral96.atlassian.net/browse/ETI-69) [anuncio] [BACK-END] Escolher o prestador: transação atômica, cota e liberação do contato — À TESTAR
+- [ETI-90](https://kaueamaral96.atlassian.net/browse/ETI-90) [anuncio] [BACK-END] Fazer o check-out com foto — À TESTAR
 
-**Onde trabalhou mais horas:** ETI-18 (12,72 h); ETI-50 (12,29 h); ETI-48 (10,71 h); ETI-34 (8,95 h); ETI-73 (8,22 h)
+**Onde trabalhou mais horas (até 01/11):** ETI-18 (12,72 h); ETI-50 (12,29 h); ETI-48 (10,71 h); ETI-34 (8,95 h); ETI-73 (8,22 h)
 
 ### Gabriel — Backend
 
@@ -143,13 +146,13 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 **Em andamento**
 
 - [ETI-88](https://kaueamaral96.atlassian.net/browse/ETI-88) [anuncio] [BACK-END] Iniciar o serviço — À TESTAR
-- [ETI-107](https://kaueamaral96.atlassian.net/browse/ETI-107) [moderacao] [BACK-END] Avaliar a outra parte ou pular — EM PROGRESSO
+- [ETI-107](https://kaueamaral96.atlassian.net/browse/ETI-107) [moderacao] [BACK-END] Avaliar a outra parte ou pular — À TESTAR
 
-**Onde trabalhou mais horas:** ETI-101 (10,1 h); ETI-59 (9,67 h); ETI-9 (8,93 h); ETI-32 (7,66 h); ETI-52 (7,35 h)
+**Onde trabalhou mais horas (até 01/11):** ETI-101 (10,1 h); ETI-59 (9,67 h); ETI-9 (8,93 h); ETI-32 (7,66 h); ETI-52 (7,35 h)
 
 ### Victor — Frontend
 
-15 cards como responsável: 8 concluídos, 0 em andamento e 7 a fazer.
+15 cards como responsável: 8 concluídos, 2 em andamento e 5 a fazer.
 
 **Concluídos**
 
@@ -162,11 +165,16 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 - [ETI-60](https://kaueamaral96.atlassian.net/browse/ETI-60) [anuncio] [FRONT-END] Telas "Novo anúncio", "Categoria" e "Anúncio publicado"
 - [ETI-76](https://kaueamaral96.atlassian.net/browse/ETI-76) [anuncio] [FRONT-END] Confirmação "Candidatar-se a este serviço?"
 
-**Onde trabalhou mais horas:** ETI-20 (42,64 h); ETI-17 (11,18 h); ETI-8 (9,69 h); ETI-40 (5,43 h); ETI-55 (4,16 h)
+**Em andamento**
+
+- [ETI-80](https://kaueamaral96.atlassian.net/browse/ETI-80) [perfil] [FRONT-END] Faixa de cota no mural e tela "Cota do mês" — PARA AJUSTE
+- [ETI-102](https://kaueamaral96.atlassian.net/browse/ETI-102) [chat] [FRONT-END] Telas "Chat" e "Chat somente leitura" — À TESTAR
+
+**Onde trabalhou mais horas (até 01/11):** ETI-20 (42,64 h); ETI-17 (11,18 h); ETI-8 (9,69 h); ETI-40 (5,43 h); ETI-55 (4,16 h)
 
 ### Cards sem responsável
 
-42 cards ainda não têm responsável no Jira. Quase todos são da Sprint 7, que será distribuída no planejamento dela; os demais são tarefas antigas de documentação e reunião feitas em conjunto.
+40 cards ainda não têm responsável no Jira. Quase todos são da Sprint 7, que será distribuída no planejamento dela; os demais são tarefas antigas de documentação e reunião feitas em conjunto.
 
 ## Cerimônias
 
@@ -181,3 +189,5 @@ Cards em que a pessoa é a responsável no Jira, por situação. A lista complet
 | Retrospective & Review — fim da Sprint 5 | 26/10/2026 | 14 cards concluídos; título obrigatório no anúncio; Sprints 6 e 7 planejadas |
 
 Todos os cinco integrantes estiveram presentes em todas as cerimônias registradas.
+
+**Horas no Clockify:** cada fim de sprint teve a Retrospective e Review (2,5 h) seguida da Planning da sprint seguinte (1,5 h). Somando a Planning da Sprint Inicial, são 20 h por integrante até a Sprint 5. As dailies, de 10 minutos às 12:00 toda terça, quarta, quinta e domingo, somam 8,5 h por integrante até 01/11. Datas e horários em [`estimativa/estimativa-horas.md`](estimativa/estimativa-horas.md#cerimônias-e-dailies).
