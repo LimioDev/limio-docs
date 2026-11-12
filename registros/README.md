@@ -5,10 +5,10 @@
 | Item | Valor |
 | --- | --- |
 | Domínio | `limio.dev.br` |
-| Uso hoje | API de desenvolvimento em `api-dev.limio.dev.br` e de produção em `api.limio.dev.br` |
+| Uso hoje | Envio de e-mails (Resend). A API usa os domínios da Railway: staging em `limio-api-staging.up.railway.app` e produção em `limio-api-production.up.railway.app` |
 | Comprovantes | pasta [`registro-br/`](registro-br/) |
 
-Os dois endereços abrem o healthcheck da API: [api-dev.limio.dev.br/actuator/health](https://api-dev.limio.dev.br/actuator/health) e [api.limio.dev.br/actuator/health](https://api.limio.dev.br/actuator/health).
+Os dois endereços abrem o healthcheck da API: [limio-api-staging.up.railway.app/actuator/health](https://limio-api-staging.up.railway.app/actuator/health) e [limio-api-production.up.railway.app/actuator/health](https://limio-api-production.up.railway.app/actuator/health).
 
 ### O que contém em `registro-br/`
 

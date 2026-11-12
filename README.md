@@ -10,13 +10,15 @@ Projeto da Escola de TI · Situação em **08/11/2026** · fim da Sprint 6 (a Sp
 | --- | --- |
 | API (back-end) | [github.com/LimioDev/limio-api](https://github.com/LimioDev/limio-api) — Java 21 e Spring Boot |
 | App (front-end mobile) | [github.com/LimioDev/limio-app](https://github.com/LimioDev/limio-app) — Expo e React Native |
-| API em desenvolvimento | [api-dev.limio.dev.br](https://api-dev.limio.dev.br/actuator/health) |
-| API em produção | [api.limio.dev.br](https://api.limio.dev.br/actuator/health) |
+| API em staging | [limio-api-staging.up.railway.app](https://limio-api-staging.up.railway.app/actuator/health) |
+| API em produção | [limio-api-production.up.railway.app](https://limio-api-production.up.railway.app/actuator/health) |
 | Issues (Jira) | [Board do projeto ETI](https://kaueamaral96.atlassian.net/jira/software/projects/ETI/boards/2) |
 | Documentação viva (Confluence) | [LIMIO — Visão Geral](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/overview) |
 | Protótipo (Figma) | [LIMIO — Protótipo Real](https://www.figma.com/design/mksrtupXi3Xs9uNeT0zKCw/LIMIO---PROTOTIPO-REAL?node-id=0-1) |
 
-O trabalho do dia a dia fica nos dois repositórios de código. Os branches de desenvolvimento são `develop` (publica em desenvolvimento) e `main` (publica em produção).
+O trabalho do dia a dia fica nos dois repositórios de código. Os branches de desenvolvimento são `develop` (merge publica em staging) e `main` (merge publica em production). O deploy é automático.
+
+A API e o banco são serverless e dormem depois de ~10 min sem uso. Por isso a primeira requisição depois disso demora mais, e isso é normal.
 
 ## O que tem nesta entrega
 
@@ -26,7 +28,7 @@ O trabalho do dia a dia fica nos dois repositórios de código. Os branches de d
 | Artefatos | [`artefatos/`](artefatos/) | Requisitos (v1.3), casos de uso, diagrama de classes, DER, 13 diagramas de atividade e backlog de user stories. |
 | Design | [`design/`](design/) | Fundamentos visuais, mapa das telas e as 90 telas do protótipo (exportação de 27/10), separadas por módulo. |
 | System design | [`system-design/`](system-design/system-design.md) | Arquitetura, módulos, fluxos, dados, segurança, infraestrutura e as 3 ADRs. |
-| Registro.br | [`registros/`](registros/) | Domínio `limio.dev.br`, usado pela API. |
+| Registro.br | [`registros/`](registros/) | Domínio `limio.dev.br`, usado para envio de e-mails (Resend). A API usa os domínios da Railway. |
 | Issues e equipe | [`equipe.md`](equipe.md) | Papéis, como ligar card → branch → pull request, horas e entregas de cada integrante, cerimônias. |
 
 ## Estrutura

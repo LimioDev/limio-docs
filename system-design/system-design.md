@@ -100,7 +100,7 @@ Linhas tracejadas: integrações previstas nos cards, ainda sem fornecedor escol
 | **limio-api** | Java 21, Spring Boot (Web MVC, Security, Data JPA, Validation, WebSocket, Actuator), Flyway, JWT (Spring Security OAuth2 JOSE), SDK do Resend, AWS SDK S3, Testcontainers | Regras de negócio, autenticação, persistência, integrações e as páginas web dos links de e-mail. |
 | **Páginas web** | HTML estático + JavaScript em `src/main/resources/static/paginas/`, servidas pela própria API ([ADR-0002](adr/0002-links-de-email-https-com-paginas-web.md)) | Concluir confirmação de e-mail e redefinição de senha no navegador. |
 | **Banco** | PostgreSQL, versionado por migrations do Flyway (`V1` a `V19` hoje) | Dados de todos os módulos, um esquema só. |
-| **Infraestrutura** | Railway, ambientes `development` e `production` | Hospedar API e banco, deploy automático por branch. |
+| **Infraestrutura** | Railway (serverless), ambientes `staging` e `production` | Hospedar API e banco, deploy automático por branch. |
 
 ## 5. Back-end: monolito modular por domínio
 
@@ -355,15 +355,17 @@ Os 13 fluxos completos, com raias e decisões, estão nos [diagramas de atividad
 ```mermaid
 flowchart LR
     DEV["Desenvolvedor"] -- "PR revisado<br/>CODEOWNERS" --> GH["GitHub<br/>LimioDev"]
-    GH -- "push na develop" --> RD["Railway · development<br/>api-dev.limio.dev.br"]
-    GH -- "push na main" --> RP["Railway · production<br/>api.limio.dev.br"]
-    RD --> PD[("Postgres dev")]
-    RP --> PP[("Postgres prod")]
+    GH -- "merge na develop" --> RD["Railway · staging<br/>limio-api-staging.up.railway.app"]
+    GH -- "merge na main" --> RP["Railway · production<br/>limio-api-production.up.railway.app"]
+    RD --> PD[("Postgres staging")]
+    RP --> PP[("Postgres production")]
     RD -. "/actuator/health" .-> HC["healthcheck"]
     RP -. "/actuator/health" .-> HC
 ```
 
-- Cada ambiente tem o próprio banco e as próprias variáveis (chaves do JWT, do HMAC do CPF, do Resend e do storage).
+- Cada ambiente tem o próprio Postgres, o próprio bucket de arquivos (storage) e as próprias variáveis (chaves do JWT, do HMAC do CPF, do Resend e do storage).
+- Serverless: a API e o banco dormem depois de ~10 min sem uso. A primeira requisição depois disso demora mais, e isso é normal.
+- O health check fica em `/actuator/health` e é público no `SecurityConfig`.
 - O Flyway aplica as migrations ao subir. Fora de produção, o envio de e-mail fica desligado (`EMAIL_ENVIAR=false`) e o conteúdo só vai para o log.
 - Fluxo de trabalho: uma branch `feature/<nº do card>` por card do Jira, pull request revisado e merge na `develop`.
 
