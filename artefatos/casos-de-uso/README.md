@@ -16,7 +16,7 @@
 
   Legenda das elipses: amarelo é caso de uso iniciado por um ator humano; verde é executado automaticamente pelo Sistema; cinza tracejado é caso de uso de outro pacote, mostrado só para indicar o relacionamento.
 
-  O UC16 (Gerenciar sessões e dispositivos) saiu do escopo na versão 1.2 dos requisitos (RF20). Ele ainda aparece desenhado na página 2 do diagrama, mas não tem especificação nem CSV.
+  O UC04 (Confirmar telefone por OTP) saiu do escopo na versão 1.4 dos requisitos (RF06, 11/11/2026): a confirmação por SMS foi removida e o e-mail passou a ser o único canal de confirmação (ETI-134 e ETI-135). O UC04 ainda aparece no diagrama e nos CSVs, e o UC01 (Cadastrar conta universal) ainda descreve o envio do OTP nos passos 5 a 7 e no fluxo alternativo 3. No fluxo vigente, o cadastro envia o link de confirmação de e-mail (UC05). Os CSVs são exportações da planilha e serão atualizados quando ela for revisada.
 - **Especificação:** os 51 casos de uso em CSV, na seção "Arquivos CSV" abaixo, com finalidade, atores, pré-condições, fluxo principal e fluxos alternativos de cada um.
 - **Planilha de trabalho:** [Google Sheets](https://docs.google.com/spreadsheets/d/1kWNyoly5FkJhXvtluj5rvOOADmTCcx7xr4R0tdRfUdw/edit?usp=sharing), uma aba por caso de uso
 - **Página no Confluence:** [Documentação de Casos de Uso](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/7667713)
@@ -49,7 +49,7 @@ Exportados da planilha em 27/10/2026. Separador `;` e acentos em UTF-8, para abr
 | UC01 | Cadastrar conta universal | Visitante | [`uc01-cadastrar-conta-universal.csv`](csv/uc01-cadastrar-conta-universal.csv) |
 | UC02 | Recusar cadastro duplicado | Visitante | [`uc02-recusar-cadastro-duplicado.csv`](csv/uc02-recusar-cadastro-duplicado.csv) |
 | UC03 | Login com e-mail e senha | Usuário | [`uc03-login-com-e-mail-e-senha.csv`](csv/uc03-login-com-e-mail-e-senha.csv) |
-| UC04 | Confirmar telefone por OTP | Usuário em cadastro (ou usuário com telefone ainda não verificado) | [`uc04-confirmar-telefone-por-otp.csv`](csv/uc04-confirmar-telefone-por-otp.csv) |
+| UC04 | Confirmar telefone por OTP (fora do escopo desde a v1.4) | Usuário em cadastro (ou usuário com telefone ainda não verificado) | [`uc04-confirmar-telefone-por-otp.csv`](csv/uc04-confirmar-telefone-por-otp.csv) |
 | UC05 | Confirmar e-mail | Usuário | [`uc05-confirmar-e-mail.csv`](csv/uc05-confirmar-e-mail.csv) |
 | UC06 | Recuperar senha por e-mail | Usuário (não autenticado) | [`uc06-recuperar-senha-por-e-mail.csv`](csv/uc06-recuperar-senha-por-e-mail.csv) |
 | UC07 | Alterar senha autenticado | Usuário autenticado | [`uc07-alterar-senha-autenticado.csv`](csv/uc07-alterar-senha-autenticado.csv) |
@@ -104,6 +104,5 @@ A especificação é de agosto. No código, alguns nomes mudaram:
 
 - O status inicial do anúncio é `PUBLICADO` (no documento, "AguardandoCandidatos"), e "Combinado" não é um status: é o anúncio `PUBLICADO` com uma candidatura `ESCOLHIDA`.
 - A candidatura pendente é `ENVIADA` (no documento, "Pendente").
-- A conta é criada antes do SMS, e não depois (decisão do grupo no ETI-30).
-
+- A conta é criada no envio do formulário (decisão do grupo no ETI-30). Desde a versão 1.4 dos requisitos não há confirmação por SMS; a conta é confirmada só por e-mail.
 Os diagramas de atividade de 27/10 ([`../atividade/`](../atividade/)) já estão com os nomes do código.

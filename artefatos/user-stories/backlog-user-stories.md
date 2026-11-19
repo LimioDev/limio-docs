@@ -1,5 +1,7 @@
 > Cópia do documento anexado à página [Backlog de User Stories](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/26443777) do Confluence, versão de 06/10/2026. Depois dessa data as histórias viraram os cards ETI-46 a ETI-118 do Jira, e as tags dos cards foram alinhadas aos módulos do código (26/10): `contratante` virou `[empregador]`, `servico` virou `[anuncio]`, o GOLD virou `[financeiro]`, as notificações viraram `[notificacao]`, o admin virou `[administracao]`, a cota virou `[perfil]` e a avaliação virou `[moderacao]`.
 
+> **Requisitos v1.4 (11/11/2026):** a US03 (Confirmar telefone por código SMS) saiu do escopo. O cadastro passa a confirmar só o e-mail, com busca de endereço por CEP (cards ETI-134 e ETI-135). As menções a SMS na US01 (envio do código após o cadastro), na US05 (login com telefone confirmado) e na US11 (canal SMS nas preferências) também deixam de valer.
+
 # LIMIO — Backlog completo de User Stories
 
 > **Base:** planilha de casos de uso (UCs), telas do Figma, DER e diagrama de classes de 06/10 e decisões do PO registradas em `LIMIO-base-de-contexto.md`.

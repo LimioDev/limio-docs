@@ -1,8 +1,10 @@
 # Especificação de requisitos e regras de negócio — LIMIO
 
-> Cópia da página do Confluence [Especificação de requisitos e regras de negócio](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/557058), versão 1.3 de 06/10/2026. A página do Confluence é a fonte oficial.
+> Cópia da página do Confluence [Especificação de requisitos e regras de negócio](https://kaueamaral96.atlassian.net/wiki/spaces/~71202081061b4b9b5c4bbea63b29ec57d232c6/pages/557058), versão 1.4 de 11/11/2026. A página do Confluence é a fonte oficial.
 
-**Versão:** 1.3 · **Data:** 06/10/2026 · **Versão anterior:** 1.2, de 29/08/2026
+**Versão:** 1.4 · **Data:** 11/11/2026 · **Versão anterior:** 1.3, de 06/10/2026
+
+**Alterações da 1.4:** remoção da confirmação de telefone por SMS (ETI-134 e ETI-135). O e-mail passa a ser o único canal de confirmação de conta, pelo Resend. O RF06 sai do escopo (o número RF06 passa a não ser utilizado, pela regra de identificadores estáveis da seção 3). Ajustes em RF01, RF05, RF19, RNF04 e no status da conta no glossário. O telefone segue como dado de contato obrigatório e editável, mas sem confirmação.
 
 **Alterações da 1.3:** incorporação das decisões de Acesso e Identidade tomadas até 06/10 e alinhamento com o DER de 06/10. Novo **RF70** (política de senha). Prazos e limites definidos em RF05, RF06, RF07 e RF08. Encerramento de sessões em RF08 e RF09. Detalhamento da exclusão de conta (RF13, RNF02) e das preferências de notificação e opt-in de WhatsApp (RF01, RF19). RF59 passa a recusar o login de conta suspensa. CPF incluído entre os dados sensíveis (RNF03). Limites de segurança referenciados no RNF04. Glossário: papel ativo por conta e status da conta. Revisão de texto em RB12, RB19 e RNF13.
 
@@ -17,7 +19,7 @@
 | Ator                         | Descrição                                                                                            |
 |------------------------------|------------------------------------------------------------------------------------------------------|
 | **Usuário**                  | Pessoa física com conta única (CPF + e-mail). Pode alternar papéis.                                  |
-| **Empregador**               | Papel que cria anúncios, recebe aplicações, conversa e escolhe um prestador.                         |
+| **Empregador (Solicitante)** | Papel que cria anúncios, recebe aplicações, conversa e escolhe um prestador.                         |
 | **Prestador**                | Papel que vê o mural, aplica, conversa e executa o serviço se for escolhido.                         |
 | **Prestador FREE**           | Prestador sem assinatura GOLD ativa. Teto de 4 serviços *escolhidos* por mês calendário.             |  
 | **Prestador GOLD**           | Prestador com assinatura GOLD ativa. Combinações ilimitadas. Mesma visibilidade de mural que o FREE. |
@@ -81,7 +83,7 @@
 | **Conclusão por silêncio**      | Se a data agendada **vigente** passou e ninguém moveu o anúncio, ou se houve check-out e o solicitante não validou no prazo, o sistema marca `Concluido`. Proposta de reagendamento pendente suspende essa conclusão (RF46, RB09).                         |
 | **Denúncia de não pagamento**   | Prestador reporta que o solicitante não pagou o combinado. Não gera estorno nem cobrança pelo LIMIO; serve para moderação de conta e fica coberto pelos Termos de Uso.                                                                                     |
 | **Papel ativo**                 | Visão corrente do usuário: Empregador ou Prestador. Vale para a conta inteira (não por aparelho) e é restaurado no login. No código, Empregador corresponde a `PapelUsuario.CONTRATANTE`.                                                                  |
-| **Status da conta**             | `PENDENTE_VERIFICACAO` (conta criada, telefone ou e-mail ainda não confirmado), `ATIVA` (telefone e e-mail confirmados) e `BLOQUEADA` (conta suspensa, RF59). A conta excluída é identificada pela data de anonimização. Transições a confirmar pelo time. |
+| **Status da conta**             | `PENDENTE_VERIFICACAO` (conta criada, e-mail ainda não confirmado), `ATIVA` (e-mail confirmado) e `BLOQUEADA` (conta suspensa, RF59). A conta excluída é identificada pela data de anonimização. Transições a confirmar pelo time. |
 
 ------------------------------------------------------------------------
 
@@ -91,7 +93,7 @@ Requisitos são testáveis. Cada RF descreve uma capacidade do sistema. Os ident
 
 ### 3.1 Acesso, autenticação e identidade
 
-- **RF01 — Cadastro universal:** o sistema permite criar conta informando nome, e-mail, celular, senha (RF70), CPF, data de nascimento e localização (cidade/UF), além do aceite obrigatório dos Termos de Uso e da Política de Privacidade. O celular aceita DDD + 9 dígitos começando por 9 e é gravado como `+55DDNNNNNNNNN`. Cidade/UF é escolhida por autocompletar com a lista do IBGE, e a API valida a UF entre as 27. O cadastro oferece opt-in de WhatsApp, **desmarcado por padrão e separado** do aceite dos Termos (RF19). Durante a confirmação, o usuário pode corrigir o celular ("Trocar número") e o e-mail ("Usar outro e-mail"). A conta é criada no envio do formulário, com papel ativo Empregador; a escolha de papel ocorre após o login, por alternância.
+- **RF01 — Cadastro universal:** o sistema permite criar conta informando nome, e-mail, celular, senha (RF70), CPF, data de nascimento e localização (cidade/UF), além do aceite obrigatório dos Termos de Uso e da Política de Privacidade. O celular é dado de contato obrigatório, sem confirmação por SMS: aceita DDD + 9 dígitos começando por 9 e é gravado como `+55DDNNNNNNNNN`. Cidade/UF é escolhida por autocompletar com a lista do IBGE, e a API valida a UF entre as 27. O cadastro oferece opt-in de WhatsApp, **desmarcado por padrão e separado** do aceite dos Termos (RF19). Depois do envio, o usuário confirma o e-mail pelo link (RF07) e pode corrigir o e-mail ("Usar outro e-mail"). A conta é criada no envio do formulário, com papel ativo Empregador; a escolha de papel ocorre após o login, por alternância.
 
 - **RF02 — Validação de maioridade:** o cadastro é recusado se a idade calculada for menor que 18 anos.
 
@@ -99,9 +101,9 @@ Requisitos são testáveis. Cada RF descreve uma capacidade do sistema. Os ident
 
 - **RF04 — Formato de CPF:** o sistema valida dígitos verificadores e formato do CPF no cadastro.
 
-- **RF05 — Login e-mail/senha:** autenticação com e-mail e senha, possível somente após a confirmação do telefone (RF06). Após sucesso, o sistema restaura o último papel ativo (ou Empregador, se nunca definido) e roteia ao dashboard correspondente. O papel ativo vale para a conta inteira, não por aparelho. Após **5 senhas erradas** para o mesmo e-mail em **15 minutos**, o login fica bloqueado por **15 minutos**. A mensagem de erro é sempre genérica, sem revelar se o e-mail existe.
+- **RF05 — Login e-mail/senha:** autenticação com e-mail e senha; criar anúncio e aplicar exigem e-mail confirmado (RF07). Após sucesso, o sistema restaura o último papel ativo (ou Empregador, se nunca definido) e roteia ao dashboard correspondente. O papel ativo vale para a conta inteira, não por aparelho. Após **5 senhas erradas** para o mesmo e-mail em **15 minutos**, o login fica bloqueado por **15 minutos**. A mensagem de erro é sempre genérica, sem revelar se o e-mail existe.
 
-- **RF06 — Confirmar telefone por OTP:** no cadastro (ou se o telefone ainda não estiver verificado), o sistema envia por SMS um código de **6 dígitos**, válido por **5 minutos**, com até **5 tentativas**. O reenvio é permitido a cada **60 segundos**, no máximo **5 vezes por hora** por telefone. O sistema só considera o cadastro utilizável para criar anúncio ou aplicar com telefone e e-mail confirmados.
+- **RF06 — (removido do escopo na versão 1.4):** a confirmação de telefone por código OTP enviado por SMS deixou de existir. O e-mail é o único canal de confirmação (RF07). O número RF06 passa a não ser utilizado.
 
 - **RF07 — Confirmar e-mail:** o sistema envia por e-mail um **link de uso único, válido por 24 horas**, que abre uma página web servida pela própria API. O reenvio do link é permitido a cada 60 segundos, no máximo 5 vezes por hora. Login com senha pode ocorrer antes; criar anúncio e aplicar exigem e-mail confirmado.
 
@@ -129,7 +131,7 @@ Requisitos são testáveis. Cada RF descreve uma capacidade do sistema. Os ident
 
 - **RF18 — Gerenciar perfil prestador:** especialidades (uma ou mais, incluindo `Outros`), raio de atendimento (km), município-base, e janelas de horário de atuação.
 
-- **RF19 — Preferências de notificação:** o usuário habilita/desabilita Push, e-mail, SMS e WhatsApp de forma independente. Padrão de conta nova: **Push ligado**, **e-mail desligado** e **WhatsApp conforme o opt-in** do cadastro (RF01); o padrão do SMS ainda será definido. O WhatsApp só pode ser ligado com consentimento registrado (documento, versão, origem, IP e data); sem consentimento, nada é enviado por WhatsApp, e desligar interrompe os envios por esse canal. E-mails de segurança (senha alterada, exclusão de conta, novo login) são sempre enviados, independentemente das preferências. Se a permissão de push estiver negada no aparelho, o app avisa e oferece atalho para os ajustes do aparelho.
+- **RF19 — Preferências de notificação:** o usuário habilita/desabilita Push, e-mail e WhatsApp de forma independente (o canal SMS deixou de existir). Padrão de conta nova: **Push ligado**, **e-mail desligado** e **WhatsApp conforme o opt-in** do cadastro (RF01). O WhatsApp só pode ser ligado com consentimento registrado (documento, versão, origem, IP e data); sem consentimento, nada é enviado por WhatsApp, e desligar interrompe os envios por esse canal. E-mails de segurança (senha alterada, exclusão de conta, novo login) são sempre enviados, independentemente das preferências. Se a permissão de push estiver negada no aparelho, o app avisa e oferece atalho para os ajustes do aparelho.
 
 ### 3.3 Dashboards
 
@@ -255,7 +257,7 @@ Requisitos são testáveis. Cada RF descreve uma capacidade do sistema. Os ident
 
 - **RNF03 — Criptografia:** TLS 1.2/1.3 em trânsito. AES-256 (ou equivalente do provedor) em repouso para dados sensíveis (**CPF**, telefone, endereço completo, tokens de pagamento). O bloqueio de reuso de CPF (RB13) guarda apenas o HMAC-SHA256 do CPF, com chave secreta mantida fora do código.
 
-- **RNF04 — Segurança de aplicação:** proteção contra SQL injection, XSS, CSRF em web, IDOR em anúncio/chat/aplicação, enumeração de CPF e rate limit em login/recuperação de senha. Limites: login conforme RF05, código SMS conforme RF06, recuperação de senha conforme RF08. Erros de autenticação e de duplicidade de cadastro são sempre genéricos.
+- **RNF04 — Segurança de aplicação:** proteção contra SQL injection, XSS, CSRF em web, IDOR em anúncio/chat/aplicação, enumeração de CPF e rate limit em login/recuperação de senha. Limites: login conforme RF05, reenvio do link de confirmação de e-mail conforme RF07, recuperação de senha conforme RF08. Erros de autenticação e de duplicidade de cadastro são sempre genéricos.
 
 - **RNF05 — Auditoria:** trilha imutável (append-only) das ações de RF66.
 

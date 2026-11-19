@@ -66,17 +66,16 @@ flowchart LR
         S3["Storage S3-compatível<br/>fotos"]
         RES["Resend<br/>e-mail transacional"]
         NOM["Nominatim / OpenStreetMap<br/>geocodificação"]
+        PAY["Asaas<br/>assinatura GOLD"]
     end
 
     subgraph FUT["Previstos, fornecedor a definir"]
-        SMS["SMS"]
         PUSH["Push e WhatsApp"]
-        PAY["Gateway de pagamento"]
     end
 
     EMP --> APP
     PRE --> APP
-    ADM -. "área do admin<br/>planejada" .-> API
+    ADM -. "área do admin<br/>(Sprint 7)" .-> API
     EMP -- "link do e-mail" --> WEB
     PRE -- "link do e-mail" --> WEB
     APP -- "HTTPS / JSON + JWT" --> API
@@ -85,12 +84,11 @@ flowchart LR
     API --> S3
     API --> RES
     API --> NOM
-    API -.-> SMS
+    API --> PAY
     API -.-> PUSH
-    API -.-> PAY
 ```
 
-Linhas tracejadas: integrações previstas nos cards, ainda sem fornecedor escolhido.
+Linhas tracejadas: integrações previstas nos cards, ainda sem fornecedor escolhido. A confirmação de telefone por SMS saiu do escopo na versão 1.4 dos requisitos (11/11/2026); a conta é confirmada só por e-mail.
 
 ## 4. Containers e tecnologias
 
@@ -99,7 +97,7 @@ Linhas tracejadas: integrações previstas nos cards, ainda sem fornecedor escol
 | **limio-app** | Expo SDK 57, React Native 0.86, React 19, Expo Router, TanStack React Query, Zustand, NativeWind, React Hook Form, Zod, Axios, STOMP.js, Expo Notifications, React Native Maps, Expo Secure Store | Telas do Empregador e do Prestador, sessão do usuário, validação de formulários, chat. |
 | **limio-api** | Java 21, Spring Boot (Web MVC, Security, Data JPA, Validation, WebSocket, Actuator), Flyway, JWT (Spring Security OAuth2 JOSE), SDK do Resend, AWS SDK S3, Testcontainers | Regras de negócio, autenticação, persistência, integrações e as páginas web dos links de e-mail. |
 | **Páginas web** | HTML estático + JavaScript em `src/main/resources/static/paginas/`, servidas pela própria API ([ADR-0002](adr/0002-links-de-email-https-com-paginas-web.md)) | Concluir confirmação de e-mail e redefinição de senha no navegador. |
-| **Banco** | PostgreSQL, versionado por migrations do Flyway (`V1` a `V19` hoje) | Dados de todos os módulos, um esquema só. |
+| **Banco** | PostgreSQL, versionado por migrations do Flyway (`V1` a `V36` em 19/11/2026) | Dados de todos os módulos, um esquema só. |
 | **Infraestrutura** | Railway (serverless), ambientes `staging` e `production` | Hospedar API e banco, deploy automático por branch. |
 
 ## 5. Back-end: monolito modular por domínio
@@ -112,12 +110,12 @@ A API é um único serviço implantável, dividido em módulos de domínio isola
 | --- | --- | --- |
 | `auth` | Usuário, sessão por aparelho, tentativas de login, verificação de contato, CPF bloqueado | Implementado |
 | `perfil` | Perfil de Empregador, endereços salvos, perfil de atuação do Prestador, categorias, mídia (fotos), geocodificação | Implementado |
-| `anuncio` | Anúncio, candidatura (aplicação), reagendamento | Em desenvolvimento (Sprint 6) |
-| `notificacao` | Preferências de notificação | Parcial (envio nos canais é Sprint 7) |
-| `chat` | Conversas e mensagens | Estrutura criada, implementação na Sprint 6 |
-| `moderacao` | Denúncias, sanções, avaliações | Estrutura criada, Sprints 6 e 7 |
-| `financeiro` | Assinatura GOLD, cobranças | Estrutura criada, Sprint 7 |
-| `administracao` | Dashboard do admin | Estrutura criada, Sprint 7 |
+| `anuncio` | Anúncio, candidatura (aplicação), reagendamento | Implementado no ciclo principal; cancelamentos, reagendamento e rotinas automáticas em andamento (Sprint 7) |
+| `notificacao` | Preferências e central de notificações | Preferências implementadas; lista de notificações e envio nos canais em andamento (Sprint 7) |
+| `chat` | Conversas e mensagens | Chat em tempo real implementado; lista de conversas em andamento (Sprint 7) |
+| `moderacao` | Denúncias, sanções, avaliações | Avaliação implementada; denúncias e sanções em andamento (Sprint 7) |
+| `financeiro` | Assinatura GOLD, cobranças | Assinatura do GOLD pelo Asaas implementada; gestão e renovação em andamento (Sprint 7) |
+| `administracao` | Dashboard do admin | Em andamento (Sprint 7) |
 | `privacidade` e `auditoria` | Exportação de dados e trilha de auditoria | Estrutura criada; o log de auditoria já existe em `comum/auditoria` |
 | `comum/` | Configuração, segurança (JWT), erros (`ErroResponse` + `CodigoErro`), eventos e portas entre módulos | Implementado |
 
@@ -385,8 +383,6 @@ Registro completo das decisões: [ADRs](adr/).
 
 ## 14. Pontos em aberto
 
-- Provedor de SMS para o código de confirmação do telefone.
 - Provedores de push e WhatsApp para as notificações.
-- Gateway de pagamento da assinatura GOLD.
 - Como o administrador entra no sistema.
 - Publicação da documentação OpenAPI da API.
