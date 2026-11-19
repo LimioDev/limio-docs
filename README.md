@@ -2,7 +2,7 @@
 
 App que conecta quem precisa de um serviço pontual (**Empregador**) a prestadores próximos (**Prestador**). O Empregador publica a demanda, os prestadores compatíveis se candidatam, os dois conversam no chat e o Empregador escolhe um. Só o escolhido recebe telefone e endereço. O pagamento do serviço é feito fora da plataforma; o único produto pago é a assinatura **GOLD**, que tira o limite de 4 escolhas por mês do Prestador.
 
-Projeto da Escola de TI · Situação em **08/11/2026** · fim da Sprint 6 (a Sprint 7 começa em 09/11)
+Projeto da Escola de TI · Situação em **19/11/2026** · Sprint 7 em andamento (termina em 21/11)
 
 ## Repositórios e ambientes
 
@@ -24,8 +24,8 @@ A API e o banco são serverless e dormem depois de ~10 min sem uso. Por isso a p
 
 | Item pedido | Onde está | Resumo |
 | --- | --- | --- |
-| Estimativa de horas do produto | [`estimativa/`](estimativa/) | **1.032 h** estimadas para os 117 cards do MVP; **603,64 h** lançadas no Clockify até 08/11 (detalhe card a card até 01/11). Em [CSV](estimativa/estimativa-horas.csv) e em [Markdown](estimativa/estimativa-horas.md). |
-| Artefatos | [`artefatos/`](artefatos/) | Requisitos (v1.3), casos de uso, diagrama de classes, DER, 13 diagramas de atividade e backlog de user stories. |
+| Estimativa de horas do produto | [`estimativa/`](estimativa/) | **1.047 h** estimadas para os 122 cards do MVP; **838,62 h** lançadas no Clockify até 19/11, com o detalhe card a card. Em [CSV](estimativa/estimativa-horas.csv) e em [Markdown](estimativa/estimativa-horas.md). |
+| Artefatos | [`artefatos/`](artefatos/) | Requisitos (v1.4), casos de uso, diagrama de classes, DER, 13 diagramas de atividade e backlog de user stories. |
 | Design | [`design/`](design/) | Fundamentos visuais, mapa das telas e as 90 telas do protótipo (exportação de 27/10), separadas por módulo. |
 | System design | [`system-design/`](system-design/system-design.md) | Arquitetura, módulos, fluxos, dados, segurança, infraestrutura e as 3 ADRs. |
 | Registro.br | [`registros/`](registros/) | Domínio `limio.dev.br`, usado para envio de e-mails (Resend). A API usa os domínios da Railway. |
@@ -38,11 +38,11 @@ A API e o banco são serverless e dormem depois de ~10 min sem uso. Por isso a p
 ├── README.md                     este índice
 ├── equipe.md                     papéis, horas e entregas por pessoa
 ├── estimativa/
-│   ├── estimativa-horas.csv      117 cards: estimativa, trabalhado, faixa ±30% e saldo
+│   ├── estimativa-horas.csv      122 cards: estimativa, trabalhado, faixa ±30% e saldo
 │   ├── estimativa-horas.md       método, resumos e tabela completa
 │   └── horas-por-pessoa.csv      horas do Clockify por pessoa e por card
 ├── artefatos/
-│   ├── requisitos/               especificação de requisitos e regras de negócio v1.3
+│   ├── requisitos/               especificação de requisitos e regras de negócio v1.4
 │   ├── casos-de-uso/             diagrama e especificação dos casos de uso
 │   ├── classes/                  diagrama de classes
 │   ├── der/                      diagrama entidade-relacionamento
@@ -69,8 +69,8 @@ A API e o banco são serverless e dormem depois de ~10 min sem uso. Por isso a p
 | 3 | 01/09 – 14/09 | Repositórios, diagrama de casos de uso, agente de validação de código | Concluída |
 | 4 | 15/09 – 11/10 | Arquitetura (ADR-0001), Railway, protótipo, diagramas de classes e de atividade | Concluída |
 | 5 | 12/10 – 25/10 | Login e sessão, cadastro no app, senhas, preferências, perfis de Empregador e Prestador, foto | Concluída |
-| 6 | 27/10 – 08/11 | Ciclo principal: anúncio, mural, candidatura, chat, escolha, execução, validação e avaliação | Em andamento |
-| 7 | 09/11 – 21/11 | Cancelamentos, reagendamento, rotinas automáticas, notificações, GOLD e moderação | Planejada |
+| 6 | 26/10 – 08/11 | Ciclo principal: anúncio, mural, candidatura, chat, escolha, execução, validação e avaliação | Concluída (18 cards; os demais passaram para a Sprint 7) |
+| 7 | 09/11 – 21/11 | Fim do ciclo principal, cancelamentos, reagendamento, rotinas automáticas, notificações, GOLD, moderação e área do admin, remoção do SMS (requisitos v1.4), deploy de produção e Play Store | Em andamento |
 
 ## Equipe
 

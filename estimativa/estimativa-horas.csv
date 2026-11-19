@@ -1,118 +1,123 @@
 ﻿Ticket;Tipo;Camada;Sprint;Status;Responsável;Título;Estimativa (h);Trabalhado (h);Trabalhado/Estimado;Faixa ±30%;Saldo (h)
 ETI-2;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;[REUNIÃO] Alinhamento de Regras de Negócio;3,5;3;0,8571;OK;0,5
 ETI-3;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;kaueamaral96;[REUNIÃO] Alinhamento de Regras de Negócio;3,5;3;0,8571;OK;0,5
-ETI-4;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;andreyindras;[REUNIÃO] Alinhamento de Regras de Negócio;14;6,5;0,4643;Fora da faixa;7,5
-ETI-5;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;Augusto Ogawa;[REUNIÃO] Alinhamento de Regras de Negócio;3,5;0;0,0000;Sem lançamento;3,5
-ETI-6;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;Gabriel Sena;[REUNIÃO] Alinhamento de Regras de Negócio;3,5;0;0,0000;Sem lançamento;3,5
-ETI-7;Tarefa;DOCS;Sprint Inicial;CONCLUIDO;(sem responsável);[DOCS] Revisar e construir Requisitos e Regras de Negócio;11,5;13,88;1,2070;OK;0
-ETI-8;Tarefa;DOCS;Sprint 2;CONCLUIDO;(sem responsável);[DOCS] Revisar e Construir Casos de Uso;12;12,38;1,0317;OK;0
+ETI-4;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;andreyindras;[REUNIÃO] Alinhamento de Regras de Negócio;14;4,93;0,3521;Fora da faixa;9,07
+ETI-5;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;Augusto Ogawa;[REUNIÃO] Alinhamento de Regras de Negócio;3,5;0;0;Sem lançamento;3,5
+ETI-6;Tarefa;REUNIÃO;Sprint Inicial;CONCLUIDO;Gabriel Sena;[REUNIÃO] Alinhamento de Regras de Negócio;3,5;0;0;Sem lançamento;3,5
+ETI-7;Tarefa;DOCS;Sprint Inicial;CONCLUIDO;(sem responsável);[DOCS] Revisar e construir Requisitos e Regras de Negócio;11,5;13,83;1,2026;OK;0
+ETI-8;Tarefa;DOCS;Sprint 2;CONCLUIDO;(sem responsável);[DOCS] Revisar e Construir Casos de Uso;12;17,45;1,4542;Fora da faixa;0
 ETI-9;Tarefa;DOCS;Sprint 4;CONCLUIDO;Gabriel Sena;[DOCS] Criação de Diagrama de Classes;14,5;10,78;0,7434;OK;3,72
-ETI-10;Tarefa;DOCS;Sprint 2;CONCLUIDO;Augusto Ogawa;[DOCS] Criação de Diagrama Entidade-Relacionamento;0,4;2,02;5,0500;Fora da faixa;0
-ETI-17;Tarefa;DOCS;Sprint 3;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;[DOCS] Criação do Diagrama de Casos de Uso;10;11,18;1,1180;OK;0
+ETI-10;Tarefa;DOCS;Sprint 2;CONCLUIDO;Augusto Ogawa;[DOCS] Criação de Diagrama Entidade-Relacionamento;0,4;8,06;20,15;Fora da faixa;0
+ETI-17;Tarefa;DOCS;Sprint 3;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;[DOCS] Criação do Diagrama de Casos de Uso;10;11,18;1,118;OK;0
 ETI-18;Tarefa;DOCS;Sprint 4;CONCLUIDO;andreyindras;[DOCS] Criação de Diagrama de Atividade;14;12,72;0,9086;OK;1,28
-ETI-19;Tarefa;GESTÃO;Sprint 2;CONCLUIDO;kaueamaral96;[GESTÃO] Estruturar base de Gestão, Cerimônias e Auditoria de Não-Conformidades;1;1;1,0000;OK;0
-ETI-20;Tarefa;DESIGN;Sprint 4;CONCLUIDO;kaueamaral96;[DESIGN] Prototipação de alta fidelidade das interfaces do aplicativo LIMIO;70,5;63,37;0,8989;OK;7,13
+ETI-19;Tarefa;GESTÃO;Sprint 2;CONCLUIDO;kaueamaral96;[GESTÃO] Estruturar base de Gestão, Cerimônias e Auditoria de Não-Conformidades;1;3,08;3,08;Fora da faixa;0
+ETI-20;Tarefa;DESIGN;Sprint 4;CONCLUIDO;kaueamaral96;[DESIGN] Prototipação de alta fidelidade das interfaces do aplicativo LIMIO;70,5;67,45;0,9567;OK;3,05
 ETI-21;Tarefa;DOCS;Sprint 2;CONCLUIDO;Gabriel Sena;[DOCS] Escrever Termos de Aceite e Politica de Privacidade da LIMIO;8;7,39;0,9237;OK;0,61
 ETI-23;Tarefa;DEV;Sprint 3;CONCLUIDO;Augusto Ogawa;[DEV] Criação de Repositório para o projeto LIMIO;4,5;2,05;0,4556;Fora da faixa;2,45
 ETI-24;Tarefa;DOCS;Sprint 3;CONCLUIDO;(sem responsável);[DOCS] Atualizar Documento de Requisitos e UC para refletir as mudanças;3;2,83;0,9433;OK;0,17
-ETI-25;Subtarefa;SUBTAREFA;Sprint 2;CONCLUIDO;Augusto Ogawa;Criacao do DIAGRAMA DE ENTIDADE E RELACIONAMENTO ;6,6;0;0,0000;Sem lançamento;6,6
-ETI-26;Tarefa;REUNIÃO;Sprint 3;CONCLUIDO;(sem responsável);[REUNIÃO] Alinhamento entre equipe;8,5;7,1;0,8353;OK;1,4
-ETI-27;Tarefa;AEP;Sprint 3;CONCLUIDO;(sem responsável);[AEP] Preparo de entrega 1 (Agente Validação de código);39;10,94;0,2805;Fora da faixa;28,06
-ETI-28;Tarefa;DEV;Sprint 3;CONCLUIDO;Augusto Ogawa;[DEV] Setup Inicial dos Repositórios limio-api e limio-app;4,5;4,15;0,9222;OK;0,35
-ETI-29;Tarefa;DOCS;Sprint 4;CONCLUIDO;(sem responsável);[DOCS] Ajustar os docs de especificação, caso de uso e validar se precisa atualizar os diagramas;1;0,84;0,8400;OK;0,16
-ETI-30;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[auth] [BACK-END] Cadastrar conta e confirmar telefone (OTP) e e-mail;7,5;6,87;0,9160;OK;0,63
+ETI-25;Subtarefa;SUBTAREFA;Sprint 2;CONCLUIDO;Augusto Ogawa;Criacao do DIAGRAMA DE ENTIDADE E RELACIONAMENTO ;6,6;0;0;Sem lançamento;6,6
+ETI-26;Tarefa;REUNIÃO;Sprint 3;CONCLUIDO;(sem responsável);[REUNIÃO] Alinhamento entre equipe;8,5;9,08;1,0682;OK;0
+ETI-27;Tarefa;AEP;Sprint 3;CONCLUIDO;(sem responsável);[AEP] Preparo de entrega 1 (Agente Validação de código);39;12,43;0,3187;Fora da faixa;26,57
+ETI-28;Tarefa;DEV;Sprint 3;CONCLUIDO;Augusto Ogawa;[DEV] Setup Inicial dos Repositórios limio-api e limio-app;4,5;4,65;1,0333;OK;0
+ETI-29;Tarefa;DOCS;Sprint 4;CONCLUIDO;(sem responsável);[DOCS] Ajustar os docs de especificação, caso de uso e validar se precisa atualizar os diagramas;1;0,84;0,84;OK;0,16
+ETI-30;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[auth] [BACK-END] Cadastrar conta e confirmar telefone (OTP) e e-mail;7,5;6,87;0,916;OK;0,63
 ETI-32;Tarefa;BACK-END;Sprint 5;CONCLUIDO;Gabriel Sena;[auth] [BACK-END] Autenticar, renovar sessão, encerrar sessão e trocar papel ativo;8,5;7,66;0,9012;OK;0,84
-ETI-33;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[auth] [BACK-END] Recuperação de senha por link e alteração de senha autenticada;11;1,58;0,1436;Aguardando horas;9,42
+ETI-33;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[auth] [BACK-END] Recuperação de senha por link e alteração de senha autenticada;11;1,58;0,1436;Fora da faixa;9,42
 ETI-34;Tarefa;BACK-END;Sprint 5;CONCLUIDO;andreyindras;[conta] [BACK-END] Consultar e atualizar preferências de notificação;9;8,95;0,9944;OK;0,05
-ETI-35;Tarefa;DOCS;Sprint 4;CONCLUIDO;Augusto Ogawa;[DOCS] Criacão de ADR's;3,5;3,31;0,9457;OK;0,19
-ETI-36;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[conta] [BACK-END] Encerrar conta: anonimização, bloqueio de acesso, bloqueio de CPF e auditoria;17;5,87;0,3453;Aguardando horas;11,13
-ETI-37;Tarefa;INFRA;Sprint 4;CONCLUIDO;Augusto Ogawa;[INFRA] Subir limio-api + Postgres na Railway (ambientes dev e prod);1;9,73;9,7300;Fora da faixa;0
-ETI-38;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[auth] [FRONT-END] Tela de login, sessão do app, logout e seletor de papel;4;3,58;0,8950;OK;0,42
+ETI-35;Tarefa;DOCS;Sprint 4;CONCLUIDO;Augusto Ogawa;[DOCS] Criacão de ADR's;3,5;6,63;1,8943;Fora da faixa;0
+ETI-36;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[conta] [BACK-END] Encerrar conta: anonimização, bloqueio de acesso, bloqueio de CPF e auditoria;17;5,87;0,3453;Fora da faixa;11,13
+ETI-37;Tarefa;INFRA;Sprint 4;CONCLUIDO;Augusto Ogawa;[INFRA] Subir limio-api + Postgres na Railway (ambientes dev e prod);1;9,73;9,73;Fora da faixa;0
+ETI-38;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[auth] [FRONT-END] Tela de login, sessão do app, logout e seletor de papel;4;3,58;0,895;OK;0,42
 ETI-39;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[auth] [FRONT-END] Telas de solicitar recuperação e de alterar senha;8;7,46;0,9325;OK;0,54
-ETI-40;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Augusto Ogawa;[auth] [FRONT-END] Fluxo de cadastro em 3 passos;6;5,43;0,9050;OK;0,57
-ETI-41;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[conta] [FRONT-END] Toggles de notificação em Ajustes;2;2,03;1,0150;OK;0
-ETI-42;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;"[conta] [FRONT-END] Tela ""Encerrar conta""";4,5;7;1,5556;Fora da faixa;0
+ETI-40;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Augusto Ogawa;[auth] [FRONT-END] Fluxo de cadastro em 3 passos;6;5,43;0,905;OK;0,57
+ETI-41;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;[conta] [FRONT-END] Toggles de notificação em Ajustes;2;2,03;1,015;OK;0
+ETI-42;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;kaueamaral96;"[conta] [FRONT-END] Tela ""Encerrar conta""";4,5;6,83;1,5178;Fora da faixa;0
 ETI-44;Subtarefa;SUBTAREFA;Sprint 6;CONCLUIDO;Augusto Ogawa;remodelar estrutura de diretorio, ADR e INCONSISTENCIA DE CPNJ;9;4,56;0,5067;Fora da faixa;4,44
 ETI-45;Tarefa;INFRA;Sprint 5;CONCLUIDO;Augusto Ogawa;[INFRA] Criar conta no Resend e configurar o domínio de envio de e-mails;1,5;1,12;0,7467;OK;0,38
-ETI-46;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[anuncio] [BACK-END] Encerrar anúncios, candidaturas e combinados de conta encerrada;13,5;6,09;0,4511;Aguardando horas;7,41
-ETI-47;Tarefa;BACK-END;Sprint 6;AJUSTANDO;Augusto Ogawa;"[auth] [BACK-END] Páginas web ""Confirmar e-mail"" e ""Nova senha""";6,5;7,82;1,2031;OK;0
+ETI-46;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Augusto Ogawa;[anuncio] [BACK-END] Encerrar anúncios, candidaturas e combinados de conta encerrada;13,5;6,09;0,4511;Fora da faixa;7,41
+ETI-47;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;"[auth] [BACK-END] Páginas web ""Confirmar e-mail"" e ""Nova senha""";6,5;7,84;1,2062;OK;0
 ETI-48;Tarefa;BACK-END;Sprint 5;CONCLUIDO;andreyindras;[empregador] [BACK-END] Consultar e editar o perfil de Empregador;12;10,71;0,8925;OK;1,29
-ETI-49;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[empregador] [FRONT-END] Telas ""Meu perfil"" e ""Dados de contato""";5;4,38;0,8760;OK;0,62
-ETI-50;Tarefa;BACK-END;Sprint 6;CONCLUIDO;andreyindras;[empregador] [BACK-END] Cadastrar, editar, remover e marcar endereço padrão;5;17,76;3,5520;Fora da faixa;0
+ETI-49;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[empregador] [FRONT-END] Telas ""Meu perfil"" e ""Dados de contato""";5;4,38;0,876;OK;0,62
+ETI-50;Tarefa;BACK-END;Sprint 6;CONCLUIDO;andreyindras;[empregador] [BACK-END] Cadastrar, editar, remover e marcar endereço padrão;5;17,73;3,546;Fora da faixa;0
 ETI-51;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[empregador] [FRONT-END] Telas ""Endereços salvos"" e ""Novo endereço""";6,5;3,16;0,4862;Fora da faixa;3,34
-ETI-52;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Gabriel Sena;[anuncio] [BACK-END] Listar os anúncios do Empregador para o painel;4,5;7,35;1,6333;Fora da faixa;0
+ETI-52;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Gabriel Sena;[anuncio] [BACK-END] Listar os anúncios do Empregador para o painel;4,5;7,34;1,6311;Fora da faixa;0
 ETI-53;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;kaueamaral96;"[empregador] [FRONT-END] Tela ""Início"" do Empregador e barra de navegação";5,5;1,26;0,2291;Fora da faixa;4,24
 ETI-54;Tarefa;BACK-END;Sprint 5;CONCLUIDO;Gabriel Sena;"[prestador] [BACK-END] Salvar o perfil de atuação e calcular ""perfil completo""";5,5;4,81;0,8745;OK;0,69
-ETI-55;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[prestador] [FRONT-END] Telas ""Perfil de atuação"" e ""Especialidades""";5,5;5,07;0,9218;OK;0,43
+ETI-55;Tarefa;FRONT-END;Sprint 5;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[prestador] [FRONT-END] Telas ""Perfil de atuação"" e ""Especialidades""";5,5;5,06;0,92;OK;0,44
 ETI-56;Tarefa;BACK-END;Sprint 5;CONCLUIDO;Gabriel Sena;[perfil] [BACK-END] Enviar e trocar a foto de perfil;4;3,77;0,9425;OK;0,23
 ETI-57;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[perfil] [FRONT-END] Trocar a foto em ""Meu perfil""";3,5;3,69;1,0543;OK;0
-ETI-58;Subtarefa;SUBTAREFA;Sprint 5;CONCLUIDO;(sem responsável);Adicionar novos membros como Code Oweners;0,5;0;0,0000;Sem lançamento;0,5
-ETI-59;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Gabriel Sena;[anuncio] [BACK-END] Criar e publicar anúncio, com fotos;16;9,67;0,6044;Fora da faixa;6,33
+ETI-58;Subtarefa;SUBTAREFA;Sprint 5;CONCLUIDO;(sem responsável);Adicionar novos membros como Code Oweners;0,5;0;0;Sem lançamento;0,5
+ETI-59;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Gabriel Sena;[anuncio] [BACK-END] Criar e publicar anúncio, com fotos;16;9,66;0,6038;Fora da faixa;6,34
 ETI-60;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Telas ""Novo anúncio"", ""Categoria"" e ""Anúncio publicado""";13,5;4,06;0,3007;Fora da faixa;9,44
-ETI-61;Tarefa;BACK-END;Sprint 6;AJUSTANDO;andreyindras;[anuncio] [BACK-END] Editar anúncio antes da escolha;6,5;4,19;0,6446;Em andamento;2,31
-ETI-62;Tarefa;FRONT-END;Sprint 6;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Editar anúncio""";4,5;0;0,0000;Sem lançamento;4,5
-ETI-63;Tarefa;BACK-END;Sprint 6;AJUSTANDO;Augusto Ogawa;[anuncio] [BACK-END] Cancelar anúncio antes da escolha;5,5;4;0,7273;OK;1,5
-ETI-64;Tarefa;FRONT-END;Sprint 6;AJUSTANDO;kaueamaral96;"[anuncio] [FRONT-END] Confirmação ""Cancelar este anúncio?""";2;5,09;2,5450;Fora da faixa;0
-ETI-65;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[anuncio] [BACK-END] Avisar os prestadores compatíveis quando um anúncio é publicado;11;0;0,0000;Sem lançamento;11
-ETI-66;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[anuncio] [BACK-END] Rotina de expiração de anúncios sem candidatos;5,5;0;0,0000;Sem lançamento;5,5
-ETI-67;Tarefa;BACK-END;Sprint 6;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Listar os candidatos do anúncio e recusar candidato;8;4,22;0,5275;Aguardando horas;3,78
-ETI-68;Tarefa;FRONT-END;Sprint 6;À TESTAR;kaueamaral96;"[anuncio] [FRONT-END] Telas ""Candidatos"" e ""Candidatos vazio"", com recusar";5,5;4,96;0,9018;OK;0,54
-ETI-69;Tarefa;BACK-END;Sprint 6;À TESTAR;andreyindras;[anuncio] [BACK-END] Escolher o prestador: transação atômica, cota e liberação do contato;16;0;0,0000;Sem lançamento;16
-ETI-70;Tarefa;FRONT-END;Sprint 6;À FAZER;kaueamaral96;"[anuncio] [FRONT-END] Confirmar escolha e ""Não foi possível escolher""";3,5;0;0,0000;Sem lançamento;3,5
-ETI-71;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[anuncio] [BACK-END] Consultar histórico de anúncios e serviços com filtros;8;0;0,0000;Sem lançamento;8
-ETI-72;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[anuncio] [FRONT-END] Tela ""Histórico"" do Empregador";5,5;0;0,0000;Sem lançamento;5,5
-ETI-73;Tarefa;BACK-END;Sprint 6;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Listar o mural e o detalhe do anúncio para o Prestador;13,5;8,22;0,6089;Aguardando horas;5,28
-ETI-74;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;kaueamaral96;"[anuncio] [FRONT-END] Telas ""Mural"", ""Filtros"", ""Mural vazio"" e ""Detalhe do anúncio""";13,5;1,58;0,1170;Fora da faixa;11,92
-ETI-75;Tarefa;BACK-END;Sprint 6;AJUSTANDO;Augusto Ogawa;[anuncio] [BACK-END] Candidatar-se a um anúncio;8;3,32;0,4150;Em andamento;4,68
-ETI-76;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Confirmação ""Candidatar-se a este serviço?""";2;4,49;2,2450;Fora da faixa;0
-ETI-77;Tarefa;BACK-END;Sprint 6;PARA AJUSTE;Augusto Ogawa;[anuncio] [BACK-END] Listar minhas candidaturas e desistir de candidatura pendente;6,5;3,17;0,4877;Em andamento;3,33
-ETI-78;Tarefa;FRONT-END;Sprint 6;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Aplicações"" (pendentes, combinadas e histórico), com desistir";6,5;0;0,0000;Sem lançamento;6,5
+ETI-61;Tarefa;BACK-END;Sprint 7;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Editar anúncio antes da escolha;6,5;5,87;0,9031;OK;0,63
+ETI-62;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Editar anúncio""";4,5;5,25;1,1667;OK;0
+ETI-63;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[anuncio] [BACK-END] Cancelar anúncio antes da escolha;5,5;4;0,7273;OK;1,5
+ETI-64;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;kaueamaral96;"[anuncio] [FRONT-END] Confirmação ""Cancelar este anúncio?""";2;5,31;2,655;Fora da faixa;0
+ETI-65;Tarefa;BACK-END;Sprint 7;PARA AJUSTE;Gabriel Sena;[anuncio] [BACK-END] Avisar os prestadores compatíveis quando um anúncio é publicado;11;11,33;1,03;OK;0
+ETI-66;Tarefa;BACK-END;Sprint 7;AJUSTANDO;andreyindras;[anuncio] [BACK-END] Rotina de expiração de anúncios sem candidatos;5,5;8,06;1,4655;Fora da faixa;0
+ETI-67;Tarefa;BACK-END;Sprint 6;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Listar os candidatos do anúncio e recusar candidato;8;7,4;0,925;OK;0,6
+ETI-68;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;kaueamaral96;"[anuncio] [FRONT-END] Telas ""Candidatos"" e ""Candidatos vazio"", com recusar";5,5;4,95;0,9;OK;0,55
+ETI-69;Tarefa;BACK-END;Sprint 7;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Escolher o prestador: transação atômica, cota e liberação do contato;16;6,69;0,4181;Fora da faixa;9,31
+ETI-70;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;kaueamaral96;"[anuncio] [FRONT-END] Confirmar escolha e ""Não foi possível escolher""";3,5;4,62;1,32;Fora da faixa;0
+ETI-71;Tarefa;BACK-END;Sprint 7;À FAZER;andreyindras;[anuncio] [BACK-END] Consultar histórico de anúncios e serviços com filtros;8;0,33;0,0413;Em andamento;7,67
+ETI-72;Tarefa;FRONT-END;Sprint 7;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Histórico"" do Empregador";5,5;0;0;Sem lançamento;5,5
+ETI-73;Tarefa;BACK-END;Sprint 6;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Listar o mural e o detalhe do anúncio para o Prestador;13,5;8,22;0,6089;Fora da faixa;5,28
+ETI-74;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;kaueamaral96;"[anuncio] [FRONT-END] Telas ""Mural"", ""Filtros"", ""Mural vazio"" e ""Detalhe do anúncio""";13,5;1,58;0,117;Fora da faixa;11,92
+ETI-75;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[anuncio] [BACK-END] Candidatar-se a um anúncio;8;3,32;0,415;Fora da faixa;4,68
+ETI-76;Tarefa;FRONT-END;Sprint 6;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Confirmação ""Candidatar-se a este serviço?""";2;4,49;2,245;Fora da faixa;0
+ETI-77;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[anuncio] [BACK-END] Listar minhas candidaturas e desistir de candidatura pendente;6,5;6,35;0,9769;OK;0,15
+ETI-78;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Aplicações"" (pendentes, combinadas e histórico), com desistir";6,5;6,33;0,9738;OK;0,17
 ETI-79;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Gabriel Sena;[perfil] [BACK-END] Consultar a cota do mês e zerar na virada do mês;6,5;3,97;0,6108;Fora da faixa;2,53
-ETI-80;Tarefa;FRONT-END;Sprint 6;PARA AJUSTE;Victor Hugo Rodrigues de Oliveira;"[perfil] [FRONT-END] Faixa de cota no mural e tela ""Cota do mês""";3,5;0;0,0000;Sem lançamento;3,5
-ETI-81;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[financeiro] [BACK-END] Assinar o GOLD pelo gateway de pagamento;18,5;0;0,0000;Sem lançamento;18,5
-ETI-82;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[financeiro] [FRONT-END] Tela ""Assinatura"" (assinar GOLD)";5,5;0;0,0000;Sem lançamento;5,5
-ETI-83;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[financeiro] [BACK-END] Gerenciar a assinatura GOLD: consultar, trocar cartão e cancelar renovação;11;0;0,0000;Sem lançamento;11
-ETI-84;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[financeiro] [FRONT-END] Tela ""Assinatura GOLD"" (gerenciar)";4,5;0;0,0000;Sem lançamento;4,5
-ETI-85;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[financeiro] [BACK-END] Renovação mensal do GOLD: cobrança, falha, novas tentativas e volta ao FREE;16;0;0,0000;Sem lançamento;16
-ETI-86;Tarefa;BACK-END;Sprint 6;PARA AJUSTE;Augusto Ogawa;[anuncio] [BACK-END] Consultar o serviço combinado com os contatos liberados;5,5;0;0,0000;Sem lançamento;5,5
-ETI-87;Tarefa;FRONT-END;Sprint 6;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Telas ""Serviço combinado"" (Empregador) e ""Seu serviço"" (Prestador)";6,5;0;0,0000;Sem lançamento;6,5
-ETI-88;Tarefa;BACK-END;Sprint 6;À TESTAR;Gabriel Sena;[anuncio] [BACK-END] Iniciar o serviço;4,5;4,49;0,9978;OK;0,01
-ETI-89;Tarefa;FRONT-END;Sprint 6;À TESTAR;kaueamaral96;"[anuncio] [FRONT-END] Botão ""Iniciar serviço"" e tela ""Serviço em andamento""";4,5;0;0,0000;Sem lançamento;4,5
-ETI-90;Tarefa;BACK-END;Sprint 6;À TESTAR;andreyindras;[anuncio] [BACK-END] Fazer o check-out com foto;6,5;0;0,0000;Sem lançamento;6,5
-ETI-91;Tarefa;FRONT-END;Sprint 6;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Checkout""";5,5;0;0,0000;Sem lançamento;5,5
-ETI-92;Tarefa;BACK-END;Sprint 6;EM PROGRESSO;Augusto Ogawa;[anuncio] [BACK-END] Validar o serviço (presencial ou pela foto);8;0;0,0000;Sem lançamento;8
-ETI-93;Tarefa;FRONT-END;Sprint 6;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Validar serviço""";4,5;0;0,0000;Sem lançamento;4,5
-ETI-94;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[anuncio] [BACK-END] Empregador cancelar o serviço combinado (24h ou mais);6,5;0;0,0000;Sem lançamento;6,5
-ETI-95;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[anuncio] [FRONT-END] Confirmação ""Cancelar o serviço combinado""";2;0;0,0000;Sem lançamento;2
-ETI-96;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[anuncio] [BACK-END] Prestador cancelar depois de escolhido;6,5;0;0,0000;Sem lançamento;6,5
-ETI-97;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[anuncio] [FRONT-END] Confirmação ""Cancelar este serviço?"" (Prestador)";2;0;0,0000;Sem lançamento;2
-ETI-98;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[anuncio] [BACK-END] Rotina de conclusão automática por silêncio;5,5;0;0,0000;Sem lançamento;5,5
-ETI-99;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[anuncio] [BACK-END] Reagendar: propor, cancelar proposta, responder e expirar;13,5;0;0,0000;Sem lançamento;13,5
-ETI-100;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[anuncio] [FRONT-END] Telas ""Propor reagendamento"" e ""Proposta recebida""";6,5;0;0,0000;Sem lançamento;6,5
-ETI-101;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Gabriel Sena;[chat] [BACK-END] Chat 1:1 em tempo real: abrir na candidatura, enviar, entregar e marcar como lida;23;10,1;0,4391;Fora da faixa;12,9
-ETI-102;Tarefa;FRONT-END;Sprint 6;À TESTAR;Victor Hugo Rodrigues de Oliveira;"[chat] [FRONT-END] Telas ""Chat"" e ""Chat somente leitura""";13,5;0;0,0000;Sem lançamento;13,5
-ETI-103;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[chat] [BACK-END] Listar minhas conversas por papel;4,5;0;0,0000;Sem lançamento;4,5
-ETI-104;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[chat] [FRONT-END] Tela ""Conversas"" (Empregador e Prestador)";4,5;0;0,0000;Sem lançamento;4,5
-ETI-105;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[perfil] [BACK-END] Consultar o perfil público e a reputação;5,5;0;0,0000;Sem lançamento;5,5
-ETI-106;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[perfil] [FRONT-END] Telas ""Perfil público"" (candidato e consulta)";4,5;0;0,0000;Sem lançamento;4,5
-ETI-107;Tarefa;BACK-END;Sprint 6;À TESTAR;Gabriel Sena;[moderacao] [BACK-END] Avaliar a outra parte ou pular;6,5;0;0,0000;Sem lançamento;6,5
-ETI-108;Tarefa;FRONT-END;Sprint 6;EM PROGRESSO;kaueamaral96;"[moderacao] [FRONT-END] Tela ""Avaliação""";3,5;2,01;0,5743;Em andamento;1,49
-ETI-109;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[auth] [BACK-END] Rotina diária de limpeza de dados vencidos (LGPD);9;0;0,0000;Sem lançamento;9
-ETI-110;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[notificacao] [BACK-END] Listar minhas notificações e marcar como lidas;4,5;0;0,0000;Sem lançamento;4,5
-ETI-111;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[notificacao] [FRONT-END] Tela ""Notificações""";4,5;0;0,0000;Sem lançamento;4,5
-ETI-112;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[notificacao] [BACK-END] Serviço único de envio de notificações, respeitando as preferências;20,5;0;0,0000;Sem lançamento;20,5
-ETI-113;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);[notificacao] [FRONT-END] Registrar o aparelho para push e abrir a tela certa ao tocar no aviso;9;0;0,0000;Sem lançamento;9
-ETI-114;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[moderacao] [BACK-END] Registrar denúncia;5,5;0;0,0000;Sem lançamento;5,5
-ETI-115;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);"[moderacao] [FRONT-END] Tela ""Abrir denúncia""";3,5;0;0,0000;Sem lançamento;3,5
-ETI-116;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[moderacao] [BACK-END] Admin analisar denúncia e aplicar sanção;11;0;0,0000;Sem lançamento;11
-ETI-117;Tarefa;BACK-END;Sprint 7;À FAZER;(sem responsável);[administracao] [BACK-END] Dashboard administrativo com os números da operação;8;0;0,0000;Sem lançamento;8
-ETI-118;Tarefa;FRONT-END;Sprint 7;À FAZER;(sem responsável);[administracao] [FRONT-END] Área do admin: fila de denúncias, análise, sanção e dashboard;16;0;0,0000;Sem lançamento;16
-ETI-119;Subtarefa;SUBTAREFA;Sprint 6;CONCLUIDO;Augusto Ogawa;Remover .env do front end;1;0;0,0000;Sem lançamento;1
-ETI-120;Subtarefa;SUBTAREFA;Sprint 6;CONCLUIDO;Augusto Ogawa;atualizar secure e cors do projeto para teste local;1;0;0,0000;Sem lançamento;1
-ETI-121;Tarefa;QA;Sprint 7;À FAZER;(sem responsável);[QA] Homologação de ponta a ponta dos fluxos do MVP;40;0;0,0000;Sem lançamento;40
-ETI-122;Tarefa;QA;Sprint 7;À FAZER;(sem responsável);[QA] Correção dos bugs encontrados na homologação;40;0;0,0000;Sem lançamento;40
-ETI-123;Tarefa;INFRA;Sprint 6;À FAZER;Augusto Ogawa;[INFRA] Publicação do app na Play Store;15;0;0,0000;Sem lançamento;15
-ETI-124;Tarefa;INFRA;Sprint 6;À FAZER;Augusto Ogawa;[INFRA] Deploy de produção: develop para main, migrations, variáveis e smoke test;20;0;0,0000;Sem lançamento;20
-ETI-125;Tarefa;DOCS;Sprint 7;À FAZER;(sem responsável);[DOCS] Apresentação e documentação final da entrega;25;0;0,0000;Sem lançamento;25
-ETI-126;Tarefa;DOCS;Sprint 7;À FAZER;Augusto Ogawa;[DOCS] Emenda ao ADR-0001: convenção de pastas por módulo (v2);3,5;0;0,0000;Sem lançamento;3,5
-ETI-127;Tarefa;DEBT;Sprint 7;À FAZER;Augusto Ogawa;[DEBT] Aplicar convenção de pastas — entidade, repository/, modelos/;8;0;0,0000;Sem lançamento;8
+ETI-80;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[perfil] [FRONT-END] Faixa de cota no mural e tela ""Cota do mês""";3,5;2,92;0,8343;OK;0,58
+ETI-81;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[financeiro] [BACK-END] Assinar o GOLD pelo gateway de pagamento;18,5;1,77;0,0957;Fora da faixa;16,73
+ETI-82;Tarefa;FRONT-END;Sprint 7;EM PROGRESSO;Victor Hugo Rodrigues de Oliveira;"[financeiro] [FRONT-END] Tela ""Assinatura"" (assinar GOLD)";5,5;5,74;1,0436;OK;0
+ETI-83;Tarefa;BACK-END;Sprint 7;À TESTAR;Augusto Ogawa;[financeiro] [BACK-END] Gerenciar a assinatura GOLD: consultar, trocar cartão e cancelar renovação;11;1,85;0,1682;Em andamento;9,15
+ETI-84;Tarefa;FRONT-END;Sprint 7;À FAZER;Victor Hugo Rodrigues de Oliveira;"[financeiro] [FRONT-END] Tela ""Assinatura GOLD"" (gerenciar)";4,5;0;0;Sem lançamento;4,5
+ETI-85;Tarefa;BACK-END;Sprint 7;EM PROGRESSO;Augusto Ogawa;[financeiro] [BACK-END] Renovação mensal do GOLD: cobrança, falha, novas tentativas e volta ao FREE;16;0;0;Sem lançamento;16
+ETI-86;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[anuncio] [BACK-END] Consultar o serviço combinado com os contatos liberados;5,5;5,3;0,9636;OK;0,2
+ETI-87;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Telas ""Serviço combinado"" (Empregador) e ""Seu serviço"" (Prestador)";6,5;5,49;0,8446;OK;1,01
+ETI-88;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Gabriel Sena;[anuncio] [BACK-END] Iniciar o serviço;4,5;6,39;1,42;Fora da faixa;0
+ETI-89;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;kaueamaral96;"[anuncio] [FRONT-END] Botão ""Iniciar serviço"" e tela ""Serviço em andamento""";4,5;8,88;1,9733;Fora da faixa;0
+ETI-90;Tarefa;BACK-END;Sprint 7;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Fazer o check-out com foto;6,5;6,67;1,0262;OK;0
+ETI-91;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Checkout""";5,5;5,18;0,9418;OK;0,32
+ETI-92;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[anuncio] [BACK-END] Validar o serviço (presencial ou pela foto);8;2,88;0,36;Fora da faixa;5,12
+ETI-93;Tarefa;FRONT-END;Sprint 7;AJUSTANDO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Tela ""Validar serviço""";4,5;4,47;0,9933;OK;0,03
+ETI-94;Tarefa;BACK-END;Sprint 7;CONCLUIDO;andreyindras;[anuncio] [BACK-END] Empregador cancelar o serviço combinado (24h ou mais);6,5;9,71;1,4938;Fora da faixa;0
+ETI-95;Tarefa;FRONT-END;Sprint 7;EM PROGRESSO;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Confirmação ""Cancelar o serviço combinado""";2;0;0;Sem lançamento;2
+ETI-96;Tarefa;BACK-END;Sprint 7;À TESTAR;andreyindras;[anuncio] [BACK-END] Prestador cancelar depois de escolhido;6,5;6,36;0,9785;OK;0,14
+ETI-97;Tarefa;FRONT-END;Sprint 7;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Confirmação ""Cancelar este serviço?"" (Prestador)";2;0;0;Sem lançamento;2
+ETI-98;Tarefa;BACK-END;Sprint 7;À FAZER;andreyindras;[anuncio] [BACK-END] Rotina de conclusão automática por silêncio;5,5;0;0;Sem lançamento;5,5
+ETI-99;Tarefa;BACK-END;Sprint 7;EM PROGRESSO;andreyindras;[anuncio] [BACK-END] Reagendar: propor, cancelar proposta, responder e expirar;13,5;0;0;Sem lançamento;13,5
+ETI-100;Tarefa;FRONT-END;Sprint 7;À FAZER;Victor Hugo Rodrigues de Oliveira;"[anuncio] [FRONT-END] Telas ""Propor reagendamento"" e ""Proposta recebida""";6,5;0;0;Sem lançamento;6,5
+ETI-101;Tarefa;BACK-END;Sprint 6;CONCLUIDO;Gabriel Sena;[chat] [BACK-END] Chat 1:1 em tempo real: abrir na candidatura, enviar, entregar e marcar como lida;23;9,92;0,4313;Fora da faixa;13,08
+ETI-102;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;Victor Hugo Rodrigues de Oliveira;"[chat] [FRONT-END] Telas ""Chat"" e ""Chat somente leitura""";13,5;3,42;0,2533;Fora da faixa;10,08
+ETI-103;Tarefa;BACK-END;Sprint 7;À TESTAR;andreyindras;[chat] [BACK-END] Listar minhas conversas por papel;4,5;6,6;1,4667;Fora da faixa;0
+ETI-104;Tarefa;FRONT-END;Sprint 7;À TESTAR;kaueamaral96;"[chat] [FRONT-END] Tela ""Conversas"" (Empregador e Prestador)";4,5;2,42;0,5378;Em andamento;2,08
+ETI-105;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[perfil] [BACK-END] Consultar o perfil público e a reputação;5,5;4,75;0,8636;OK;0,75
+ETI-106;Tarefa;FRONT-END;Sprint 7;AJUSTANDO;kaueamaral96;"[perfil] [FRONT-END] Telas ""Perfil público"" (candidato e consulta)";4,5;9,78;2,1733;Fora da faixa;0
+ETI-107;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Gabriel Sena;[moderacao] [BACK-END] Avaliar a outra parte ou pular;6,5;3,21;0,4938;Fora da faixa;3,29
+ETI-108;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;kaueamaral96;"[moderacao] [FRONT-END] Tela ""Avaliação""";3,5;2,23;0,6371;Fora da faixa;1,27
+ETI-109;Tarefa;BACK-END;Sprint 7;CONCLUIDO;andreyindras;[auth] [BACK-END] Rotina diária de limpeza de dados vencidos (LGPD);9;1,05;0,1167;Fora da faixa;7,95
+ETI-110;Tarefa;BACK-END;Sprint 7;PARA AJUSTE;Gabriel Sena;[notificacao] [BACK-END] Listar minhas notificações e marcar como lidas;4,5;7,98;1,7733;Fora da faixa;0
+ETI-111;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;kaueamaral96;"[notificacao] [FRONT-END] Tela ""Notificações""";4,5;7,84;1,7422;Fora da faixa;0
+ETI-112;Tarefa;BACK-END;Sprint 7;PARA AJUSTE;Gabriel Sena;[notificacao] [BACK-END] Serviço único de envio de notificações, respeitando as preferências;20,5;6,37;0,3107;Em andamento;14,13
+ETI-113;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;kaueamaral96;[notificacao] [FRONT-END] Registrar o aparelho para push e abrir a tela certa ao tocar no aviso;9;3,97;0,4411;Fora da faixa;5,03
+ETI-114;Tarefa;BACK-END;Sprint 7;EM PROGRESSO;Gabriel Sena;[moderacao] [BACK-END] Registrar denúncia;5,5;2,15;0,3909;Em andamento;3,35
+ETI-115;Tarefa;FRONT-END;Sprint 7;EM PROGRESSO;kaueamaral96;"[moderacao] [FRONT-END] Tela ""Abrir denúncia""";3,5;2,39;0,6829;Em andamento;1,11
+ETI-116;Tarefa;BACK-END;Sprint 7;EM PROGRESSO;Gabriel Sena;[moderacao] [BACK-END] Admin analisar denúncia e aplicar sanção;11;2,59;0,2355;Em andamento;8,41
+ETI-117;Tarefa;BACK-END;Sprint 7;EM PROGRESSO;Gabriel Sena;[administracao] [BACK-END] Dashboard administrativo com os números da operação;8;6,85;0,8562;OK;1,15
+ETI-118;Tarefa;FRONT-END;Sprint 7;EM PROGRESSO;kaueamaral96;[administracao] [FRONT-END] Área do admin: fila de denúncias, análise, sanção e dashboard;16;5,27;0,3294;Em andamento;10,73
+ETI-119;Subtarefa;SUBTAREFA;Sprint 7;CONCLUIDO;Augusto Ogawa;Remover .env do front end;1;0;0;Sem lançamento;1
+ETI-120;Subtarefa;SUBTAREFA;Sprint 7;CONCLUIDO;Augusto Ogawa;atualizar secure e cors do projeto para teste local;1;0;0;Sem lançamento;1
+ETI-121;Tarefa;QA;Sprint 7;À FAZER;(sem responsável);[QA] Homologação de ponta a ponta dos fluxos do MVP;40;0;0;Sem lançamento;40
+ETI-122;Tarefa;QA;Sprint 7;À FAZER;(sem responsável);[QA] Correção dos bugs encontrados na homologação;40;0;0;Sem lançamento;40
+ETI-123;Tarefa;INFRA;Sprint 7;EM PROGRESSO;Augusto Ogawa;[INFRA] Publicação do app na Play Store;15;10,07;0,6713;Em andamento;4,93
+ETI-124;Tarefa;INFRA;Sprint 7;EM PROGRESSO;Augusto Ogawa;[INFRA] Deploy de produção: develop para main, migrations, variáveis e smoke test;20;16,86;0,843;OK;3,14
+ETI-125;Tarefa;DOCS;Sprint 7;À FAZER;(sem responsável);[DOCS] Apresentação e documentação final da entrega;25;0;0;Sem lançamento;25
+ETI-126;Tarefa;DOCS;Sprint 7;À FAZER;Augusto Ogawa;[DOCS] Emenda ao ADR-0001: convenção de pastas por módulo (v2);3,5;0;0;Sem lançamento;3,5
+ETI-127;Tarefa;DEBT;Sprint 7;À FAZER;Augusto Ogawa;[DEBT] Aplicar convenção de pastas — entidade, repository/, modelos/;8;0;0;Sem lançamento;8
+ETI-134;Tarefa;BACK-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[auth] [BACK-END] Trocar a confirmação por SMS pela confirmação só por e-mail;8;2,62;0,3275;Fora da faixa;5,38
+ETI-135;Tarefa;FRONT-END;Sprint 7;CONCLUIDO;Augusto Ogawa;[auth] [FRONT-END] Busca por CEP e remoção do SMS do app;7;0,62;0,0886;Fora da faixa;6,38
+ETI-136;Subtarefa;SUBTAREFA;Sprint 7;CONCLUIDO;Gabriel Sena;[anuncio/chat] [BACK-END] Devolver o id do usuário nas telas que abrem o perfil público;;0,49;;Sem estimativa;
+ETI-137;Subtarefa;SUBTAREFA;Sprint 7;CONCLUIDO;kaueamaral96;desenho de tela admin figma;;0;;Sem estimativa;
+ETI-138;Subtarefa;SUBTAREFA;Sprint 7;CONCLUIDO;Gabriel Sena;[BACK-END] devolver o id da candidatura no servico combinado;;0,34;;Sem estimativa;

@@ -5,6 +5,9 @@
 - **Telas:** 90 telas de app, numeradas de 01 a 46. As variações de uma mesma tela levam letra (14a, 14b, 22b, 32h...): estados vazios, erros, confirmações e menus.
 - **Versão:** exportação do Figma de 27/10/2026, com 54 telas atualizadas e 36 novas.
 - **Plataforma de referência:** iPhone 393 × 852
+- **Mudanças depois da exportação:**
+  - **Requisitos v1.4 (11/11/2026):** a confirmação de telefone por SMS saiu do cadastro (ETI-134 e ETI-135). A tela 03 (Confirmar telefone) não faz mais parte do fluxo, e o cadastro (tela 02) ganhou a busca de endereço por CEP. As imagens 02 e 03 ainda são as da exportação de 27/10.
+  - **Área do admin:** as telas do painel administrativo (fila de denúncias, análise, sanção e dashboard) foram desenhadas no Figma em 16/11 (ETI-137) e ainda não estão exportadas aqui.
 
 ## Fundamentos
 
@@ -61,7 +64,7 @@ Cada tela tem o mesmo número usado nos cards do Jira (por exemplo, o card ETI-7
 | --- | --- | --- | --- |
 | 01 | Boas-vindas | [`01-boas-vindas.png`](telas/1-acesso-e-identidade/01-boas-vindas.png) |  |
 | 02 | Criar conta | [`02-criar-conta.png`](telas/1-acesso-e-identidade/02-criar-conta.png) |  |
-| 03 | Confirmar telefone | [`03-confirmar-telefone.png`](telas/1-acesso-e-identidade/03-confirmar-telefone.png) |  |
+| 03 | Confirmar telefone | [`03-confirmar-telefone.png`](telas/1-acesso-e-identidade/03-confirmar-telefone.png) | fora do fluxo (v1.4) |
 | 04 | Confirmar e-mail | [`04-confirmar-email.png`](telas/1-acesso-e-identidade/04-confirmar-email.png) |  |
 | 05 | Entrar | [`05-entrar.png`](telas/1-acesso-e-identidade/05-entrar.png) |  |
 | 06 | Recuperar senha | [`06-recuperar-senha.png`](telas/1-acesso-e-identidade/06-recuperar-senha.png) |  |

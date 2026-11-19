@@ -1,64 +1,4 @@
 ﻿Pessoa;Ticket;Horas (Clockify)
-Augusto Ogawa;ETI-4;3,5
-Augusto Ogawa;ETI-7;3,5
-Augusto Ogawa;ETI-10;1,71
-Augusto Ogawa;ETI-23;2,05
-Augusto Ogawa;ETI-26;1,1
-Augusto Ogawa;ETI-27;5,96
-Augusto Ogawa;ETI-28;4,15
-Augusto Ogawa;ETI-30;6,87
-Augusto Ogawa;ETI-33;1,58
-Augusto Ogawa;ETI-35;3,31
-Augusto Ogawa;ETI-36;5,87
-Augusto Ogawa;ETI-37;8,71
-Augusto Ogawa;ETI-44;4,56
-Augusto Ogawa;ETI-45;1,12
-Augusto Ogawa;ETI-46;6,09
-Augusto Ogawa;ETI-47;7,82
-Augusto Ogawa;ETI-50;5,47
-Augusto Ogawa;ETI-63;4
-Augusto Ogawa;ETI-75;3,32
-Augusto Ogawa;ETI-77;3,17
-Augusto Ogawa;(sem card);2,05
-Augusto Ogawa;Cerimônias (sem card);20
-Augusto Ogawa;Dailies (sem card);8,5
-Gabriel Sena;ETI-7;2,5
-Gabriel Sena;ETI-9;8,93
-Gabriel Sena;ETI-21;6,71
-Gabriel Sena;ETI-26;1,2
-Gabriel Sena;ETI-27;1,6
-Gabriel Sena;ETI-32;7,66
-Gabriel Sena;ETI-52;7,35
-Gabriel Sena;ETI-54;4,81
-Gabriel Sena;ETI-56;3,77
-Gabriel Sena;ETI-59;9,67
-Gabriel Sena;ETI-79;3,97
-Gabriel Sena;ETI-88;4,49
-Gabriel Sena;ETI-101;10,1
-Gabriel Sena;Cerimônias (sem card);20
-Gabriel Sena;Dailies (sem card);8,5
-Victor Hugo Rodrigues de Oliveira;ETI-2;3
-Victor Hugo Rodrigues de Oliveira;ETI-7;2,08
-Victor Hugo Rodrigues de Oliveira;ETI-8;9,69
-Victor Hugo Rodrigues de Oliveira;ETI-9;0,34
-Victor Hugo Rodrigues de Oliveira;ETI-10;0,31
-Victor Hugo Rodrigues de Oliveira;ETI-17;11,18
-Victor Hugo Rodrigues de Oliveira;ETI-20;42,64
-Victor Hugo Rodrigues de Oliveira;ETI-21;0,68
-Victor Hugo Rodrigues de Oliveira;ETI-24;2,83
-Victor Hugo Rodrigues de Oliveira;ETI-26;1,5
-Victor Hugo Rodrigues de Oliveira;ETI-29;0,84
-Victor Hugo Rodrigues de Oliveira;ETI-40;5,43
-Victor Hugo Rodrigues de Oliveira;ETI-42;0,4
-Victor Hugo Rodrigues de Oliveira;ETI-49;3,77
-Victor Hugo Rodrigues de Oliveira;ETI-51;2,86
-Victor Hugo Rodrigues de Oliveira;ETI-53;0,01
-Victor Hugo Rodrigues de Oliveira;ETI-55;4,16
-Victor Hugo Rodrigues de Oliveira;ETI-57;3,37
-Victor Hugo Rodrigues de Oliveira;ETI-60;3,9
-Victor Hugo Rodrigues de Oliveira;ETI-76;4,09
-Victor Hugo Rodrigues de Oliveira;Cerimônias (sem card);20
-Victor Hugo Rodrigues de Oliveira;Dailies (sem card);8,5
 andreyindras;ETI-4;3
 andreyindras;ETI-7;2,75
 andreyindras;ETI-8;1,69
@@ -67,18 +7,81 @@ andreyindras;ETI-26;1,67
 andreyindras;ETI-27;2,16
 andreyindras;ETI-34;8,95
 andreyindras;ETI-48;10,71
-andreyindras;ETI-50;12,29
-andreyindras;ETI-61;4,19
-andreyindras;ETI-67;4,22
+andreyindras;ETI-50;12,26
+andreyindras;ETI-61;5,87
+andreyindras;ETI-66;8,06
+andreyindras;ETI-67;7,4
+andreyindras;ETI-69;6,69
+andreyindras;ETI-71;0,33
 andreyindras;ETI-73;8,22
-andreyindras;Cerimônias (sem card);20
-andreyindras;Dailies (sem card);8,5
+andreyindras;ETI-90;6,67
+andreyindras;ETI-94;9,71
+andreyindras;ETI-96;6,36
+andreyindras;ETI-103;6,6
+andreyindras;ETI-109;1,05
+andreyindras;Cerimônias (sem card);24
+andreyindras;Dailies (sem card);10,34
+Augusto Ogawa;ETI-4;1,93
+Augusto Ogawa;ETI-7;3,45
+Augusto Ogawa;ETI-10;7,75
+Augusto Ogawa;ETI-23;2,05
+Augusto Ogawa;ETI-26;3,08
+Augusto Ogawa;ETI-27;7,45
+Augusto Ogawa;ETI-28;4,65
+Augusto Ogawa;ETI-30;6,87
+Augusto Ogawa;ETI-33;1,58
+Augusto Ogawa;ETI-35;6,63
+Augusto Ogawa;ETI-36;5,87
+Augusto Ogawa;ETI-37;8,71
+Augusto Ogawa;ETI-44;4,56
+Augusto Ogawa;ETI-45;1,12
+Augusto Ogawa;ETI-46;6,09
+Augusto Ogawa;ETI-47;7,84
+Augusto Ogawa;ETI-50;5,47
+Augusto Ogawa;ETI-63;4
+Augusto Ogawa;ETI-75;3,32
+Augusto Ogawa;ETI-77;6,35
+Augusto Ogawa;ETI-81;1,77
+Augusto Ogawa;ETI-83;1,85
+Augusto Ogawa;ETI-86;5,3
+Augusto Ogawa;ETI-92;2,88
+Augusto Ogawa;ETI-105;4,75
+Augusto Ogawa;ETI-123;10,07
+Augusto Ogawa;ETI-124;16,86
+Augusto Ogawa;ETI-134;2,62
+Augusto Ogawa;(sem card);12,91
+Augusto Ogawa;Cerimônias (sem card);24
+Augusto Ogawa;Dailies (sem card);10,33
+Gabriel Sena;ETI-7;2,5
+Gabriel Sena;ETI-9;8,93
+Gabriel Sena;ETI-21;6,71
+Gabriel Sena;ETI-26;1,2
+Gabriel Sena;ETI-27;1,6
+Gabriel Sena;ETI-32;7,66
+Gabriel Sena;ETI-52;7,34
+Gabriel Sena;ETI-54;4,81
+Gabriel Sena;ETI-56;3,77
+Gabriel Sena;ETI-59;9,66
+Gabriel Sena;ETI-65;11,33
+Gabriel Sena;ETI-79;3,97
+Gabriel Sena;ETI-88;6,39
+Gabriel Sena;ETI-101;9,92
+Gabriel Sena;ETI-107;3,21
+Gabriel Sena;ETI-110;7,98
+Gabriel Sena;ETI-112;6,37
+Gabriel Sena;ETI-114;2,15
+Gabriel Sena;ETI-116;2,59
+Gabriel Sena;ETI-117;6,85
+Gabriel Sena;ETI-136;0,49
+Gabriel Sena;ETI-138;0,34
+Gabriel Sena;Cerimônias (sem card);24
+Gabriel Sena;Dailies (sem card);10,34
 kaueamaral96;ETI-3;3
 kaueamaral96;ETI-7;3,05
-kaueamaral96;ETI-8;1
+kaueamaral96;ETI-8;6,07
 kaueamaral96;ETI-9;1,51
-kaueamaral96;ETI-19;1
-kaueamaral96;ETI-20;20,74
+kaueamaral96;ETI-19;3,08
+kaueamaral96;ETI-20;24,82
 kaueamaral96;ETI-26;1,64
 kaueamaral96;ETI-27;1,22
 kaueamaral96;ETI-37;1,01
@@ -89,13 +92,58 @@ kaueamaral96;ETI-42;6,6
 kaueamaral96;ETI-49;0,61
 kaueamaral96;ETI-51;0,29
 kaueamaral96;ETI-53;1,25
-kaueamaral96;ETI-55;0,91
+kaueamaral96;ETI-55;0,9
 kaueamaral96;ETI-57;0,32
 kaueamaral96;ETI-60;0,16
-kaueamaral96;ETI-64;5,09
-kaueamaral96;ETI-68;4,96
+kaueamaral96;ETI-62;0,2
+kaueamaral96;ETI-64;5,31
+kaueamaral96;ETI-68;4,95
+kaueamaral96;ETI-70;4,62
 kaueamaral96;ETI-74;1,58
 kaueamaral96;ETI-76;0,41
-kaueamaral96;ETI-108;2,01
-kaueamaral96;Cerimônias (sem card);20
-kaueamaral96;Dailies (sem card);8,5
+kaueamaral96;ETI-78;1,99
+kaueamaral96;ETI-80;0,22
+kaueamaral96;ETI-87;1,33
+kaueamaral96;ETI-89;8,88
+kaueamaral96;ETI-93;0,45
+kaueamaral96;ETI-102;0,46
+kaueamaral96;ETI-104;2,42
+kaueamaral96;ETI-106;9,78
+kaueamaral96;ETI-108;2,23
+kaueamaral96;ETI-111;7,84
+kaueamaral96;ETI-113;3,97
+kaueamaral96;ETI-115;2,39
+kaueamaral96;ETI-118;5,27
+kaueamaral96;ETI-135;0,62
+kaueamaral96;Cerimônias (sem card);24
+kaueamaral96;Dailies (sem card);10,34
+Victor Hugo Rodrigues de Oliveira;ETI-2;3
+Victor Hugo Rodrigues de Oliveira;ETI-7;2,08
+Victor Hugo Rodrigues de Oliveira;ETI-8;9,69
+Victor Hugo Rodrigues de Oliveira;ETI-9;0,34
+Victor Hugo Rodrigues de Oliveira;ETI-10;0,31
+Victor Hugo Rodrigues de Oliveira;ETI-17;11,18
+Victor Hugo Rodrigues de Oliveira;ETI-20;42,62
+Victor Hugo Rodrigues de Oliveira;ETI-21;0,68
+Victor Hugo Rodrigues de Oliveira;ETI-24;2,83
+Victor Hugo Rodrigues de Oliveira;ETI-26;1,5
+Victor Hugo Rodrigues de Oliveira;ETI-29;0,84
+Victor Hugo Rodrigues de Oliveira;ETI-40;5,43
+Victor Hugo Rodrigues de Oliveira;ETI-42;0,23
+Victor Hugo Rodrigues de Oliveira;ETI-49;3,77
+Victor Hugo Rodrigues de Oliveira;ETI-51;2,86
+Victor Hugo Rodrigues de Oliveira;ETI-53;0,01
+Victor Hugo Rodrigues de Oliveira;ETI-55;4,16
+Victor Hugo Rodrigues de Oliveira;ETI-57;3,37
+Victor Hugo Rodrigues de Oliveira;ETI-60;3,9
+Victor Hugo Rodrigues de Oliveira;ETI-62;5,05
+Victor Hugo Rodrigues de Oliveira;ETI-76;4,09
+Victor Hugo Rodrigues de Oliveira;ETI-78;4,34
+Victor Hugo Rodrigues de Oliveira;ETI-80;2,7
+Victor Hugo Rodrigues de Oliveira;ETI-82;5,74
+Victor Hugo Rodrigues de Oliveira;ETI-87;4,16
+Victor Hugo Rodrigues de Oliveira;ETI-91;5,18
+Victor Hugo Rodrigues de Oliveira;ETI-93;4,02
+Victor Hugo Rodrigues de Oliveira;ETI-102;2,96
+Victor Hugo Rodrigues de Oliveira;Cerimônias (sem card);24
+Victor Hugo Rodrigues de Oliveira;Dailies (sem card);10,34
